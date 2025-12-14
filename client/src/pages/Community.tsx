@@ -9,25 +9,29 @@ export default function Community() {
       title: "Family House of West Georgia",
       description: "The Family House of West Georgia provides overnight accommodations for medical patients visiting Columbus, Georgia for extended healthcare treatment.",
       logo: "/images/logo-family-house.jpg",
-      image: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&q=80&w=800",
+      link: "https://www.fhwga.com/"
     },
     {
       title: "Humane Society of Harris County",
       description: "Founded in 1991, this nonprofit organization finds loving homes for animals in need.",
       logo: "/images/logo-humane-society.png",
-      image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=800",
+      link: "https://www.hsharrisco.org/"
     },
     {
       title: "Habitat for Humanity",
       description: "Habitat for Humanity is about bringing people together to build homes, communities, and hope. Monetary donations or donating to the ReStore.",
       logo: "/images/logo-habitat.png",
-      image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80&w=800",
+      link: "https://www.columbusareahabitat.com/"
     },
     {
       title: "Valley Rescue Mission",
       description: "Since 1963, Valley Rescue Mission has provided emergency shelter and meals for the homeless, substance abuse recovery programs, and community outreach.",
       logo: "/images/logo-valley-rescue.png",
-      image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800",
+      link: "https://www.valleyrescuemission.org/"
     }
   ];
 
@@ -75,9 +79,15 @@ export default function Community() {
                       alt={org.title} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md h-16 w-16 flex items-center justify-center">
+                    <a 
+                      href={org.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md h-16 w-16 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10"
+                      title={`Visit ${org.title} website`}
+                    >
                       <img src={org.logo} alt={`${org.title} logo`} className="max-h-full max-w-full object-contain" />
-                    </div>
+                    </a>
                   </div>
                   <CardHeader>
                     <CardTitle className="font-serif text-2xl text-primary group-hover:text-accent transition-colors">
