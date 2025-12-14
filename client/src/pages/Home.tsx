@@ -14,7 +14,7 @@ export default function Home() {
       <section className="relative h-[80vh] min-h-[600px] w-full overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/images/hero-living-room.jpg" 
+            src="/images/gallery-1.jpg" 
             alt="Cozy modern farmhouse living room with La-Z-Boy furniture" 
             className="h-full w-full object-cover object-center"
           />
@@ -165,15 +165,17 @@ export default function Home() {
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Placeholder images using unsplash since we don't have specific product shots yet */}
             {[
-              "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800",
-              "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&q=80&w=800",
-              "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800",
-              "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800",
-              "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800",
-              "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&q=80&w=800"
+              "/images/gallery-2.jpg",
+              "/images/gallery-3.jpg",
+              "/images/gallery-4.jpg",
+              "/images/gallery-5.jpg",
+              "/images/gallery-6.jpg",
+              "/images/gallery-7.jpg",
+              "/images/gallery-8.jpg",
+              "/images/gallery-9.jpg"
             ].map((src, index) => (
               <motion.div
                 key={index}
