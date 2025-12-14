@@ -9,7 +9,7 @@ export default function Community() {
       title: "Family House of West Georgia",
       description: "The Family House of West Georgia provides overnight accommodations for medical patients visiting Columbus, Georgia for extended healthcare treatment.",
       logo: "/images/logo-family-house.jpg",
-      image: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&q=80&w=800",
+      image: "/images/family-house-building.jpg",
       link: "https://www.fhwga.com/"
     },
     {
