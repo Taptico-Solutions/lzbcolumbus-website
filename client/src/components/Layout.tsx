@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container flex h-20 items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img src="/images/logo.jpg" alt="La-Z-Boy Columbus" className="h-12 w-auto object-contain" />
+              <img src="/images/logo-new.jpg" alt="La-Z-Boy Columbus" className="h-12 w-auto object-contain" />
             </div>
           </Link>
 
@@ -95,7 +95,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {/* Brand & Social */}
             <div className="space-y-4">
-              <img src="/images/logo.jpg" alt="La-Z-Boy Columbus" className="h-10 w-auto object-contain mb-4" />
+              <img src="/images/logo-new.jpg" alt="La-Z-Boy Columbus" className="h-10 w-auto object-contain mb-4" />
               <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
                 Creating homes filled with comfort, style, and quality that lasts. 
                 Proudly serving the Columbus community since 2002.
