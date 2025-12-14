@@ -1,10 +1,26 @@
 import { motion } from "framer-motion";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
+import { useState } from "react";
+import { toast } from "sonner";
 
 export default function Blog() {
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubscribed(true);
+      toast.success("Successfully subscribed to the newsletter!");
+      setEmail("");
+    }, 1000);
+  };
   const posts = [
     {
       id: 1,
@@ -136,16 +152,31 @@ export default function Blog() {
             <p className="text-primary-foreground/80 text-lg">
               Join our newsletter for the latest trends, exclusive offers, and expert advice from our design team.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className="flex-1 px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-accent"
-              />
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white border-none">
-                Subscribe
-              </Button>
-            </div>
+            {isSubscribed ? (
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-white/10 rounded-lg p-6 flex flex-col items-center gap-3"
+              >
+                <CheckCircle2 className="h-12 w-12 text-accent" />
+                <h3 className="text-xl font-medium">Thanks for subscribing!</h3>
+                <p className="text-sm text-white/80">Check your inbox for your welcome guide.</p>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input 
+                  type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address" 
+                  required
+                  className="flex-1 px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-accent"
+                />
+                <Button type="submit" size="lg" className="bg-accent hover:bg-accent/90 text-white border-none">
+                  Subscribe
+                </Button>
+              </form>
+            )}
           </div>
         </div>
       </section>

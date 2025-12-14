@@ -10,6 +10,7 @@ import ComfortClub from "./pages/ComfortClub";
 import Community from "./pages/Community";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import RoomPlanner from "./pages/RoomPlanner";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
         <Route path="/community" component={Community} />
       <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
+        <Route path="/room-planner" component={RoomPlanner} />
         <Route path="/404" component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
