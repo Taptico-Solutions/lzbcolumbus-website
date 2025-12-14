@@ -20,31 +20,29 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-20 items-center justify-between">
           <Link href="/">
-            <a className="flex items-center gap-2">
-              <span className="font-serif text-2xl font-bold tracking-tight text-primary">
-                La-Z-Boy <span className="text-accent font-script text-3xl">Columbus</span>
-              </span>
-            </a>
+            <div className="flex items-center gap-2 cursor-pointer">
+              <img src="/images/logo.jpg" alt="La-Z-Boy Columbus" className="h-12 w-auto object-contain" />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
-                <a
+                <div
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary",
+                    "text-sm font-medium transition-colors hover:text-primary cursor-pointer",
                     location === link.href
                       ? "text-primary font-semibold border-b-2 border-accent pb-1"
                       : "text-muted-foreground"
                   )}
                 >
                   {link.label}
-                </a>
+                </div>
               </Link>
             ))}
             <Link href="/comfort-club">
-              <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-white font-serif">
+              <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-white font-serif cursor-pointer">
                 Join Club
               </Button>
             </Link>
@@ -65,19 +63,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
-                  <a
+                  <div
                     className={cn(
-                      "text-base font-medium transition-colors hover:text-primary p-2 rounded-md hover:bg-muted",
+                      "text-base font-medium transition-colors hover:text-primary p-2 rounded-md hover:bg-muted cursor-pointer",
                       location === link.href ? "text-primary bg-muted/50" : "text-muted-foreground"
                     )}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </div>
                 </Link>
               ))}
               <Link href="/comfort-club">
-                <Button className="w-full bg-primary text-white font-serif" onClick={() => setIsMenuOpen(false)}>
+                <Button className="w-full bg-primary text-white font-serif cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                   Join Comfort Club
                 </Button>
               </Link>
@@ -97,9 +95,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {/* Brand & Social */}
             <div className="space-y-4">
-              <h3 className="font-serif text-xl font-bold text-primary">
-                La-Z-Boy <span className="text-accent font-script">Columbus</span>
-              </h3>
+              <img src="/images/logo.jpg" alt="La-Z-Boy Columbus" className="h-10 w-auto object-contain mb-4" />
               <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
                 Creating homes filled with comfort, style, and quality that lasts. 
                 Proudly serving the Columbus community since 2002.
@@ -120,17 +116,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/">
-                    <a className="text-muted-foreground hover:text-primary transition-colors">Home</a>
+                    <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Home</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="/comfort-club">
-                    <a className="text-muted-foreground hover:text-primary transition-colors">Comfort Club</a>
+                    <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Comfort Club</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="/community">
-                    <a className="text-muted-foreground hover:text-primary transition-colors">Community Involvement</a>
+                    <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Community Involvement</span>
                   </Link>
                 </li>
               </ul>

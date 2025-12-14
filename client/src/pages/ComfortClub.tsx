@@ -27,9 +27,10 @@ export default function ComfortClub() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-6">
-                Join The <span className="text-accent font-script">Comfort Club</span> TODAY!
-              </h1>
+              <div className="mb-8">
+                <img src="/images/comfort-club-logo.png" alt="Comfort Club" className="h-32 md:h-40 w-auto object-contain" />
+                <h1 className="sr-only">Join The Comfort Club TODAY!</h1>
+              </div>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-lg">
                 Unlock exclusive deals, early access to new collections, and insider updates on the latest comfort innovations.
               </p>

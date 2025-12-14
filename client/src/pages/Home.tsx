@@ -36,7 +36,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/comfort-club">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-serif text-lg px-8 py-6 h-auto">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-serif text-lg px-8 py-6 h-auto cursor-pointer">
                   Join Comfort Club
                 </Button>
               </Link>
@@ -94,7 +94,7 @@ export default function Home() {
               </div>
               <div className="pt-4">
                 <Link href="/community">
-                  <Button variant="link" className="text-accent hover:text-accent/80 p-0 text-lg font-serif italic">
+                  <Button variant="link" className="text-accent hover:text-accent/80 p-0 text-lg font-serif italic cursor-pointer">
                     Read more about our community involvement <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
