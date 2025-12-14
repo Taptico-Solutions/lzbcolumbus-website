@@ -8,6 +8,7 @@ export default function Blog() {
   const posts = [
     {
       id: 1,
+      slug: "choosing-perfect-recliner",
       title: "5 Tips for Choosing the Perfect Recliner",
       excerpt: "Finding the right recliner is about more than just comfort. Learn how to select the perfect style, size, and fabric for your living space.",
       author: "Sarah Evans",
@@ -17,6 +18,7 @@ export default function Blog() {
     },
     {
       id: 2,
+      slug: "modern-farmhouse-look",
       title: "Modern Farmhouse: How to Get the Look",
       excerpt: "Discover the key elements of the modern farmhouse aesthetic, from neutral color palettes to rustic textures and cozy accents.",
       author: "Design Team",
@@ -26,6 +28,7 @@ export default function Blog() {
     },
     {
       id: 3,
+      slug: "small-spaces-sectionals",
       title: "Maximizing Small Spaces with Sectionals",
       excerpt: "Think you don't have room for a sectional? Think again. Here are creative ways to arrange sectionals in smaller living rooms.",
       author: "Mike Johnson",
@@ -35,6 +38,7 @@ export default function Blog() {
     },
     {
       id: 4,
+      slug: "performance-fabrics-benefits",
       title: "The Benefits of Performance Fabrics",
       excerpt: "Life happens. Learn why performance fabrics are a game-changer for families with kids and pets, offering durability without sacrificing style.",
       author: "Sarah Evans",
@@ -109,9 +113,11 @@ export default function Blog() {
                     </p>
                   </CardContent>
                   <CardFooter>
-                    <Button variant="ghost" className="p-0 h-auto font-medium text-primary hover:text-accent hover:bg-transparent group/btn">
-                      Read Article <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                    </Button>
+                    <Link href={`/blog/${post.slug}`}>
+                      <Button variant="ghost" className="p-0 h-auto font-medium text-primary hover:text-accent hover:bg-transparent group/btn">
+                        Read Article <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               </motion.div>
