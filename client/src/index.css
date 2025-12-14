@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;700&display=swap');
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -43,39 +44,55 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
+  /* Modern Farmhouse Chic Palette */
+  /* Primary: Sage Green (#8DA399) -> OKLCH approx 0.7 0.05 160 */
+  --primary: oklch(0.7 0.05 160);
+  --primary-foreground: oklch(0.98 0.01 100);
+  
+  /* Secondary: Warm Cream (#F5F5F0) -> OKLCH approx 0.97 0.01 100 */
+  --secondary: oklch(0.97 0.01 100);
+  --secondary-foreground: oklch(0.3 0.02 30);
+  
+  /* Accent: Terracotta/Clay (#C78D75) -> OKLCH approx 0.7 0.1 50 */
+  --accent: oklch(0.7 0.1 50);
+  --accent-foreground: oklch(0.98 0.01 100);
+  
+  /* Background: Warm Cream/Off-white */
+  --background: oklch(0.98 0.005 100);
+  --foreground: oklch(0.3 0.01 30); /* Charcoal Grey */
+  
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: oklch(0.3 0.01 30);
+  
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --popover-foreground: oklch(0.3 0.01 30);
+  
+  --muted: oklch(0.95 0.01 100);
+  --muted-foreground: oklch(0.5 0.02 30);
+  
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  
+  --border: oklch(0.9 0.01 100);
+  --input: oklch(0.9 0.01 100);
+  --ring: oklch(0.7 0.05 160); /* Sage Green Ring */
+  
+  --radius: 0.5rem;
+  
+  --sidebar: oklch(0.97 0.01 100);
+  --sidebar-foreground: oklch(0.3 0.01 30);
+  --sidebar-primary: oklch(0.7 0.05 160);
+  --sidebar-primary-foreground: oklch(0.98 0.01 100);
+  --sidebar-accent: oklch(0.95 0.01 100);
+  --sidebar-accent-foreground: oklch(0.3 0.01 30);
+  --sidebar-border: oklch(0.9 0.01 100);
+  --sidebar-ring: oklch(0.7 0.05 160);
+
+  --chart-1: oklch(0.7 0.05 160); /* Sage */
+  --chart-2: oklch(0.7 0.1 50); /* Terracotta */
+  --chart-3: oklch(0.8 0.1 80); /* Gold/Brass */
+  --chart-4: oklch(0.6 0.05 160); /* Darker Sage */
+  --chart-5: oklch(0.5 0.02 30); /* Charcoal */
 }
 
 .dark {
@@ -118,7 +135,19 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold;
+  }
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-sans {
+    font-family: 'Lato', sans-serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
