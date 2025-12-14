@@ -45,21 +45,21 @@
 
 :root {
   /* Modern Farmhouse Chic Palette */
-  /* Primary: Navy PMS 2189 (#002D56) -> OKLCH approx 0.3 0.08 250 */
-  --primary: oklch(0.3 0.08 250);
-  --primary-foreground: oklch(0.98 0.01 100);
+  /* Primary: Navy (#003349) */
+  --primary: #003349;
+  --primary-foreground: #ffffff;
   
-  /* Secondary: Warm Cream (#F5F5F0) -> OKLCH approx 0.97 0.01 100 */
-  --secondary: oklch(0.97 0.01 100);
-  --secondary-foreground: oklch(0.3 0.02 30);
+  /* Secondary: Warm Beige (#E6E2D5) */
+  --secondary: #E6E2D5;
+  --secondary-foreground: #003349;
   
-  /* Accent: Terracotta/Clay (#C78D75) -> OKLCH approx 0.7 0.1 50 */
-  --accent: oklch(0.7 0.1 50);
-  --accent-foreground: oklch(0.98 0.01 100);
+  /* Accent: Rust/Terracotta (Approx from image) */
+  --accent: #C25B3C;
+  --accent-foreground: #ffffff;
   
-  /* Background: Warm Cream/Off-white */
-  --background: oklch(0.98 0.005 100);
-  --foreground: oklch(0.3 0.01 30); /* Charcoal Grey */
+  /* Background: White */
+  --background: #ffffff;
+  --foreground: #003349; /* Navy text for high contrast and brand alignment */
   
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.3 0.01 30);
@@ -67,32 +67,32 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.3 0.01 30);
   
-  --muted: oklch(0.95 0.01 100);
-  --muted-foreground: oklch(0.5 0.02 30);
+  --muted: #9FB6AD; /* Sage Green from secondary palette */
+  --muted-foreground: #003349;
   
-  --destructive: oklch(0.6 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive: #C25B3C; /* Use Rust for destructive actions */
+  --destructive-foreground: #ffffff;
   
-  --border: oklch(0.9 0.01 100);
-  --input: oklch(0.9 0.01 100);
-  --ring: oklch(0.3 0.08 250); /* Navy Ring */
+  --border: #E6E2D5;
+  --input: #E6E2D5;
+  --ring: #003349;
   
   --radius: 0.5rem;
   
-  --sidebar: oklch(0.97 0.01 100);
-  --sidebar-foreground: oklch(0.3 0.01 30);
-  --sidebar-primary: oklch(0.3 0.08 250);
-  --sidebar-primary-foreground: oklch(0.98 0.01 100);
-  --sidebar-accent: oklch(0.95 0.01 100);
-  --sidebar-accent-foreground: oklch(0.3 0.01 30);
-  --sidebar-border: oklch(0.9 0.01 100);
-  --sidebar-ring: oklch(0.3 0.08 250);
+  --sidebar: #E6E2D5;
+  --sidebar-foreground: #003349;
+  --sidebar-primary: #003349;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #9FB6AD;
+  --sidebar-accent-foreground: #003349;
+  --sidebar-border: #003349;
+  --sidebar-ring: #003349;
 
-  --chart-1: oklch(0.3 0.08 250); /* Navy */
-  --chart-2: oklch(0.7 0.1 50); /* Terracotta */
-  --chart-3: oklch(0.8 0.1 80); /* Gold/Brass */
-  --chart-4: oklch(0.25 0.08 250); /* Darker Navy */
-  --chart-5: oklch(0.5 0.02 30); /* Charcoal */
+  --chart-1: #003349; /* Navy */
+  --chart-2: #C25B3C; /* Rust */
+  --chart-3: #9FB6AD; /* Sage */
+  --chart-4: #365B6D; /* Slate */
+  --chart-5: #E6E2D5; /* Beige */
 }
 
 .dark {
