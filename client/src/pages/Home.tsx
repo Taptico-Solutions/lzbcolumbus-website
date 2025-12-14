@@ -168,15 +168,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Placeholder images using unsplash since we don't have specific product shots yet */}
             {[
-              "/images/gallery-2.jpg",
-              "/images/gallery-3.jpg",
-              "/images/gallery-4.jpg",
-              "/images/gallery-5.jpg",
-              "/images/gallery-6.jpg",
-              "/images/gallery-7.jpg",
-              "/images/gallery-8.jpg",
-              "/images/gallery-9.jpg"
-            ].map((src, index) => (
+              { src: "https://content.la-z-boy.com/img/home/pano/desktop/architects.png", link: "https://www.la-z-boy.com/content/architects", alt: "Architects Collection" },
+              { src: "https://content.la-z-boy.com/img/home/clybourn.png", link: "https://www.la-z-boy.com/content/clybourn", alt: "Clybourn Collection" },
+              { src: "/images/gallery/TD26_Jay_U44706_C180964_065.jpg", link: "https://www.la-z-boy.com/p/recliners/jay-rocking-recliner/_/R-010706", alt: "Jay Recliner" },
+              { src: "https://content.la-z-boy.com/img/home/pano/desktop/holiday-sale-30.png", link: "https://www.la-z-boy.com/content/sale", alt: "Holiday Sale" },
+              { src: "/images/gallery/TD13a_Collins_610494_D180764_018.jpg", link: "https://www.la-z-boy.com/p/sofas/collins-sofa/_/R-610494", alt: "Collins Sofa" },
+              { src: "/images/gallery/TD8_Ava_010769_C196552_009.jpg", link: "https://www.la-z-boy.com/p/recliners/ava-high-leg-reclining-chair/_/R-028932", alt: "Ava Recliner" },
+              { src: "/images/gallery/TD23_Finley_10X747_D160632_001(1).jpg", link: "https://www.la-z-boy.com/p/recliners/finley-rocking-recliner/_/R-010747", alt: "Finley Recliner" },
+              { src: "/images/gallery/TD11c_Tahoe_MOD-632_E191765_090.jpg", link: "https://www.la-z-boy.com/p/sofas/tahoe-sofa/_/R-610468", alt: "Tahoe Sofa" }
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -185,12 +185,18 @@ export default function Home() {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="group overflow-hidden rounded-lg shadow-md aspect-[4/3] relative cursor-pointer"
               >
-                <img 
-                  src={src} 
-                  alt={`Gallery image ${index + 1}`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+                  <img 
+                    src={item.src} 
+                    alt={item.alt} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                    <span className="text-white opacity-0 group-hover:opacity-100 font-serif text-lg font-bold transition-opacity duration-300 bg-black/40 px-4 py-2 rounded">
+                      {item.alt}
+                    </span>
+                  </div>
+                </a>
               </motion.div>
             ))}
           </div>

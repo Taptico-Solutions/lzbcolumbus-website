@@ -40,9 +40,52 @@ export default function RoomPlanner() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Video Tutorials */}
       <section className="py-20 bg-background">
         <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl text-primary mb-4">See It In Action</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Watch our design experts demonstrate how to use the 3D Room Planner to create your perfect space.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="aspect-video rounded-xl overflow-hidden shadow-lg"
+            >
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/0csx9RMCUF8" 
+                title="How to Decorate a Room | La-Z-Boy 3D Room Planner" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="aspect-video rounded-xl overflow-hidden shadow-lg"
+            >
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/8YC8NIANtN4" 
+                title="How to Design a Mid-Century Modern Living Room" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </motion.div>
+          </div>
+
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl text-primary mb-4">How It Works</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
