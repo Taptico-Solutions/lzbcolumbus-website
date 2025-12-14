@@ -8,6 +8,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import ComfortClub from "./pages/ComfortClub";
 import Community from "./pages/Community";
+import Blog from "./pages/Blog";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/comfort-club" component={ComfortClub} />
         <Route path="/community" component={Community} />
+      <Route path="/blog" component={Blog} />
         <Route path="/404" component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

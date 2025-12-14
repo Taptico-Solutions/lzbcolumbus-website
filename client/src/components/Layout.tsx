@@ -12,6 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { href: "/", label: "Home" },
     { href: "/comfort-club", label: "Comfort Club" },
     { href: "/community", label: "Community" },
+    { href: "/blog", label: "Design Blog" },
   ];
 
   return (
@@ -127,6 +128,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li>
                   <Link href="/community">
                     <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Community Involvement</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog">
+                    <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Design Blog</span>
                   </Link>
                 </li>
               </ul>
