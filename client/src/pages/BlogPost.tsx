@@ -3,6 +3,8 @@ import { Calendar, User, ArrowLeft, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useRoute } from "wouter";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
 
 // Mock data for blog posts - in a real app this would come from an API or CMS
 const blogPosts = [
@@ -151,6 +153,7 @@ const blogPosts = [
 export default function BlogPost() {
   const [match, params] = useRoute("/blog/:slug");
   const post = blogPosts.find(p => p.slug === params?.slug);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
 
   if (!post) {
     return (
@@ -245,9 +248,56 @@ export default function BlogPost() {
                     </h4>
                   </CardContent>
                   <CardFooter className="p-4 pt-0">
-                    <Button variant="outline" className="w-full text-primary border-primary/20 hover:bg-primary hover:text-white">
-                      View Details
-                    </Button>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button 
+                          variant="outline" 
+                          className="w-full text-primary border-primary/20 hover:bg-primary hover:text-white"
+                          onClick={() => setSelectedProduct(product)}
+                        >
+                          Quick View
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[600px] bg-background border-border">
+                        <DialogHeader>
+                          <DialogTitle className="font-serif text-2xl text-primary">{product.name}</DialogTitle>
+                          <DialogDescription className="text-muted-foreground uppercase tracking-wider text-xs">
+                            {product.category}
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                          <div className="aspect-square overflow-hidden rounded-lg bg-muted/30">
+                            <img 
+                              src={product.image} 
+                              alt={product.name} 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="space-y-4">
+                            <p className="text-muted-foreground">
+                              Experience the perfect blend of style and comfort with the {product.name}. 
+                              Available in hundreds of fabrics and leathers to match your unique style.
+                            </p>
+                            <div className="space-y-2">
+                              <h4 className="font-medium text-primary">Key Features:</h4>
+                              <ul className="text-sm text-muted-foreground list-disc list-inside space-y-1">
+                                <li>Premium cushioning</li>
+                                <li>Customizable upholstery</li>
+                                <li>Handcrafted quality</li>
+                                <li>Lifetime warranty on frame</li>
+                              </ul>
+                            </div>
+                            <div className="pt-4">
+                              <Link href="/comfort-club">
+                                <Button className="w-full bg-primary text-white hover:bg-primary/90">
+                                  Schedule a Test Sit
+                                </Button>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   </CardFooter>
                 </Card>
               ))}
