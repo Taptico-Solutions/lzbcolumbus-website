@@ -241,13 +241,27 @@ export default function Home() {
             Sign up for our newsletter to receive exclusive offers, design tips, and updates on new arrivals.
           </p>
           <div className="max-w-md mx-auto">
-            <form className="flex flex-col sm:flex-row gap-4">
+            <form 
+              action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0" 
+              method="post" 
+              id="mc-embedded-subscribe-form" 
+              name="mc-embedded-subscribe-form" 
+              className="flex flex-col sm:flex-row gap-4 validate" 
+              target="_blank"
+            >
               <Input 
                 type="email" 
+                name="EMAIL" 
+                id="mce-EMAIL"
                 placeholder="Enter your email address" 
-                className="bg-white border-gray-300 h-12"
+                className="bg-white border-gray-300 h-12 required email"
+                required
               />
-              <Button className="bg-[#C25B3C] hover:bg-[#A04830] text-white h-12 px-8 font-serif text-lg">
+              {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+              <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+                <input type="text" name="b_125356b6e77a67ca13f0f1c06_677285eb78" tabIndex={-1} defaultValue="" />
+              </div>
+              <Button type="submit" name="subscribe" id="mc-embedded-subscribe" className="bg-[#C25B3C] hover:bg-[#A04830] text-white h-12 px-8 font-serif text-lg">
                 Subscribe
               </Button>
             </form>
