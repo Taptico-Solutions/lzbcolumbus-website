@@ -228,10 +228,10 @@ export default function Home() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              "/images/gallery-1.jpg",
-              "/images/gallery-2.jpg",
-              "/images/gallery-3.jpg",
-              "/images/gallery-4.jpg"
+              "/images/insta-1.jpg",
+              "/images/insta-2.jpg",
+              "/images/insta-3.jpg",
+              "/images/insta-4.jpg"
             ].map((src, index) => (
               <a 
                 key={index}
