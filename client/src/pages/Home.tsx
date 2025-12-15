@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Star, ArrowRight, Heart, ShieldCheck, Armchair } from "lucide-react";
 import { InstagramFeed } from "@/components/InstagramFeed";
 import { Link } from "wouter";
@@ -240,28 +241,73 @@ export default function Home() {
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
             Sign up for our newsletter to receive exclusive offers, design tips, and updates on new arrivals.
           </p>
-          <div className="max-w-md mx-auto">
+          <div className="max-w-2xl mx-auto">
             <form 
               action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0" 
               method="post" 
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
-              className="flex flex-col sm:flex-row gap-4 validate" 
+              className="flex flex-col gap-4 validate text-left" 
               target="_blank"
             >
-              <Input 
-                type="email" 
-                name="EMAIL" 
-                id="mce-EMAIL"
-                placeholder="Enter your email address" 
-                className="bg-white border-gray-300 h-12 required email"
-                required
-              />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="mce-FNAME" className="text-[#003349]">First Name</Label>
+                  <Input type="text" name="FNAME" id="mce-FNAME" className="bg-white border-gray-300" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="mce-LNAME" className="text-[#003349]">Last Name</Label>
+                  <Input type="text" name="LNAME" id="mce-LNAME" className="bg-white border-gray-300" />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="mce-EMAIL" className="text-[#003349]">Email Address <span className="text-red-500">*</span></Label>
+                <Input 
+                  type="email" 
+                  name="EMAIL" 
+                  id="mce-EMAIL" 
+                  className="bg-white border-gray-300 required email"
+                  required
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="mce-MMERGE7" className="text-[#003349]">City</Label>
+                  <Input type="text" name="MMERGE7" id="mce-MMERGE7" className="bg-white border-gray-300" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="mce-MMERGE9" className="text-[#003349]">Zip Code</Label>
+                  <Input type="text" name="MMERGE9" id="mce-MMERGE9" className="bg-white border-gray-300" />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="mce-MMERGE24" className="text-[#003349]">Who helped you with your sign up today?</Label>
+                <select 
+                  name="MMERGE24" 
+                  id="mce-MMERGE24" 
+                  className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  <option value=""></option>
+                  <option value="Marlon Rice">Marlon Rice</option>
+                  <option value="Tamika Davis">Tamika Davis</option>
+                  <option value="Casey Cooper">Casey Cooper</option>
+                  <option value="Jason Hall">Jason Hall</option>
+                  <option value="Bret Gladden">Bret Gladden</option>
+                  <option value="Aaulashua Smoot">Aaulashua Smoot</option>
+                  <option value="Kennth Llera">Kennth Llera</option>
+                  <option value="Susan Evans">Susan Evans</option>
+                </select>
+              </div>
+
               {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
               <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
                 <input type="text" name="b_125356b6e77a67ca13f0f1c06_677285eb78" tabIndex={-1} defaultValue="" />
               </div>
-              <Button type="submit" name="subscribe" id="mc-embedded-subscribe" className="bg-[#C25B3C] hover:bg-[#A04830] text-white h-12 px-8 font-serif text-lg">
+              
+              <Button type="submit" name="subscribe" id="mc-embedded-subscribe" className="bg-[#C25B3C] hover:bg-[#A04830] text-white h-12 px-8 font-serif text-lg w-full mt-4">
                 Subscribe
               </Button>
             </form>
