@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Gift, Sparkles, Zap, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -66,48 +67,73 @@ export default function ComfortClub() {
                   <p className="text-sm text-muted-foreground">It takes less than a minute to join!</p>
                 </CardHeader>
                 <CardContent className="p-6 md:p-8">
-                  <form className="space-y-4">
+                  <form 
+                    action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0" 
+                    method="post" 
+                    id="mc-embedded-subscribe-form" 
+                    name="mc-embedded-subscribe-form" 
+                    className="space-y-4 validate" 
+                    target="_blank"
+                  >
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="firstName">First Name</Label>
-                        <Input id="firstName" placeholder="Jane" required />
+                        <Label htmlFor="mce-FNAME">First Name</Label>
+                        <Input type="text" name="FNAME" id="mce-FNAME" placeholder="Jane" className="bg-white" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="lastName">Last Name</Label>
-                        <Input id="lastName" placeholder="Doe" required />
+                        <Label htmlFor="mce-LNAME">Last Name</Label>
+                        <Input type="text" name="LNAME" id="mce-LNAME" placeholder="Doe" className="bg-white" />
                       </div>
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number <span className="text-destructive">*</span></Label>
-                      <Input id="phone" type="tel" placeholder="(555) 123-4567" required />
+                      <Label htmlFor="mce-EMAIL">Email Address <span className="text-destructive">*</span></Label>
+                      <Input 
+                        type="email" 
+                        name="EMAIL" 
+                        id="mce-EMAIL" 
+                        placeholder="jane@example.com" 
+                        className="bg-white required email"
+                        required 
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="mce-MMERGE7">City</Label>
+                        <Input type="text" name="MMERGE7" id="mce-MMERGE7" className="bg-white" />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="mce-MMERGE9">Zip Code</Label>
+                        <Input type="text" name="MMERGE9" id="mce-MMERGE9" className="bg-white" />
+                      </div>
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email Address <span className="text-destructive">*</span></Label>
-                      <Input id="email" type="email" placeholder="jane@example.com" required />
+                      <Label htmlFor="mce-MMERGE24">Who helped you with your sign up today?</Label>
+                      <select 
+                        name="MMERGE24" 
+                        id="mce-MMERGE24" 
+                        className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      >
+                        <option value=""></option>
+                        <option value="Marlon Rice">Marlon Rice</option>
+                        <option value="Tamika Davis">Tamika Davis</option>
+                        <option value="Casey Cooper">Casey Cooper</option>
+                        <option value="Jason Hall">Jason Hall</option>
+                        <option value="Bret Gladden">Bret Gladden</option>
+                        <option value="Aaulashua Smoot">Aaulashua Smoot</option>
+                        <option value="Kennth Llera">Kennth Llera</option>
+                        <option value="Susan Evans">Susan Evans</option>
+                      </select>
                     </div>
                     
-                    <div className="space-y-2">
-                      <Label htmlFor="referrer">Who walked you through your signup?</Label>
-                      <Input id="referrer" placeholder="Enter name (optional)" />
+                    {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+                    <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+                      <input type="text" name="b_125356b6e77a67ca13f0f1c06_677285eb78" tabIndex={-1} defaultValue="" />
                     </div>
                     
-                    <div className="flex items-start space-x-3 pt-2">
-                      <Checkbox id="sms-consent" className="mt-1" />
-                      <Label htmlFor="sms-consent" className="text-xs text-muted-foreground font-normal leading-snug">
-                        I agree to receive recurring automated promotional and personalized marketing text messages from La-Z-Boy Columbus via SMS. Consent is not a condition of any purchase. Message and data rates may apply. Reply STOP to cancel.
-                      </Label>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <Checkbox id="email-consent" className="mt-1" />
-                      <Label htmlFor="email-consent" className="text-xs text-muted-foreground font-normal leading-snug">
-                        I want to subscribe to your mailing list.
-                      </Label>
-                    </div>
-                    
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-serif text-lg py-6 mt-4">
+                    <Button type="submit" name="subscribe" id="mc-embedded-subscribe" className="w-full bg-primary hover:bg-primary/90 text-white font-serif text-lg py-6 mt-4">
                       Join the Club
                     </Button>
                     
