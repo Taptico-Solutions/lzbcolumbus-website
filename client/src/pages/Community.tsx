@@ -100,9 +100,11 @@ export default function Community() {
                     </p>
                   </CardContent>
                   <CardFooter className="pt-0 pb-8">
-                    <Button variant="outline" className="group-hover:bg-primary group-hover:text-white transition-colors border-primary text-primary">
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <a href={org.link} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                      <Button variant="outline" className="w-full sm:w-auto group-hover:bg-primary group-hover:text-white transition-colors border-primary text-primary">
+                        Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </a>
                   </CardFooter>
                 </Card>
               </motion.div>
