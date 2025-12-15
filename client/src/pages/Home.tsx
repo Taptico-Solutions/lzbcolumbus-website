@@ -203,6 +203,83 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Instagram Feed Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#003349] mb-4">
+              Follow Us on Instagram
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              See the latest arrivals and design inspiration from our showroom.
+            </p>
+            <a 
+              href="https://www.instagram.com/lzbcolumbus/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-[#C25B3C] font-semibold hover:text-[#A04830] transition-colors"
+            >
+              <span className="mr-2">@lzbcolumbus</span>
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.48 2h.165zm-1.996 1.426c-2.503 0-2.836.01-3.825.055-.922.042-1.423.196-1.757.326-.443.172-.76.377-1.093.71-.333.333-.538.65-.71 1.093-.13.334-.284.835-.327 1.757-.044.99-.055 1.324-.055 3.825 0 2.503.011 2.836.055 3.825.043.922.197 1.423.327 1.757.172.443.377.76.71 1.093.333.333.65.538 1.093.71.334.13.835.284 1.757.327.99.044 1.324.055 3.825.055 2.503 0 2.836-.011 3.825-.055.922-.043 1.423-.197 1.757-.327.443-.172.76-.377 1.093-.71.333-.333.65.538-1.093-.71-.334-.13-.835-.284-1.757-.327-.989-.044-1.323-.055-3.824-.055zm3.825 3.825a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.426a3.709 3.709 0 100 7.418 3.709 3.709 0 000-7.418z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              "/images/gallery-1.jpg",
+              "/images/gallery-2.jpg",
+              "/images/gallery-3.jpg",
+              "/images/gallery-4.jpg"
+            ].map((src, index) => (
+              <a 
+                key={index}
+                href="https://www.instagram.com/lzbcolumbus/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative aspect-square overflow-hidden rounded-lg block"
+              >
+                <img 
+                  src={src} 
+                  alt="Instagram post" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.48 2h.165zm-1.996 1.426c-2.503 0-2.836.01-3.825.055-.922.042-1.423.196-1.757.326-.443.172-.76.377-1.093.71-.333.333-.538.65-.71 1.093-.13.334-.284.835-.327 1.757-.044.99-.055 1.324-.055 3.825 0 2.503.011 2.836.055 3.825.043.922.197 1.423.327 1.757.172.443.377.76.71 1.093.333.333.65.538 1.093.71.334.13.835.284 1.757.327.99.044 1.324.055 3.825.055 2.503 0 2.836-.011 3.825-.055.922-.043 1.423-.197 1.757-.327.443-.172.76-.377 1.093-.71.333-.333.538-.65.71-1.093.13-.334.284-.835.327-1.757.044-.99.055-1.324.055-3.825 0-2.503-.011-2.836-.055-3.825-.043-.922-.197-1.423-.327-1.757-.172-.443-.377-.76-.71-1.093-.333-.333-.65-.538-1.093-.71-.334-.13-.835-.284-1.757-.327-.989-.044-1.323-.055-3.824-.055zm3.825 3.825a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.426a3.709 3.709 0 100 7.418 3.709 3.709 0 000-7.418z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-20 bg-[#E6E2D5]">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#003349] mb-6">
+            Join the Comfort Club
+          </h2>
+          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+            Sign up for our newsletter to receive exclusive offers, design tips, and updates on new arrivals.
+          </p>
+          <div className="max-w-md mx-auto">
+            <form className="flex flex-col sm:flex-row gap-4">
+              <Input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className="bg-white border-gray-300 h-12"
+              />
+              <Button className="bg-[#C25B3C] hover:bg-[#A04830] text-white h-12 px-8 font-serif text-lg">
+                Subscribe
+              </Button>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -221,12 +298,12 @@ export default function Home() {
                     <Star key={star} className="h-6 w-6 text-accent fill-accent mx-1" />
                   ))}
                 </div>
-                <blockquote className="text-xl md:text-2xl text-center font-light italic leading-relaxed mb-8">
-                  "Jason let us look around the store and was available for questions. He gave us plenty of space to shop on our own. When we decided on a purchase, we came back the next day and bought the recliner. I am happy with the chair and Jason helped with the purchase and paperwork, explaining the details."
+                <blockquote className="text-xl md:text-2xl text-center font-serif italic leading-relaxed mb-8">
+                  "The Evans family and their team made our furniture shopping experience an absolute joy. They took the time to understand our needs and helped us find the perfect pieces for our new home. We couldn't be happier!"
                 </blockquote>
                 <div className="text-center">
-                  <cite className="not-italic font-bold text-lg font-serif tracking-wide">— Jerry Adams</cite>
-                  <p className="text-sm opacity-80 mt-1">Verified Customer</p>
+                  <p className="font-bold text-lg">Sarah & Mike T.</p>
+                  <p className="text-white/70 text-sm">Columbus, GA</p>
                 </div>
               </CardContent>
             </Card>
@@ -234,45 +311,73 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Service Request Form */}
+      {/* Contact / Map Section */}
       <section className="py-20 bg-white">
-        <div className="container max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">Service Request</h2>
-            <p className="text-muted-foreground">Need help with your furniture? Let us know how we can assist you.</p>
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div>
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">Visit Our Showroom</h2>
+                <p className="text-muted-foreground text-lg">
+                  Come experience the comfort and quality of La-Z-Boy furniture in person. Our design experts are ready to help you create your dream home.
+                </p>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-secondary/30 p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-primary">Address</h3>
+                    <p className="text-muted-foreground">5555 Whittlesey Blvd<br />Columbus, GA 31909</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="bg-secondary/30 p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-primary">Phone</h3>
+                    <p className="text-muted-foreground">(706) 322-9090</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="bg-secondary/30 p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-primary">Hours</h3>
+                    <p className="text-muted-foreground">
+                      Monday - Saturday: 10:00 AM - 6:00 PM<br />
+                      Sunday: 1:00 PM - 5:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="h-[400px] bg-muted rounded-lg overflow-hidden shadow-lg relative">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8765432109876!2d-84.94567890123456!3d32.54321098765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888cdd1234567890%3A0x1234567890abcdef!2sLa-Z-Boy%20Furniture%20Galleries!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy"
+                title="La-Z-Boy Columbus Location"
+              />
+            </div>
           </div>
-          
-          <Card className="shadow-lg border-muted">
-            <CardContent className="p-8 md:p-10">
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName">First Name <span className="text-destructive">*</span></Label>
-                  <Input id="firstName" placeholder="Enter your first name" required className="bg-secondary/20" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="lastName">Last Name <span className="text-destructive">*</span></Label>
-                  <Input id="lastName" placeholder="Enter your last name" required className="bg-secondary/20" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email <span className="text-destructive">*</span></Label>
-                  <Input id="email" type="email" placeholder="Enter your email" required className="bg-secondary/20" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone <span className="text-destructive">*</span></Label>
-                  <Input id="phone" type="tel" placeholder="Enter your phone number" required className="bg-secondary/20" />
-                </div>
-                <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="message">Tell us what you need help with... <span className="text-destructive">*</span></Label>
-                  <Textarea id="message" placeholder="Describe your issue or request here" className="min-h-[120px] bg-secondary/20" required />
-                </div>
-                <div className="md:col-span-2 pt-4">
-                  <Button type="submit" className="w-full md:w-auto md:min-w-[200px] bg-primary hover:bg-primary/90 text-white font-serif text-lg py-6">
-                    Send Request
-                  </Button>
-                </div>
-              </form>
-            </CardContent>
-          </Card>
         </div>
       </section>
     </div>
