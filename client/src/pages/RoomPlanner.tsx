@@ -55,10 +55,10 @@ export default function RoomPlanner() {
 
           <div className="max-w-4xl mx-auto mb-20 rounded-xl overflow-hidden shadow-2xl">
             <BeforeAfterSlider 
-              beforeImage="/images/room-render.jpg" 
-              afterImage="/images/room-reality.jpg" 
-              beforeLabel="3D Render"
-              afterLabel="Real Room"
+              beforeImage="/images/project-upload/IMG_6453.jpg" 
+              afterImage="/images/project-upload/IMG_7228.jpg" 
+              beforeLabel="Before"
+              afterLabel="After"
             />
           </div>
 
