@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { ArrowRight, Layout, Monitor, Share2, MousePointerClick } from "lucide-react";
 import { Link } from "wouter";
 
@@ -42,9 +43,25 @@ export default function RoomPlanner() {
         </div>
       </section>
 
-      {/* Video Tutorials */}
+      {/* Before & After Section */}
       <section className="py-20 bg-background">
         <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl text-primary mb-4">From Render to Reality</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              See how accurate our 3D Room Planner is. Drag the slider to compare the digital design with the final real-life result.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-20 rounded-xl overflow-hidden shadow-2xl">
+            <BeforeAfterSlider 
+              beforeImage="/images/room-render.jpg" 
+              afterImage="/images/room-reality.jpg" 
+              beforeLabel="3D Render"
+              afterLabel="Real Room"
+            />
+          </div>
+
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl text-primary mb-4">See It In Action</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
