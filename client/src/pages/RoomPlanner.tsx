@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { TransformationGallery } from "@/components/TransformationGallery";
 import { ArrowRight, Layout, Monitor, Share2, MousePointerClick } from "lucide-react";
 import { Link } from "wouter";
 
@@ -53,12 +54,40 @@ export default function RoomPlanner() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto mb-20 rounded-xl overflow-hidden shadow-2xl">
+          <div className="max-w-4xl mx-auto mb-12 rounded-xl overflow-hidden shadow-2xl">
+            <div className="bg-white p-4 border-b">
+              <h3 className="font-serif text-xl text-primary">Project 1: The Collins Living Room</h3>
+            </div>
             <BeforeAfterSlider 
               beforeImage="/images/project-upload/IMG_6453.jpg" 
               afterImage="/images/project-upload/IMG_7228.jpg" 
               beforeLabel="Before"
               afterLabel="After"
+            />
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-20 rounded-xl overflow-hidden shadow-2xl">
+            <div className="bg-white p-4 border-b">
+              <h3 className="font-serif text-xl text-primary">Project 2: Cozy Family Retreat</h3>
+            </div>
+            <BeforeAfterSlider 
+              beforeImage="/images/project-upload-2/IMG_4318_empty.png" 
+              afterImage="/images/project-upload-2/IMG_4318.jpg" 
+              beforeLabel="Before (AI Generated Empty Room)"
+              afterLabel="After"
+            />
+          </div>
+
+          <div className="mb-20">
+            <TransformationGallery 
+              images={[
+                { src: "/images/project-upload-2/IMG_4319.jpg", alt: "Living Room Angle 1", category: "Living Room" },
+                { src: "/images/project-upload-2/IMG_4316.jpg", alt: "Detail Shot", category: "Details" },
+                { src: "/images/project-upload-2/IMG_3197.jpg", alt: "Wide View", category: "Overview" },
+                { src: "/images/project-upload-2/IMG_3198.jpg", alt: "Seating Area", category: "Living Room" },
+                { src: "/images/project-upload/IMG_7226.jpg", alt: "Rug Detail", category: "Textures" },
+                { src: "/images/project-upload/IMG_7222.jpg", alt: "Empty Space", category: "Before" },
+              ]}
             />
           </div>
 
