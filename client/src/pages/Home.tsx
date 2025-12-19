@@ -323,25 +323,65 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-16">What Our Customers Say</h2>
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
+            <div className="flex items-center justify-center gap-2 text-accent">
+              <div className="flex">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="h-5 w-5 fill-current" />
+                ))}
+              </div>
+              <span className="text-white font-medium">4.8 Stars on Google (1,000+ Reviews)</span>
+            </div>
+          </div>
           
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-white/10 border-none text-white backdrop-blur-sm">
-              <CardContent className="p-8 md:p-12">
-                <div className="flex justify-center mb-6">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="h-6 w-6 text-accent fill-accent mx-1" />
-                  ))}
-                </div>
-                <blockquote className="text-xl md:text-2xl text-center font-serif italic leading-relaxed mb-8">
-                  "The Evans family and their team made our furniture shopping experience an absolute joy. They took the time to understand our needs and helped us find the perfect pieces for our new home. We couldn't be happier!"
-                </blockquote>
-                <div className="text-center">
-                  <p className="font-bold text-lg">Sarah & Mike T.</p>
-                  <p className="text-white/70 text-sm">Columbus, GA</p>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+            {[
+              {
+                text: "I walked into La-Z-Boy of Columbus today for the second time and was genuinely surprised when Jason recognized me right away. In a world where customer service seems to be fading fast, this was a refreshing reminder of what it should look like.",
+                author: "Eric Brew",
+                role: "Local Guide"
+              },
+              {
+                text: "My wife and I went shopping for 2 recliners... The salesperson that waited on us was Jason Hall - who was WONDERFUL! We sat in a couple of recliners before he approached us, and we conversed about our needs.",
+                author: "Warren Barsaleau",
+                role: "Verified Customer"
+              },
+              {
+                text: "I just wanted to take a moment to sincerely thank the owner, Bryan Evans for stepping in and doing the right thing after my recent experience as a customer. Your professionalism, integrity, and genuine care for your customers truly stood out.",
+                author: "Amanda Allred",
+                role: "Verified Customer"
+              }
+            ].map((review, index) => (
+              <Card key={index} className="bg-white/10 border-none text-white backdrop-blur-sm h-full">
+                <CardContent className="p-8 flex flex-col h-full">
+                  <div className="flex mb-4">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star key={star} className="h-4 w-4 text-accent fill-accent mr-1" />
+                    ))}
+                  </div>
+                  <blockquote className="text-lg font-serif italic leading-relaxed mb-6 flex-grow">
+                    "{review.text}"
+                  </blockquote>
+                  <div className="mt-auto">
+                    <p className="font-bold text-lg">{review.author}</p>
+                    <p className="text-white/70 text-sm">{review.role}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a 
+              href="https://www.google.com/maps/place/La-Z-Boy+Columbus/@32.545155,-84.9546556,17z/data=!4m8!3m7!1s0x888ccb4a37b8fd43:0x23498fe3dd17bfdc!8m2!3d32.5451505!4d-84.9520753!9m1!1b1!16s%2Fg%2F1tdd1g9j?entry=ttu" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-serif text-lg px-8 py-6 h-auto">
+                Read All Google Reviews
+              </Button>
+            </a>
           </div>
         </div>
       </section>
