@@ -37,12 +37,12 @@
         
         /* 3-Column Grid */
         .grid-section { padding: 40px 20px; background-color: #ffffff; }
-        .grid-container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
-        .grid-item { width: 100%; margin-bottom: 30px; text-align: center; }
+        .grid-container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: stretch; }
+        .grid-item { width: 100%; margin-bottom: 30px; text-align: center; display: flex; flex-direction: column; align-items: center; height: 100%; }
         .grid-image { width: 100%; height: 200px; object-fit: cover; margin-bottom: 15px; }
         .grid-title { font-family: 'Georgia', serif; font-size: 16px; color: #003349; margin-bottom: 10px; }
-        .grid-text { font-size: 12px; color: #666666; line-height: 1.6; margin-bottom: 15px; }
-        .btn-small { display: inline-block; background-color: #a0b8ae; color: #ffffff; padding: 6px 15px; text-decoration: none; text-transform: uppercase; font-size: 9px; letter-spacing: 1px; }
+        .grid-text { font-size: 13px; color: #666666; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; min-height: 60px; }
+        .btn-small { display: inline-block; background-color: #a0b8ae; color: #ffffff; padding: 8px 20px; text-decoration: none; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; min-width: 100px; margin-top: auto; }
         
         /* Quote/Profile Section */
         .profile-section { padding: 40px 20px; background-color: #f9f9f9; text-align: center; }
@@ -87,8 +87,8 @@
             <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/pfbItJqaBCYTjugM.jpg" alt="The Evans Family - Happy New Year 2026" class="hero-image">
             <div class="hero-content">
                 <h1 class="hero-title">Happy New Year!</h1>
-                <p class="hero-text">As we step into 2025, we want to thank you for being part of our La-Z-Boy Columbus family. We look forward to helping you create more comfortable memories this year.</p>
-                <a href="https://lzbcolumbus.com/new-year-2026" class="btn-hero">Read Our Letter</a>
+                <p class="hero-text">As we step into 2026, we want to thank you for being part of our La-Z-Boy Columbus family. We look forward to helping you create more comfortable memories this year.</p>
+                <a href="/new-year-2026" class="btn-hero">Read Our Letter</a>
             </div>
         </div>
         
@@ -97,7 +97,7 @@
             <div class="dark-text-col">
                 <h2 class="dark-title">Post-Holiday Reset</h2>
                 <p class="dark-text">The tree is down, the glitter is swept away. Instead of seeing your space as "empty," view it as a fresh canvas. The weeks following the holidays are the perfect time to breathe new life into your home.</p>
-                <a href="https://lzbcolumbus.com/new-year-2026" class="btn-light">Read Tips</a>
+                <a href="/new-year-2026" class="btn-light">Read Tips</a>
             </div>
             <div class="dark-image-col">
                 <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/JdFoHnAxUFBTRSQH.jpg" alt="Living Room" style="width: 100%; height: 100%; object-fit: cover;">
@@ -112,23 +112,25 @@
                     <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/WMcYiuwmONGqSsiR.jpg" alt="Design Detail" class="grid-image">
                     <h3 class="grid-title">Design for Life</h3>
                     <p class="grid-text">Stop saving the "good room" for guests. Reclaim every square foot for your daily enjoyment.</p>
-                    <a href="https://lzbcolumbus.com/new-year-2026" class="btn-small">Read More</a>
+                    <a href="/new-year-2026" class="btn-small">Read More</a>
                 </div>
                 
                 <!-- Col 2: Resolution 2 -->
                 <div class="grid-item">
                     <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/otoQjRNJUOSfmEgS.jpg" alt="Texture Detail" class="grid-image">
                     <h3 class="grid-title">Signature Style</h3>
-                    <p class="grid-text">Commit to finding <em>your</em> look, not just what's trending. Create a home that reflects you.</p>
-                    <a href="https://lzbcolumbus.com/new-year-2026" class="btn-small">Read More</a>
+                    <p class="grid-text">Commit to finding your look, not just what's trending. Create a home that reflects you.</p>
+                    <a href="/new-year-2026" class="btn-small">Read More</a>
                 </div>
                 
                 <!-- Col 3: Giveaway -->
                 <div class="grid-item">
-                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/SvdMFOVXiykTZamW.jpg" alt="Pillow Giveaway" class="grid-image">
+                    <div style="width: 100%; height: 200px; background: #f9f9f9; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/lczwXSrHzZCJEJFN.png" alt="Comfort Club" style="max-width: 80%; max-height: 80%; object-fit: contain;">
+                    </div>
                     <h3 class="grid-title">Pillow Giveaway</h3>
                     <p class="grid-text">Join the Comfort Club for a chance to win a premium La-Z-Boy pillow!</p>
-                    <a href="https://lzbcolumbus.com/comfort-club" class="btn-small" style="background-color: #b04f34;">Enter Now</a>
+                    <a href="/new-year-2026" class="btn-small" >Enter Now</a>
                 </div>
             </div>
         </div>

@@ -32,9 +32,11 @@ export default function RoomPlanner() {
               Design your space with our 3D Room Planner before you buy.
             </p>
             <div className="pt-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white border-none h-14 px-8 text-lg">
-                Start Designing Now <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <a href="https://www.la-z-boy.com/content/Room-Planner-3D" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-white border-none h-14 px-8 text-lg">
+                  Start Designing Now <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -181,9 +183,11 @@ export default function RoomPlanner() {
               </ul>
 
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary text-white hover:bg-primary/90">
-                  Launch Room Planner
-                </Button>
+                <a href="https://www.la-z-boy.com/content/Room-Planner-3D" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-primary text-white hover:bg-primary/90">
+                    Launch Room Planner
+                  </Button>
+                </a>
                 <Link href="/comfort-club">
                   <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5">
                     Get Expert Help
