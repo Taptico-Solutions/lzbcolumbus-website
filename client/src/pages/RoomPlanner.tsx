@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Layout, Monitor, Share2, MousePointerClick } from "lucide-react";
 import { Link } from "wouter";
 
@@ -32,11 +32,11 @@ export default function RoomPlanner() {
               Design your space with our 3D Room Planner before you buy.
             </p>
             <div className="pt-4">
-              <a href="https://www.la-z-boy.com/content/Room-Planner-3D" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-white border-none h-14 px-8 text-lg">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-white border-none h-14 px-8 text-lg">
+                <a href="https://www.la-z-boy.com/content/Room-Planner-3D" target="_blank" rel="noopener noreferrer">
                   Start Designing Now <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </a>
+                </a>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -183,11 +183,11 @@ export default function RoomPlanner() {
               </ul>
 
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
-                <a href="https://www.la-z-boy.com/content/Room-Planner-3D" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-primary text-white hover:bg-primary/90">
+                <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90">
+                  <a href="https://www.la-z-boy.com/content/Room-Planner-3D" target="_blank" rel="noopener noreferrer">
                     Launch Room Planner
-                  </Button>
-                </a>
+                  </a>
+                </Button>
                 <Link href="/comfort-club">
                   <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5">
                     Get Expert Help
@@ -200,17 +200,69 @@ export default function RoomPlanner() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white text-center">
-        <div className="container max-w-4xl">
-          <h2 className="font-serif text-4xl md:text-5xl mb-6">Need a Second Opinion?</h2>
-          <p className="text-xl text-white/80 mb-10 leading-relaxed">
-            Our certified design experts can review your room plan and offer personalized suggestions to elevate your space—completely free.
-          </p>
-          <Link href="/comfort-club">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 h-14 px-10 text-lg font-medium">
-              Book a Free Design Consultation
-            </Button>
-          </Link>
+      <section className="py-20 bg-primary text-white">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
+              <h2 className="font-serif text-4xl md:text-5xl mb-6">Need a Second Opinion?</h2>
+              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                Our certified design experts can review your room plan and offer personalized suggestions to elevate your space—completely free.
+              </p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  "Expert review of your 3D room plan",
+                  "Personalized furniture recommendations",
+                  "Fabric and color coordination advice",
+                  "Tips for maximizing space and flow"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-white/90 font-medium">
+                    <div className="h-2 w-2 rounded-full bg-accent" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <Card className="border-none shadow-xl bg-white text-foreground">
+              <CardHeader className="pb-2 text-center">
+                <CardTitle className="font-serif text-2xl text-primary">Book a Free Consultation</CardTitle>
+                <p className="text-sm text-muted-foreground">Fill out the form below to request an appointment.</p>
+              </CardHeader>
+              <CardContent className="p-6 md:p-8">
+                <form className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="firstName" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">First Name</label>
+                      <input type="text" id="firstName" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Jane" />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="lastName" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Last Name</label>
+                      <input type="text" id="lastName" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Doe" />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email Address <span className="text-destructive">*</span></label>
+                    <input type="email" id="email" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="jane@example.com" required />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Phone Number</label>
+                    <input type="tel" id="phone" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="(555) 123-4567" />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">How can we help?</label>
+                    <textarea id="message" className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="I'm looking to redesign my living room..."></textarea>
+                  </div>
+                  
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-serif text-lg py-6 mt-4">
+                    Request Appointment
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
     </div>
