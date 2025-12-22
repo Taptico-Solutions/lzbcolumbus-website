@@ -83,8 +83,7 @@ export default function RoomPlanner() {
               images={[
                 { src: "/images/project-upload-2/IMG_4319.jpg", alt: "Living Room Angle 1", category: "Living Room" },
                 { src: "/images/project-upload-2/IMG_4316.jpg", alt: "Detail Shot", category: "Details" },
-                { src: "/images/project-upload-2/IMG_3197.jpg", alt: "Wide View", category: "Overview" },
-                { src: "/images/project-upload-2/IMG_3198.jpg", alt: "Seating Area", category: "Living Room" },
+                
                 { src: "/images/project-upload/IMG_7226.jpg", alt: "Rug Detail", category: "Textures" },
                 
               ]}
