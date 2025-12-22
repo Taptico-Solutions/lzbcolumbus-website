@@ -116,15 +116,15 @@ export default function ComfortClub() {
                         id="mce-MMERGE24" 
                         className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                       >
-                        <option value=""></option>
-                        <option value="Marlon Rice">Marlon Rice</option>
-                        <option value="Tamika Davis">Tamika Davis</option>
-                        <option value="Casey Cooper">Casey Cooper</option>
+                        <option value="">Select a team member...</option>
                         <option value="Jason Hall">Jason Hall</option>
-                        <option value="Bret Gladden">Bret Gladden</option>
-                        <option value="Aaulashua Smoot">Aaulashua Smoot</option>
-                        <option value="Kennth Llera">Kennth Llera</option>
-                        <option value="Susan Evans">Susan Evans</option>
+                        <option value="Kenneth Llera">Kenneth Llera</option>
+                        <option value="Aulashua">Aulashua</option>
+                        <option value="Casey">Casey</option>
+                        <option value="Jarred">Jarred</option>
+                        <option value="Bryan Evans">Bryan Evans (Owner)</option>
+                        <option value="Marlon Rice">Marlon Rice</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
                     

@@ -298,6 +298,20 @@ export default function RoomPlanner() {
                   </div>
 
                   <div className="space-y-2">
+                    <label htmlFor="teamMember" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Mention a Team Member (Optional)</label>
+                    <select id="teamMember" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                      <option value="">Select a team member...</option>
+                      <option value="Jason Hall">Jason Hall</option>
+                      <option value="Kenneth Llera">Kenneth Llera</option>
+                      <option value="Aulashua">Aulashua</option>
+                      <option value="Casey">Casey</option>
+                      <option value="Jarred">Jarred</option>
+                      <option value="Bryan Evans">Bryan Evans (Owner)</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">How can we help?</label>
                     <textarea id="message" className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="I'm looking to redesign my living room..."></textarea>
                   </div>
