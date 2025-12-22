@@ -12,6 +12,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import NewYear2026 from "@/pages/NewYear2026";
 import RoomPlanner from "./pages/RoomPlanner";
+import ServiceRequest from "./pages/ServiceRequest";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
         <Route path="/blog/:id" component={BlogPost} />
       <Route path="/new-year-2026" component={NewYear2026} />
         <Route path="/room-planner" component={RoomPlanner} />
+        <Route path="/service-request" component={ServiceRequest} />
         <Route path="/404" component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
