@@ -29,7 +29,7 @@ export default function Blog() {
       excerpt: "Finding the right recliner is about more than just comfort. Learn how to select the perfect style, size, and fabric for your living space.",
       author: "Sarah Evans",
       date: "October 15, 2023",
-      image: "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&q=80&w=800",
+      image: "/images/gallery/beige-recliner-setup.png",
       category: "Furniture Guide"
     },
     {
@@ -39,7 +39,7 @@ export default function Blog() {
       excerpt: "Discover the key elements of the modern farmhouse aesthetic, from neutral color palettes to rustic textures and cozy accents.",
       author: "Design Team",
       date: "September 28, 2023",
-      image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&q=80&w=800",
+      image: "/images/gallery/christmas-living-room.png",
       category: "Interior Design"
     },
     {
@@ -49,7 +49,7 @@ export default function Blog() {
       excerpt: "Think you don't have room for a sectional? Think again. Here are creative ways to arrange sectionals in smaller living rooms.",
       author: "Mike Johnson",
       date: "September 10, 2023",
-      image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800",
+      image: "/images/gallery/blue-grey-living-room-2.png",
       category: "Space Planning"
     },
     {
@@ -59,7 +59,7 @@ export default function Blog() {
       excerpt: "Life happens. Learn why performance fabrics are a game-changer for families with kids and pets, offering durability without sacrificing style.",
       author: "Sarah Evans",
       date: "August 22, 2023",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800",
+      image: "/images/gallery/blue-grey-living-room-1.png",
       category: "Materials"
     }
   ];

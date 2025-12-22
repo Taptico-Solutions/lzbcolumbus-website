@@ -194,7 +194,7 @@ export default function RoomPlanner() {
               className="relative rounded-2xl overflow-hidden shadow-xl"
             >
               <img 
-                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=1000" 
+                src="/images/gallery/blue-grey-living-room-1.png" 
                 alt="Room Planner Interface" 
                 className="w-full h-full object-cover"
               />
