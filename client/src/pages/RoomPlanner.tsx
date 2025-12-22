@@ -307,6 +307,7 @@ export default function RoomPlanner() {
                       <option value="Casey">Casey</option>
                       <option value="Jarred">Jarred</option>
                       <option value="Bryan Evans">Bryan Evans (Owner)</option>
+                      <option value="Marlon Rice">Marlon Rice</option>
                       <option value="Other">Other</option>
                     </select>
                   </div>
