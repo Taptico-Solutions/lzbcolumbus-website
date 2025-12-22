@@ -59,10 +59,10 @@ export default function RoomPlanner() {
               <h3 className="font-serif text-xl text-primary">Project 1: The Dorian Living Room</h3>
             </div>
             <BeforeAfterSlider 
-              beforeImage="/images/project-upload/IMG_6453.jpg" 
+              beforeImage="/images/project-upload/IMG_7228_empty.png" 
               afterImage="/images/project-upload/IMG_7228.jpg" 
-              beforeLabel="Before"
-              afterLabel="After"
+              beforeLabel="Before (Empty Room)"
+              afterLabel="After (La-Z-Boy Design)"
             />
           </div>
 
