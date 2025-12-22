@@ -194,8 +194,8 @@ export default function RoomPlanner() {
               className="relative rounded-2xl overflow-hidden shadow-xl"
             >
               <img 
-                src="/images/gallery/blue-grey-living-room-1.png" 
-                alt="Room Planner Interface" 
+                src="/images/hero/room-planner-family.jpg" 
+                alt="Family enjoying their La-Z-Boy living room" 
                 className="w-full h-full object-cover"
               />
             </motion.div>
