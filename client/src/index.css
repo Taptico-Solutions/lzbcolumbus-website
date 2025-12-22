@@ -205,3 +205,21 @@
     }
   }
 }
+@layer utilities {
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+  
+  .pause-scroll {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

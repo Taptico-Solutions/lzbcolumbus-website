@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Star, ArrowRight, Heart, ShieldCheck, Armchair } from "lucide-react";
 import { InstagramFeed } from "@/components/InstagramFeed";
+import { GoogleReviewFeed } from "@/components/GoogleReviewFeed";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 
@@ -335,41 +336,8 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
-            {[
-              {
-                text: "I walked into La-Z-Boy of Columbus today for the second time and was genuinely surprised when Jason recognized me right away. In a world where customer service seems to be fading fast, this was a refreshing reminder of what it should look like.",
-                author: "Eric Brew",
-                role: "Local Guide"
-              },
-              {
-                text: "My wife and I went shopping for 2 recliners... The salesperson that waited on us was Jason Hall - who was WONDERFUL! We sat in a couple of recliners before he approached us, and we conversed about our needs.",
-                author: "Warren Barsaleau",
-                role: "Verified Customer"
-              },
-              {
-                text: "I just wanted to take a moment to sincerely thank the owner, Bryan Evans for stepping in and doing the right thing after my recent experience as a customer. Your professionalism, integrity, and genuine care for your customers truly stood out.",
-                author: "Amanda Allred",
-                role: "Verified Customer"
-              }
-            ].map((review, index) => (
-              <Card key={index} className="bg-white/10 border-none text-white backdrop-blur-sm h-full">
-                <CardContent className="p-8 flex flex-col h-full">
-                  <div className="flex mb-4">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="h-4 w-4 text-accent fill-accent mr-1" />
-                    ))}
-                  </div>
-                  <blockquote className="text-lg font-serif italic leading-relaxed mb-6 flex-grow">
-                    "{review.text}"
-                  </blockquote>
-                  <div className="mt-auto">
-                    <p className="font-bold text-lg">{review.author}</p>
-                    <p className="text-white/70 text-sm">{review.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="mb-12">
+            <GoogleReviewFeed />
           </div>
 
           <div className="text-center">
