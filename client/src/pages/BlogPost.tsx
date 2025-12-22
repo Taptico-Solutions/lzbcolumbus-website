@@ -140,12 +140,7 @@ const blogPosts = [
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
         category: "Sofas"
       },
-      {
-        id: "p8",
-        name: "Jay Recliner",
-        image: "/images/TD26_Jay_U44706_C180964_065.jpg",
-        category: "Recliners"
-      }
+
     ]
   }
 ];

@@ -173,9 +173,9 @@ export default function Home() {
             {[
               { src: "/images/TD13a_Collins_610494_D180764_018.jpg", link: "https://www.la-z-boy.com/p/sofas/collins-sofa/_/R-610494", alt: "Collins Sofa" },
               { src: "/images/TD8_Ava_010769_C196552_009.jpg", link: "https://www.la-z-boy.com/p/recliners/ava-high-leg-reclining-chair/_/R-028932", alt: "Ava Recliner" },
-              { src: "/images/TD26_Jay_U44706_C180964_065.jpg", link: "https://www.la-z-boy.com/p/recliners/jay-rocking-recliner/_/R-010706", alt: "Jay Recliner" },
+
               { src: "/images/TD23_Finley_10X747_D160632_001(1).jpg", link: "https://www.la-z-boy.com/p/recliners/finley-rocking-recliner/_/R-010747", alt: "Finley Recliner" },
-              { src: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg", link: "https://www.la-z-boy.com/p/chairs/armitage-high-leg-reclining-chair/_/R-028812", alt: "Armitage Chair" },
+              { src: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg", link: "https://www.la-z-boy.com/p/chairs/armitage-high-leg-reclining-chair/_/R-028812", alt: "Armitage Loveseat" },
               { src: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg", link: "https://www.la-z-boy.com/p/sofas/tahoe-sofa/_/R-610468", alt: "Tahoe Sofa" },
               { src: "/images/TD13e_Neo_10X-762_D201081_068.jpg", link: "https://www.la-z-boy.com/p/recliners/neo-rocking-recliner/_/R-010762", alt: "Neo Recliner" },
               { src: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg", link: "https://www.la-z-boy.com/p/sofas/trouper-reclining-sofa/_/R-440724", alt: "Trouper Sofa" }
