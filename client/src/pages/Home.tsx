@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Star, ArrowRight, Heart, ShieldCheck, Armchair } from "lucide-react";
+import { Star, ArrowRight, Heart, ShieldCheck, Armchair, PenSquare } from "lucide-react";
 import { InstagramFeed } from "@/components/InstagramFeed";
 import { GoogleReviewFeed } from "@/components/GoogleReviewFeed";
 import { Link } from "wouter";
@@ -340,14 +340,26 @@ export default function Home() {
             <GoogleReviewFeed />
           </div>
 
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
               href="https://www.google.com/maps/place/La-Z-Boy+Columbus/@32.545155,-84.9546556,17z/data=!4m8!3m7!1s0x888ccb4a37b8fd43:0x23498fe3dd17bfdc!8m2!3d32.5451505!4d-84.9520753!9m1!1b1!16s%2Fg%2F1tdd1g9j?entry=ttu" 
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-serif text-lg px-8 py-6 h-auto">
-                Read All Google Reviews
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-serif text-lg px-8 py-6 h-auto w-full sm:w-auto">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" className="w-5 h-5 mr-2" />
+                Read All Reviews
+              </Button>
+            </a>
+            
+            <a 
+              href="https://search.google.com/local/writereview?placeid=ChIJQ_24N0rLiIgR3L8X3eOISSME" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-serif text-lg px-8 py-6 h-auto w-full sm:w-auto">
+                <PenSquare className="w-5 h-5 mr-2" />
+                Write a Review
               </Button>
             </a>
           </div>
