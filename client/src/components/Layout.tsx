@@ -141,6 +141,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Service Request</span>
                   </Link>
                 </li>
+                <li>
+                  <Link href="/general-questions">
+                    <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">General Questions</span>
+                  </Link>
+                </li>
               </ul>
             </div>
 
