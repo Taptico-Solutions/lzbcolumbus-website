@@ -64,7 +64,7 @@ export default function Home() {
             >
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-accent rounded-lg z-0" />
               <img 
-                src="/images/family-photo-real.jpg" 
+                src="/images/evans_family_cropped.jpg" 
                 alt="The Evans Family - Owners of La-Z-Boy Columbus" 
                 className="relative z-10 rounded-lg shadow-lg w-full object-cover aspect-[4/3]"
               />
