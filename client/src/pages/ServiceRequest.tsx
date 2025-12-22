@@ -5,6 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { CheckCircle2 } from "lucide-react";
 
 export default function ServiceRequest() {
   const [formData, setFormData] = useState({
@@ -14,6 +22,7 @@ export default function ServiceRequest() {
     phone: "",
     message: ""
   });
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -35,6 +44,16 @@ ${formData.message}
     `;
     
     window.location.href = `mailto:Service@lazboy-columbus.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Show confirmation and clear form
+    setShowConfirmation(true);
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
   };
 
   return (
@@ -124,6 +143,28 @@ ${formData.message}
           </div>
         </form>
       </motion.div>
+
+      <Dialog open={showConfirmation} onOpenChange={setShowConfirmation}>
+        <DialogContent className="sm:max-w-md bg-[#EAE0D5] border-none text-[#003B4F]">
+          <DialogHeader className="flex flex-col items-center text-center space-y-4">
+            <div className="w-16 h-16 rounded-full bg-[#B5C9C3] flex items-center justify-center mb-2">
+              <CheckCircle2 className="w-10 h-10 text-[#003B4F]" />
+            </div>
+            <DialogTitle className="text-2xl font-serif text-[#003B4F]">Email Draft Created!</DialogTitle>
+            <DialogDescription className="text-[#003B4F]/80 text-lg">
+              Your email client should have opened with your message ready to send. Please click "Send" in your email app to complete your request.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-center mt-6">
+            <Button 
+              onClick={() => setShowConfirmation(false)}
+              className="bg-[#003B4F] text-[#EAE0D5] hover:bg-[#003B4F]/90 px-8"
+            >
+              Got it
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
