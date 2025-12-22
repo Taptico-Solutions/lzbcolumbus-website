@@ -13,7 +13,7 @@ export default function RoomPlanner() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/project-upload/IMG_3969(1).jpeg" 
+            src="/images/room-planner-hero-family.jpg" 
             alt="Virtual Room Planner" 
             className="w-full h-full object-cover"
           />

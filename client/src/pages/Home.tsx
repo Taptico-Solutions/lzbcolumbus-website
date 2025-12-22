@@ -171,6 +171,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Placeholder images using unsplash since we don't have specific product shots yet */}
             {[
+              { src: "/images/gallery-grey-recliner.jpg", link: "https://www.la-z-boy.com/p/high-leg-recliners/haven-high-leg-reclining-chair/_/R-028450", alt: "Haven High Leg Reclining Chair" },
+              { src: "/images/gallery-man-dog.jpg", link: "https://www.la-z-boy.com/p/rocking-recliners/greyson-power-rocking-recliner/_/R-10P530", alt: "Greyson Power Rocking Recliner" },
               { src: "/images/TD13a_Collins_610494_D180764_018.jpg", link: "https://www.la-z-boy.com/p/stationary-sofas/collins-sofa/_/R-610494", alt: "Collins Sofa" },
               { src: "/images/TD8_Ava_010769_C196552_009.jpg", link: "https://www.la-z-boy.com/p/rocking-recliners/ava-rocking-recliner/_/R-010769", alt: "Ava Recliner" },
 
