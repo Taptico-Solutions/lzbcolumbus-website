@@ -56,7 +56,7 @@ export default function RoomPlanner() {
 
           <div className="max-w-4xl mx-auto mb-12 rounded-xl overflow-hidden shadow-2xl">
             <div className="bg-white p-4 border-b">
-              <h3 className="font-serif text-xl text-primary">Project 1: The Collins Living Room</h3>
+              <h3 className="font-serif text-xl text-primary">Project 1: The Dorian Living Room</h3>
             </div>
             <BeforeAfterSlider 
               beforeImage="/images/project-upload/IMG_6453.jpg" 
