@@ -13,7 +13,7 @@ export default function RoomPlanner() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1600" 
+            src="/images/project-upload/IMG_3969(1).jpeg" 
             alt="Virtual Room Planner" 
             className="w-full h-full object-cover"
           />
@@ -86,7 +86,7 @@ export default function RoomPlanner() {
                 { src: "/images/project-upload-2/IMG_3197.jpg", alt: "Wide View", category: "Overview" },
                 { src: "/images/project-upload-2/IMG_3198.jpg", alt: "Seating Area", category: "Living Room" },
                 { src: "/images/project-upload/IMG_7226.jpg", alt: "Rug Detail", category: "Textures" },
-                { src: "/images/project-upload/IMG_7222.jpg", alt: "Empty Space", category: "Before" },
+                
               ]}
             />
           </div>
