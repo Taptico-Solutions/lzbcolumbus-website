@@ -32,7 +32,7 @@ export default function Home() {
           >
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 leading-tight">
               Welcome to <br/>
-              <span className="text-foreground">La-Z-Boy Home Furnishings & Decor!</span>
+              <span className="text-foreground text-5xl md:text-6xl lg:text-7xl">Columbus Georgia!</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light">
               Creating homes filled with comfort, style, and quality that lasts right here in Columbus.
@@ -391,6 +391,11 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold text-lg text-primary">Address</h3>
                     <p className="text-muted-foreground">5555 Whittlesey Blvd<br />Columbus, GA 31909</p>
+                    <p className="text-muted-foreground mt-2">
+                      <span className="font-semibold">Hours:</span><br/>
+                      Mon - Sat: 10am - 7pm<br/>
+                      Sun: 12:30pm - 5pm
+                    </p>
                   </div>
                 </div>
                 

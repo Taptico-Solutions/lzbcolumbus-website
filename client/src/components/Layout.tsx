@@ -167,6 +167,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     (706) 653-1070
                   </a>
                 </div>
+                <div className="flex items-start gap-3 pt-2">
+                  <div className="text-accent font-semibold shrink-0 text-xs uppercase tracking-wider">Hours</div>
+                  <div className="space-y-1">
+                    <p>Mon - Sat: 10am - 7pm</p>
+                    <p>Sun: 12:30pm - 5pm</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
