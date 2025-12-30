@@ -407,7 +407,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-primary">Phone</h3>
-                    <p className="text-muted-foreground">(706) 322-9090</p>
+                    <p className="text-muted-foreground">(706) 653-1070</p>
                   </div>
                 </div>
                 
@@ -420,8 +420,8 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold text-lg text-primary">Hours</h3>
                     <p className="text-muted-foreground">
-                      Monday - Saturday: 10:00 AM - 6:00 PM<br />
-                      Sunday: 1:00 PM - 5:00 PM
+                      Mon - Sat: 10am - 7pm<br />
+                      Sun: 12:30pm - 5pm
                     </p>
                   </div>
                 </div>
