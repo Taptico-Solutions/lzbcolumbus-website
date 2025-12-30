@@ -30,6 +30,9 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl bg-white/90 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-xl border-l-4 border-accent"
           >
+            <div className="mb-6">
+              <img src="/images/logo-final.png" alt="La-Z-Boy" className="h-16 md:h-20 w-auto object-contain" />
+            </div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 leading-tight">
               Welcome to <br/>
               <span className="text-foreground text-5xl md:text-6xl lg:text-7xl">Columbus Georgia!</span>
@@ -407,7 +410,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-primary">Phone</h3>
-                    <p className="text-muted-foreground">(706) 653-1070</p>
+                    <a href="tel:7066531070" className="text-muted-foreground hover:text-primary transition-colors">(706) 653-1070</a>
                   </div>
                 </div>
                 
