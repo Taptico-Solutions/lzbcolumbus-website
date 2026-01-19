@@ -342,7 +342,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://search.google.com/local/writereview?placeid=ChIJQ_24N0rLiIgR3L8X3eOPOSM" 
+              href="https://www.google.com/search?q=La-Z-Boy+Home+Furnishings+%26+Decor+Columbus+GA+reviews#lrd=0x888cd24a37b8fd43:0x23398fe3dd17bfdc,3,,,," 
               target="_blank" 
               rel="noopener noreferrer"
             >
