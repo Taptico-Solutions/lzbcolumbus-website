@@ -1,9 +1,8 @@
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { TransformationGallery } from "@/components/TransformationGallery";
-import { ArrowRight, Layout, Monitor, Share2, MousePointerClick } from "lucide-react";
+import { ArrowRight, Layout, Monitor, MousePointerClick } from "lucide-react";
 import { Link } from "wouter";
 
 export default function RoomPlanner() {
@@ -21,12 +20,7 @@ export default function RoomPlanner() {
         </div>
         
         <div className="container relative z-10 text-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto space-y-6"
-          >
+          <div className="max-w-3xl mx-auto space-y-6">
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight">
               Visualize Your Dream Room
             </h1>
@@ -40,7 +34,7 @@ export default function RoomPlanner() {
                 </a>
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -98,12 +92,7 @@ export default function RoomPlanner() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="aspect-video rounded-xl overflow-hidden shadow-lg"
-            >
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
               <iframe 
                 width="100%" 
                 height="100%" 
@@ -113,14 +102,8 @@ export default function RoomPlanner() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
               ></iframe>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="aspect-video rounded-xl overflow-hidden shadow-lg"
-            >
+            </div>
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
               <iframe 
                 width="100%" 
                 height="100%" 
@@ -130,7 +113,7 @@ export default function RoomPlanner() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
               ></iframe>
-            </motion.div>
+            </div>
           </div>
 
           <div className="text-center mb-16">
@@ -158,13 +141,7 @@ export default function RoomPlanner() {
                 description: "Switch to 3D mode to walk through your design and see it from every angle."
               }
             ].map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-              >
+              <div key={index}>
                 <Card className="text-center h-full border-none shadow-none bg-secondary/30">
                   <CardContent className="pt-12 pb-8 px-6 flex flex-col items-center">
                     <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm text-accent">
@@ -176,7 +153,7 @@ export default function RoomPlanner() {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -186,25 +163,15 @@ export default function RoomPlanner() {
       <section className="py-20 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative rounded-2xl overflow-hidden shadow-xl"
-            >
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img 
                 src="/images/hero/room-planner-family.jpg" 
                 alt="Family enjoying their La-Z-Boy living room" 
                 className="w-full h-full object-cover"
               />
-            </motion.div>
+            </div>
             
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
+            <div className="space-y-8">
               <h2 className="font-serif text-4xl text-primary leading-tight">
                 Professional Tools, <br/>
                 <span className="text-accent">Simple to Use</span>
@@ -239,7 +206,7 @@ export default function RoomPlanner() {
                   </Button>
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -258,70 +225,27 @@ export default function RoomPlanner() {
                   "Expert review of your 3D room plan",
                   "Personalized furniture recommendations",
                   "Fabric and color coordination advice",
-                  "Tips for maximizing space and flow"
+                  "Access to exclusive in-store options"
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white/90 font-medium">
+                  <li key={i} className="flex items-center gap-3 text-white/90">
                     <div className="h-2 w-2 rounded-full bg-accent" />
                     {item}
                   </li>
                 ))}
               </ul>
+              <Link href="/comfort-club">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 border-none text-lg px-8">
+                  Request Design Review
+                </Button>
+              </Link>
             </div>
-
-            <Card className="border-none shadow-xl bg-white text-foreground">
-              <CardHeader className="pb-2 text-center">
-                <CardTitle className="font-serif text-2xl text-primary">Book a Free Consultation</CardTitle>
-                <p className="text-sm text-muted-foreground">Fill out the form below to request an appointment.</p>
-              </CardHeader>
-              <CardContent className="p-6 md:p-8">
-                <form className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="firstName" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">First Name</label>
-                      <input type="text" id="firstName" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Jane" />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="lastName" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Last Name</label>
-                      <input type="text" id="lastName" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Doe" />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email Address <span className="text-destructive">*</span></label>
-                    <input type="email" id="email" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="jane@example.com" required />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Phone Number</label>
-                    <input type="tel" id="phone" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="(555) 123-4567" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="teamMember" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Mention a Team Member (Optional)</label>
-                    <select id="teamMember" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-                      <option value="">Select a team member...</option>
-                      <option value="Jason Hall">Jason Hall</option>
-                      <option value="Kenneth Llera">Kenneth Llera</option>
-                      <option value="Aulashua">Aulashua</option>
-                      <option value="Casey">Casey</option>
-                      <option value="Jarred">Jarred</option>
-                      <option value="Bryan Evans">Bryan Evans (Owner)</option>
-                      <option value="Marlon Rice">Marlon Rice</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">How can we help?</label>
-                    <textarea id="message" className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="I'm looking to redesign my living room..."></textarea>
-                  </div>
-                  
-                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-serif text-lg py-6 mt-4">
-                    Request Appointment
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-2xl border-4 border-white/10">
+              <img 
+                src="/images/gallery/blue-grey-living-room-1.png" 
+                alt="La-Z-Boy Design Expert working with a client" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
