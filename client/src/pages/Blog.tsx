@@ -81,6 +81,16 @@ export default function Blog() {
       date: "January 15, 2026",
       image: "/images/gallery/blue-grey-living-room-1.png",
       category: "Decor Tips"
+    },
+    {
+      id: 7,
+      slug: "reasons-to-work-with-designer",
+      title: "Reasons to Work with a La-Z-Boy Designer on Your Next Room",
+      excerpt: "Designing a room can feel overwhelming, but it doesn't have to be. Discover how expert guidance can turn your ideas into a comfortable, cohesive space.",
+      author: "Design Team",
+      date: "January 20, 2026",
+      image: "/images/hero/room-planner-family.jpg",
+      category: "Design Services"
     }
   ];
 

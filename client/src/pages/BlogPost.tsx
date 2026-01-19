@@ -55,24 +55,30 @@ const blogPosts = [
   {
     id: 1,
     slug: "choosing-perfect-recliner",
-    title: "5 Tips for Choosing the Perfect Recliner",
+    title: "Tips for Choosing the Right La-Z-Boy Recliner",
     content: `
-      <p class="mb-4">Finding the right recliner is about more than just comfort. It's about finding a piece that fits your body, your style, and your life. Here are our top 5 tips for selecting the perfect recliner for your home.</p>
+      <p class="mb-4">Choosing a recliner is about matching your comfort preferences, lifestyle, and space. These easy tips will help you find the perfect fit:</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">1. Measure Your Space</h3>
-      <p class="mb-4">Before you fall in love with a recliner, make sure it fits. Measure the width, depth, and height of the space where you plan to put it. Don't forget to account for the fully reclined length!</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">1. Think About How You Like to Relax</h3>
+      <p class="mb-4">Do you enjoy gentle motion? Consider a rocking or swivel-gliding recliner. Want to sit straight and then slowly recline? A traditional reclining model may be best.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">2. Consider Your Body Type</h3>
-      <p class="mb-4">Recliners aren't one-size-fits-all. Your feet should touch the floor when sitting upright, and your head should be comfortably supported when reclined. We offer sizes from petite to tall to ensure the perfect fit.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">2. Consider Your Space</h3>
+      <p class="mb-4">If your room is tight, go for a wall (space-saving) recliner, which doesn't need as much room behind it to fully recline. If you want mobility and flexibility, a swivel gliding recliner lets you rotate and glide comfortably.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">3. Choose Your Mechanism</h3>
-      <p class="mb-4">Do you want a classic rocker recliner? A wall-hugger that saves space? Or a power recliner with infinite positions? Think about how you'll use the chair most often.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">3. Power vs. Manual</h3>
+      <p class="mb-4">Power recliners let you adjust position with the touch of a button — great for effortless comfort and precise positioning. Manual recliners are simple, dependable, and don't require plugs or motors.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">4. Select Your Fabric</h3>
-      <p class="mb-4">Leather offers a sleek look and durability, while performance fabrics are great for families with kids and pets. Consider the texture and color that will best complement your existing decor.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">4. Mobility Needs Matter</h3>
+      <p class="mb-4">If standing up is becoming harder, a lift recliner gently raises you into a standing position, offering extra support and peace of mind.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">5. Test It Out</h3>
-      <p class="mb-4">The most important step! Come into our showroom and take a seat. Recline fully, sit upright, and see how it feels. Your body will tell you which one is right.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">5. Match to Your Daily Life</h3>
+      <p class="mb-4">Think about who will use it most. Families with kids might prefer durable, easy-to-clean fabrics and classic mechanisms, while someone who loves tech and convenience might lean toward powered models.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">6. Sit in It Before You Decide</h3>
+      <p class="mb-4">Everyone feels comfort differently. Spend time in the recliner to test back support, legrest comfort, and ease of use before you buy.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Bottom Line:</h3>
+      <p class="mb-4">Choose a recliner that fits your space, matches how you relax, and supports how you move. With La-Z-Boy's variety of styles and mechanisms, there's a perfect seat for nearly every lifestyle.</p>
     `,
     author: "Sarah Evans",
     date: "October 15, 2023",
@@ -218,7 +224,7 @@ const blogPosts = [
     slug: "easy-room-refresh-accessories",
     title: "Easy Ways to Refresh Your Room by Swapping Accessories",
     content: `
-      <p class="mb-4">If your room is feeling a little tired but a full makeover isn’t in the cards, accessories are your secret weapon. Small changes can make a big impact—without the time or cost of replacing furniture. Here are a few simple ways to update your space just by changing out the finishing touches.</p>
+      <p class="mb-4">If your room is feeling a little tired but a full makeover isn't in the cards, accessories are your secret weapon. Small changes can make a big impact—without the time or cost of replacing furniture. Here are a few simple ways to update your space just by changing out the finishing touches.</p>
       
       <h3 class="text-2xl font-serif text-primary mt-8 mb-4">1. Update Your Pillows and Throws</h3>
       <p class="mb-4">Decorative pillows and throws are one of the quickest ways to refresh a room. Try new textures like bouclé, velvet, or woven fabrics, or switch up colors seasonally. Even mixing in one or two new patterns can instantly give your sofa or chair a whole new look.</p>
@@ -228,10 +234,10 @@ const blogPosts = [
       
       <h3 class="text-2xl font-serif text-primary mt-8 mb-4">3. Layer in New Area Rugs</h3>
       <p class="mb-4">An area rug can anchor a room and pull everything together. Changing the rug—or layering a smaller rug over an existing one—adds warmth, texture, and personality while helping define seating areas.</p>
-
+      
       <h3 class="text-2xl font-serif text-primary mt-8 mb-4">4. Refresh Wall Decor</h3>
       <p class="mb-4">Try rearranging artwork, adding a mirror, or introducing framed prints in new finishes. Even swapping frames from black to brass or wood can make existing art feel brand new.</p>
-
+      
       <h3 class="text-2xl font-serif text-primary mt-8 mb-4">5. Style with Accessories That Tell a Story</h3>
       <p class="mb-4">Trays, books, greenery, and decorative objects bring personality into a room. Group items in odd numbers and vary heights for a designer-styled look. Rotating accessories from room to room can also give everything a fresh perspective.</p>
     `,
@@ -241,16 +247,57 @@ const blogPosts = [
     category: "Decor Tips",
     relatedProducts: [
       {
-        id: "p9",
-        name: "Decorative Pillows",
-        image: "/images/gallery-1.jpg",
-        category: "Accessories"
+        id: "p7",
+        name: "Ava Sofa",
+        image: "/images/TD8_Ava_010769_C196552_009.jpg",
+        category: "Sofas"
       },
       {
-        id: "p10",
-        name: "Area Rugs",
-        image: "/images/project-upload/IMG_7226.jpg",
-        category: "Rugs"
+        id: "p4",
+        name: "Armitage Chair",
+        image: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg",
+        category: "Chairs"
+      }
+    ]
+  },
+  {
+    id: 7,
+    slug: "reasons-to-work-with-designer",
+    title: "Reasons to Work with a La-Z-Boy Designer on Your Next Room",
+    content: `
+      <p class="mb-4">Designing a room can feel overwhelming, but it doesn't have to be. When you work with a La-Z-Boy designer, you get expert guidance that turns your ideas into a comfortable, cohesive space—without the guesswork. Here's why partnering with a designer makes all the difference:</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">1. A Room That Actually Fits Your Life</h3>
+      <p class="mb-4">La-Z-Boy designers start by understanding how you live. From movie nights and family gatherings to quiet moments of relaxation, they help design a room that works for your daily routines—not just one that looks good in photos.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">2. Expert Space Planning</h3>
+      <p class="mb-4">Designers know how to make the most of your space. They'll help with furniture placement, traffic flow, and scale so your room feels open, balanced, and comfortable—whether you're working with a cozy space or a large open floor plan.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">3. Help Choosing the Right Pieces</h3>
+      <p class="mb-4">With so many options, it's easy to second-guess yourself. A La-Z-Boy designer helps you select the right sofas, recliners, fabrics, and finishes that work together and fit your comfort needs, lifestyle, and budget.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">4. Confidence in Color, Fabric, and Finishes</h3>
+      <p class="mb-4">From performance fabrics to wood tones and accent details, designers help you coordinate choices that feel intentional and timeless. They'll also guide you toward durable options that make sense for kids, pets, and everyday living.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">5. Less Stress, Better Results</h3>
+      <p class="mb-4">Designers simplify the process by handling the details—so you don't have to. The result? A room you feel confident about, comfortable in, and excited to come home to.</p>
+    `,
+    author: "Design Team",
+    date: "January 20, 2026",
+    image: "/images/hero/room-planner-family.jpg",
+    category: "Design Services",
+    relatedProducts: [
+      {
+        id: "p3",
+        name: "Tahoe Sectional",
+        image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
+        category: "Sectionals"
+      },
+      {
+        id: "p7",
+        name: "Ava Sofa",
+        image: "/images/TD8_Ava_010769_C196552_009.jpg",
+        category: "Sofas"
       }
     ]
   }
