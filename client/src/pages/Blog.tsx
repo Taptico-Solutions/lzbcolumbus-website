@@ -39,17 +39,17 @@ export default function Blog() {
       excerpt: "Finding the right recliner is about more than just comfort. Learn how to select the perfect style, size, and fabric for your living space.",
       author: "Sarah Evans",
       date: "October 15, 2023",
-      image: "/images/gallery/beige-recliner-setup.png",
+      image: "/images/pinnacle-power-lift-recliner.jpg",
       category: "Furniture Guide"
     },
     {
       id: 2,
-      slug: "modern-farmhouse-look",
-      title: "Modern Farmhouse: How to Get the Look",
-      excerpt: "Discover the key elements of the modern farmhouse aesthetic, from neutral color palettes to rustic textures and cozy accents.",
+      slug: "2026-living-room-trends",
+      title: "2026 Living Room Trends: Soft Modern",
+      excerpt: "Say goodbye to stark minimalism. This year is all about soft curves, warm neutrals, and spaces that feel as good as they look.",
       author: "Design Team",
-      date: "September 28, 2023",
-      image: "/images/gallery/christmas-living-room.png",
+      date: "January 10, 2026",
+      image: "/images/gallery-1.jpg",
       category: "Interior Design"
     },
     {
@@ -59,7 +59,7 @@ export default function Blog() {
       excerpt: "Think you don't have room for a sectional? Think again. Here are creative ways to arrange sectionals in smaller living rooms.",
       author: "Mike Johnson",
       date: "September 10, 2023",
-      image: "/images/gallery/blue-grey-living-room-2.png",
+      image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
       category: "Space Planning"
     },
     {
@@ -69,7 +69,7 @@ export default function Blog() {
       excerpt: "Life happens. Learn why performance fabrics are a game-changer for families with kids and pets, offering durability without sacrificing style.",
       author: "Sarah Evans",
       date: "August 22, 2023",
-      image: "/images/gallery/blue-grey-living-room-1.png",
+      image: "/images/TD13a_Collins_610494_D180764_018.jpg",
       category: "Materials"
     }
   ];

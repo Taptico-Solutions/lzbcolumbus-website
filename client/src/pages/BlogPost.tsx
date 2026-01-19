@@ -76,7 +76,7 @@ const blogPosts = [
     `,
     author: "Sarah Evans",
     date: "October 15, 2023",
-    image: "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&q=80&w=800",
+    image: "/images/pinnacle-power-lift-recliner.jpg",
     category: "Furniture Guide",
     relatedProducts: [
       {
@@ -87,31 +87,37 @@ const blogPosts = [
       },
       {
         id: "p2",
-        name: "Collis Sofa",
-        image: "/images/TD13a_Collins_610494_D180764_018.jpg",
-        category: "Living Room"
+        name: "Morrison Recliner",
+        image: "/images/gallery-grey-recliner.jpg",
+        category: "Recliners"
+      },
+      {
+        id: "p3",
+        name: "Jasper Recliner",
+        image: "/images/greyson-rocking-recliner.jpg",
+        category: "Recliners"
       }
     ]
   },
   {
     id: 2,
-    slug: "modern-farmhouse-look",
-    title: "Modern Farmhouse: How to Get the Look",
+    slug: "2026-living-room-trends",
+    title: "2026 Living Room Trends: Soft Modern",
     content: `
-      <p class="mb-4">The modern farmhouse aesthetic strikes the perfect balance between rustic warmth and contemporary clean lines. It's comfortable, practical, and undeniably stylish. Here's how to bring this look into your Columbus home.</p>
+      <p class="mb-4">Say goodbye to stark minimalism. 2026 is all about "Soft Modern"—a design philosophy that prioritizes comfort without sacrificing style. It's warm, inviting, and perfect for real life.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Neutral Color Palette</h3>
-      <p class="mb-4">Start with a base of warm whites, creams, and soft greys. Add depth with accents of navy (like our brand color!), sage green, or terracotta. These natural tones create a calming atmosphere.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Curved Silhouettes</h3>
+      <p class="mb-4">Sharp edges are out; curves are in. Look for sofas with rounded arms, circular coffee tables, and arched mirrors. These shapes soften the room and improve flow.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Mix Textures</h3>
-      <p class="mb-4">Layering is key. Combine smooth leather with chunky knit throws, distressed wood with sleek metal accents. This contrast adds visual interest and coziness.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Warm Neutrals</h3>
+      <p class="mb-4">Grey is warming up. Think "greige," taupe, oatmeal, and warm white. These shades create a cozy backdrop that feels fresh but not sterile.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Practical Comfort</h3>
-      <p class="mb-4">Modern farmhouse furniture should invite you to sit down and relax. Look for deep seats, plush cushions, and durable fabrics that can stand up to everyday life.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Tactile Textures</h3>
+      <p class="mb-4">Bouclé, velvet, and chunky knits are huge this year. Mixing textures adds depth and interest to a neutral palette, making the space feel rich and layered.</p>
     `,
     author: "Design Team",
-    date: "September 28, 2023",
-    image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&q=80&w=800",
+    date: "January 10, 2026",
+    image: "/images/gallery-1.jpg",
     category: "Interior Design",
     relatedProducts: [
       {
@@ -133,30 +139,33 @@ const blogPosts = [
     slug: "small-spaces-sectionals",
     title: "Maximizing Small Spaces with Sectionals",
     content: `
-      <p class="mb-4">Many people think sectionals are only for large rooms, but they can actually be a great solution for smaller spaces too. It's all about choosing the right scale and configuration.</p>
+      <p class="mb-4">Think you don't have room for a sectional? Think again. A well-chosen sectional can actually make a small room feel larger by streamlining the seating and reducing visual clutter.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Define the Zone</h3>
-      <p class="mb-4">A sectional naturally defines the seating area in an open-concept space. Use an area rug to further anchor the zone and create a cozy island of comfort.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Choose the Right Scale</h3>
+      <p class="mb-4">Look for "apartment-sized" or modular sectionals with slimmer profiles. Avoid overstuffed arms or deep backs that eat up valuable floor space.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Go Modular</h3>
-      <p class="mb-4">Modular sectionals allow you to customize the layout to fit your specific dimensions. You can add or remove pieces as your needs change.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Use the Corner</h3>
+      <p class="mb-4">Tucking a sectional into a corner frees up the center of the room for traffic flow. It maximizes every inch of square footage.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Keep it Light</h3>
+      <p class="mb-4">Lighter fabrics reflect light and make the piece feel less heavy. Legs that lift the sofa off the floor also help create a sense of openness.</p>
     `,
     author: "Mike Johnson",
     date: "September 10, 2023",
-    image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800",
+    image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
     category: "Space Planning",
     relatedProducts: [
       {
         id: "p5",
-        name: "Neo Sectional",
-        image: "/images/TD13e_Neo_10X-762_D201081_068.jpg",
+        name: "Trouper Sectional",
+        image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
         category: "Sectionals"
       },
       {
         id: "p6",
-        name: "Finley Recliner",
-        image: "/images/TD23_Finley_10X747_D160632_001(1).jpg",
-        category: "Recliners"
+        name: "Tahoe Sectional",
+        image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
+        category: "Sectionals"
       }
     ]
   },
@@ -165,24 +174,33 @@ const blogPosts = [
     slug: "performance-fabrics-benefits",
     title: "The Benefits of Performance Fabrics",
     content: `
-      <p class="mb-4">For busy households, performance fabrics are a lifesaver. They resist stains, repel liquids, and are easy to clean, keeping your furniture looking new for years.</p>
+      <p class="mb-4">Life happens—spilled wine, muddy paws, sticky fingers. But that doesn't mean you can't have beautiful furniture. Performance fabrics are the secret weapon for stress-free living.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Stain Resistance</h3>
-      <p class="mb-4">Spilled wine? Muddy paws? No problem. Most messes can be wiped away with a damp cloth thanks to the protective technology woven into the fibers.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Liquid Repellent</h3>
+      <p class="mb-4">Our iClean™ fabrics create a barrier that repels spills before they turn into stains. Liquids bead up on the surface, giving you time to wipe them away.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Durability</h3>
-      <p class="mb-4">Performance fabrics are tested to withstand heavy use. They resist pilling, fading, and abrasion, making them ideal for high-traffic family rooms.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Easy to Clean</h3>
+      <p class="mb-4">For tougher messes, most performance fabrics can be cleaned with simple soap and water. No expensive professional cleaning required.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Soft & Stylish</h3>
+      <p class="mb-4">Gone are the days of stiff, scratchy outdoor fabrics. Today's performance options are soft to the touch and come in hundreds of colors and patterns.</p>
     `,
     author: "Sarah Evans",
     date: "August 22, 2023",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800",
+    image: "/images/TD13a_Collins_610494_D180764_018.jpg",
     category: "Materials",
     relatedProducts: [
       {
         id: "p7",
-        name: "Ava Sofa",
-        image: "/images/TD8_Ava_010769_C196552_009.jpg",
+        name: "Collins Sofa",
+        image: "/images/TD13a_Collins_610494_D180764_018.jpg",
         category: "Sofas"
+      },
+      {
+        id: "p8",
+        name: "Leah Sleep Sofa",
+        image: "/images/leah-sleep-sofa.jpg",
+        category: "Sleep Sofas"
       }
     ]
   }
@@ -213,122 +231,135 @@ export default function BlogPost() {
           alt={post.title} 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-end pb-12">
-          <div className="container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="max-w-4xl text-white"
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <span className="bg-accent px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider">
-                  {post.category}
-                </span>
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="container text-center text-white">
+            <div className="inline-block px-3 py-1 bg-accent rounded-full text-sm font-medium mb-4">
+              {post.category}
+            </div>
+            <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold max-w-4xl mx-auto leading-tight">
+              {post.title}
+            </h1>
+            <div className="flex items-center justify-center gap-6 mt-6 text-white/90">
+              <div className="flex items-center gap-2">
+                <Calendar className="h-5 w-5" />
+                {post.date}
               </div>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight">
-                {post.title}
-              </h1>
-              <div className="flex items-center gap-6 text-sm md:text-base text-white/90">
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
-                  {post.date}
-                </div>
-                <div className="flex items-center gap-2">
-                  <User className="h-4 w-4" />
-                  {post.author}
-                </div>
+              <div className="flex items-center gap-2">
+                <User className="h-5 w-5" />
+                {post.author}
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
-        {/* Main Content */}
-        <div className="lg:col-span-8">
-          <Link href="/blog">
-            <Button variant="ghost" className="mb-8 pl-0 hover:bg-transparent hover:text-accent">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
-            </Button>
-          </Link>
-          
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-primary prose-p:text-muted-foreground prose-img:rounded-xl"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-        </div>
-
-        {/* Sidebar / Related Products */}
-        <div className="lg:col-span-4 space-y-8">
-          <div className="bg-secondary/30 p-6 rounded-xl sticky top-24">
-            <h3 className="font-serif text-2xl text-primary mb-6 flex items-center gap-2">
-              <Tag className="h-5 w-5 text-accent" />
-              Related Products
-            </h3>
-            <div className="space-y-6">
-              {post.relatedProducts.map((product) => (
-                <Card key={product.id} className="overflow-hidden hover:shadow-md transition-shadow">
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                  <CardContent className="p-4">
-                    <div className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">
-                      {product.category}
-                    </div>
-                    <h4 className="font-serif text-lg text-primary font-medium">
-                      {product.name}
-                    </h4>
-                  </CardContent>
-                  <CardFooter className="p-4 pt-0">
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button 
-                          variant="outline" 
-                          className="w-full text-primary border-primary/20 hover:bg-primary hover:text-white"
-                          onClick={() => setSelectedProduct(product)}
-                        >
-                          Quick View
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="sm:max-w-[425px]">
-                        <DialogHeader>
-                          <DialogTitle className="font-serif text-2xl text-primary">{product.name}</DialogTitle>
-                          <DialogDescription>
-                            Experience comfort and style with the {product.name}.
-                          </DialogDescription>
-                        </DialogHeader>
-                        <div className="grid gap-4 py-4">
-                          <div className="aspect-video relative overflow-hidden rounded-lg">
-                            <img 
-                              src={product.image} 
-                              alt={product.name} 
-                              className="object-cover w-full h-full"
-                            />
-                          </div>
-                          <p className="text-muted-foreground">
-                            Visit our showroom to customize this piece with over 900 fabric and leather options.
-                          </p>
-                          <Link href="/room-planner">
-                            <Button className="w-full bg-primary text-white">
-                              Book a Consultation
-                            </Button>
-                          </Link>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
-                  </CardFooter>
-                </Card>
-              ))}
             </div>
           </div>
         </div>
       </div>
+
+      <div className="container py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Main Content */}
+          <div className="lg:col-span-8">
+            <Link href="/blog">
+              <Button variant="ghost" className="mb-8 pl-0 hover:bg-transparent hover:text-accent">
+                <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
+              </Button>
+            </Link>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-primary prose-p:text-muted-foreground prose-img:rounded-lg"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+
+            {/* Share / Tags */}
+            <div className="mt-12 pt-8 border-t border-border flex items-center justify-between">
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Tag className="h-4 w-4" />
+                <span>Tags: {post.category}, Interior Design, La-Z-Boy</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-4 space-y-8">
+            {/* Related Products */}
+            {post.relatedProducts && (
+              <div className="bg-secondary/20 p-6 rounded-lg">
+                <h3 className="font-serif text-xl font-bold text-primary mb-4">Featured Products</h3>
+                <div className="space-y-4">
+                  {post.relatedProducts.map((product) => (
+                    <div 
+                      key={product.id}
+                      className="group cursor-pointer bg-white p-3 rounded-md shadow-sm hover:shadow-md transition-all flex items-center gap-4"
+                      onClick={() => setSelectedProduct(product)}
+                    >
+                      <div className="h-16 w-16 rounded-md overflow-hidden bg-gray-100 shrink-0">
+                        <img 
+                          src={product.image} 
+                          alt={product.name} 
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-primary group-hover:text-accent transition-colors">
+                          {product.name}
+                        </h4>
+                        <p className="text-xs text-muted-foreground">{product.category}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Newsletter Widget */}
+            <div className="bg-primary text-primary-foreground p-8 rounded-lg text-center">
+              <h3 className="font-serif text-2xl font-bold mb-4">Join the Club</h3>
+              <p className="text-white/80 mb-6">
+                Get design tips and exclusive offers delivered to your inbox.
+              </p>
+              <Link href="/comfort-club">
+                <Button className="w-full bg-white text-primary hover:bg-white/90">
+                  Sign Up Now
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Product Quick View Dialog */}
+      <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle className="font-serif text-2xl">{selectedProduct?.name}</DialogTitle>
+            <DialogDescription>
+              {selectedProduct?.category}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4">
+            <div className="aspect-square rounded-lg overflow-hidden bg-gray-100 mb-4">
+              <img 
+                src={selectedProduct?.image} 
+                alt={selectedProduct?.name} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="text-muted-foreground text-sm mb-6">
+              Experience the comfort of the {selectedProduct?.name} at our Columbus showroom. 
+              Customize it with over 900 fabric and leather options.
+            </p>
+            <div className="flex gap-3">
+              <Button className="flex-1" onClick={() => window.open('https://www.la-z-boy.com', '_blank')}>
+                View Details
+              </Button>
+              <Button variant="outline" className="flex-1" onClick={() => setSelectedProduct(null)}>
+                Close
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

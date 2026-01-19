@@ -137,6 +137,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </Link>
                 </li>
                 <li>
+                  <a href="https://www.la-z-boy.com/design-services/request" target="_blank" rel="noopener noreferrer">
+                    <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Design Assistance Request</span>
+                  </a>
+                </li>
+                <li>
                   <Link href="/service-request">
                     <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Service Request</span>
                   </Link>

@@ -30,15 +30,12 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl bg-white/90 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-xl border-l-4 border-accent"
           >
-            <div className="mb-6">
-              <img src="/images/logo-final.png" alt="La-Z-Boy" className="h-16 md:h-20 w-auto object-contain" />
-            </div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 leading-tight">
-              Welcome to <br/>
-              <span className="text-foreground text-5xl md:text-6xl lg:text-7xl">Columbus Georgia!</span>
+              Make Yourself <br/>
+              <span className="text-foreground text-5xl md:text-6xl lg:text-7xl">At Home.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light">
-              Creating homes filled with comfort, style, and quality that lasts right here in Columbus.
+              We're here to help you create a space that feels just right—filled with comfort, style, and quality that lasts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/comfort-club">
@@ -172,18 +169,16 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Placeholder images using unsplash since we don't have specific product shots yet */}
             {[
-              { src: "/images/gallery-grey-recliner.jpg", link: "https://www.la-z-boy.com/p/high-leg-recliners/haven-high-leg-reclining-chair/_/R-028450", alt: "Haven High Leg Reclining Chair" },
-              { src: "/images/gallery-man-dog.jpg", link: "https://www.la-z-boy.com/p/rocking-recliners/greyson-power-rocking-recliner/_/R-10P530", alt: "Greyson Power Rocking Recliner" },
+              { src: "/images/gallery-grey-recliner.jpg", link: "https://www.la-z-boy.com/p/high-leg-recliners/brentwood-high-leg-reclining-chair/_/R-028488", alt: "Brentwood High Leg Reclining Chair" },
+              { src: "/images/greyson-rocking-recliner.jpg", link: "https://www.la-z-boy.com/p/living-room-recliners-rocking-recliners/greyson-rocking-recliner/_/R-010530", alt: "Greyson Rocking Recliner" },
               { src: "/images/TD13a_Collins_610494_D180764_018.jpg", link: "https://www.la-z-boy.com/p/stationary-sofas/collins-sofa/_/R-610494", alt: "Collins Sofa" },
-              { src: "/images/TD8_Ava_010769_C196552_009.jpg", link: "https://www.la-z-boy.com/p/rocking-recliners/ava-rocking-recliner/_/R-010769", alt: "Ava Recliner" },
+              { src: "/images/wynne-rocking-recliner.jpg", link: "https://www.la-z-boy.com/p/living-room-recliners-rocking-recliners/wynne-rocking-recliner/_/R-010700", alt: "Wynne Rocking Recliner" },
 
-              { src: "/images/TD23_Finley_10X747_D160632_001(1).jpg", link: "https://www.la-z-boy.com/p/rocking-recliners/finley-rocking-recliner/_/R-010747", alt: "Finley Recliner" },
-              { src: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg", link: "https://www.la-z-boy.com/p/oversized-recliners/armitage-power-reclining-chair-and-a-half-w-headrest/_/R-85U812", alt: "Armitage Loveseat" },
+              { src: "/images/leah-sleep-sofa.jpg", link: "https://www.la-z-boy.com/s?Ntt=leah&Ns=P_Price%7C0", alt: "Leah Sleep Sofa" },
+              { src: "/images/pinnacle-power-lift-recliner.jpg", link: "https://www.la-z-boy.com/p/living-room-recliners-power-lift-chairs/pinnacle-platinum-power-lift-recliner-w-headrest--lumbar/_/R-1PH512", alt: "Pinnacle Platinum Power Lift Recliner" },
               { src: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg", link: "https://www.la-z-boy.com/p/stationary-sectionals/tahoe-sectional/_/R-xxs632", alt: "Tahoe Sofa" },
-              { src: "/images/TD13e_Neo_10X-762_D201081_068.jpg", link: "https://www.la-z-boy.com/p/rocking-recliners/neo-power-rocking-recliner-w-headrest--lumbar/_/R-10X762", alt: "Neo Recliner" },
-              { src: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg", link: "https://www.la-z-boy.com/p/sofas/trouper-reclining-sofa/_/R-440724", alt: "Trouper Sofa" }
+              { src: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg", link: "https://www.la-z-boy.com/p/living-room-sectionals-reclining-sectionals/sectional-trouper/_/R-xxs724", alt: "Trouper Sectional" }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -347,7 +342,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://www.google.com/maps/place/La-Z-Boy+Columbus/@32.545155,-84.9546556,17z/data=!4m8!3m7!1s0x888ccb4a37b8fd43:0x23498fe3dd17bfdc!8m2!3d32.5451505!4d-84.9520753!9m1!1b1!16s%2Fg%2F1tdd1g9j?entry=ttu" 
+              href="https://www.google.com/maps/place/La-Z-Boy+Furniture+Galleries+%26+Decor/@32.545155,-84.9546556,17z/data=!3m1!4b1!4m6!3m5!1s0x888ccb4a37b8fd43:0x23498fe3dd17bfdc!8m2!3d32.5451505!4d-84.9520753!16s%2Fg%2F1tdd1g9j?entry=ttu" 
               target="_blank" 
               rel="noopener noreferrer"
             >
