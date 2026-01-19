@@ -172,18 +172,27 @@ const blogPosts = [
   {
     id: 4,
     slug: "performance-fabrics-benefits",
-    title: "The Benefits of Performance Fabrics",
+    title: "The Benefits of Performance Fabrics on La-Z-Boy Upholstered Furniture",
     content: `
-      <p class="mb-4">Life happens—spilled wine, muddy paws, sticky fingers. But that doesn't mean you can't have beautiful furniture. Performance fabrics are the secret weapon for stress-free living.</p>
+      <p class="mb-4">When you invest in La-Z-Boy upholstered furniture, choosing performance fabrics like iClean™ can make everyday living easier and more enjoyable. Built to handle real life in family homes, these high-performance textiles combine comfort, durability, and easy care. Here are five key features and benefits that set them apart:</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Liquid Repellent</h3>
-      <p class="mb-4">Our iClean™ fabrics create a barrier that repels spills before they turn into stains. Liquids bead up on the surface, giving you time to wipe them away.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">1. Advanced Stain Resistance</h3>
+      <p class="mb-4">La-Z-Boy’s iClean™ fabric uses innovative technology that surrounds each fiber with a protective barrier, repelling common household spills before they become stains. Everyday messes like coffee, wine, juice, dirt, and more can simply be blotted away — no scrubbing required in many cases.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Easy to Clean</h3>
-      <p class="mb-4">For tougher messes, most performance fabrics can be cleaned with simple soap and water. No expensive professional cleaning required.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">2. Easy Maintenance</h3>
+      <p class="mb-4">Performance fabrics are designed for hassle-free cleaning. Most spills stay on the surface long enough to be wiped off with a soft cloth or paper towel. For tougher messes, a mild soap and water solution is usually all you need, helping you keep furniture looking fresh with minimal effort.</p>
       
-      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Soft & Stylish</h3>
-      <p class="mb-4">Gone are the days of stiff, scratchy outdoor fabrics. Today's performance options are soft to the touch and come in hundreds of colors and patterns.</p>
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">3. Soft, Comfortable Feel</h3>
+      <p class="mb-4">Despite their robust performance, these fabrics don’t sacrifice comfort. iClean™ textiles remain soft to the touch and maintain the cozy feel you expect from La-Z-Boy upholstery, making them ideal for family lounging or relaxed evenings with guests.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">4. Wide Style Variety</h3>
+      <p class="mb-4">La-Z-Boy offers a broad selection of performance fabric options in many colors, textures, and patterns. This gives you the flexibility to match your décor while still enjoying the benefits of high-performance upholstery.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">5. Peace of Mind with Warranty Protection</h3>
+      <p class="mb-4">Performance fabrics like iClean™ are backed by a manufacturer warranty — typically up to three years for covered stains — giving extra reassurance that your furniture is protected against everyday spills and accidents.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Who It’s Best For:</h3>
+      <p class="mb-4">Families with kids, pet owners, and anyone who wants beautiful furniture without the worry of daily accidents will appreciate the practical advantages of performance fabrics on La-Z-Boy pieces. Whether you’re upgrading a recliner or choosing a new sofa, these fabrics help keep your home looking great with less stress.</p>
     `,
     author: "Sarah Evans",
     date: "August 22, 2023",
@@ -199,8 +208,49 @@ const blogPosts = [
       {
         id: "p8",
         name: "Leah Sleep Sofa",
-        image: "/images/leah-sleep-sofa.jpg",
+        image: "/images/TD28e_Leah_555-418_D206893.jpg",
         category: "Sleep Sofas"
+      }
+    ]
+  },
+  {
+    id: 6,
+    slug: "easy-room-refresh-accessories",
+    title: "Easy Ways to Refresh Your Room by Swapping Accessories",
+    content: `
+      <p class="mb-4">If your room is feeling a little tired but a full makeover isn’t in the cards, accessories are your secret weapon. Small changes can make a big impact—without the time or cost of replacing furniture. Here are a few simple ways to update your space just by changing out the finishing touches.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">1. Update Your Pillows and Throws</h3>
+      <p class="mb-4">Decorative pillows and throws are one of the quickest ways to refresh a room. Try new textures like bouclé, velvet, or woven fabrics, or switch up colors seasonally. Even mixing in one or two new patterns can instantly give your sofa or chair a whole new look.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">2. Swap Lampshades or Lighting Accents</h3>
+      <p class="mb-4">Lighting plays a huge role in how a room feels. Replacing a lampshade, updating bulb warmth, or adding a small accent lamp can completely change the mood—making a space feel cozier, brighter, or more modern.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">3. Layer in New Area Rugs</h3>
+      <p class="mb-4">An area rug can anchor a room and pull everything together. Changing the rug—or layering a smaller rug over an existing one—adds warmth, texture, and personality while helping define seating areas.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">4. Refresh Wall Decor</h3>
+      <p class="mb-4">Try rearranging artwork, adding a mirror, or introducing framed prints in new finishes. Even swapping frames from black to brass or wood can make existing art feel brand new.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">5. Style with Accessories That Tell a Story</h3>
+      <p class="mb-4">Trays, books, greenery, and decorative objects bring personality into a room. Group items in odd numbers and vary heights for a designer-styled look. Rotating accessories from room to room can also give everything a fresh perspective.</p>
+    `,
+    author: "Design Team",
+    date: "January 15, 2026",
+    image: "/images/gallery/blue-grey-living-room-1.png",
+    category: "Decor Tips",
+    relatedProducts: [
+      {
+        id: "p9",
+        name: "Decorative Pillows",
+        image: "/images/gallery-1.jpg",
+        category: "Accessories"
+      },
+      {
+        id: "p10",
+        name: "Area Rugs",
+        image: "/images/project-upload/IMG_7226.jpg",
+        category: "Rugs"
       }
     ]
   }
@@ -208,13 +258,16 @@ const blogPosts = [
 
 export default function BlogPost() {
   const [match, params] = useRoute("/blog/:slug");
-  const post = blogPosts.find(p => p.slug === params?.slug);
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
-
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  
+  if (!match) return null;
+  
+  const post = blogPosts.find(p => p.slug === params.slug);
+  
   if (!post) {
     return (
       <div className="container py-20 text-center">
-        <h1 className="text-3xl font-serif text-primary mb-4">Post Not Found</h1>
+        <h1 className="text-4xl font-serif text-primary mb-4">Post Not Found</h1>
         <Link href="/blog">
           <Button>Return to Blog</Button>
         </Link>
@@ -223,9 +276,9 @@ export default function BlogPost() {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="min-h-screen bg-background">
       {/* Hero Image */}
-      <div className="relative h-[40vh] md:h-[50vh] w-full overflow-hidden">
+      <div className="relative h-[50vh] w-full overflow-hidden">
         <img 
           src={post.image} 
           alt={post.title} 
@@ -233,14 +286,14 @@ export default function BlogPost() {
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="container text-center text-white">
-            <div className="inline-block px-3 py-1 bg-accent rounded-full text-sm font-medium mb-4">
+          <div className="container text-center text-white space-y-4">
+            <div className="inline-block px-3 py-1 bg-accent rounded-full text-sm font-medium uppercase tracking-wider mb-4">
               {post.category}
             </div>
-            <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold max-w-4xl mx-auto leading-tight">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl max-w-4xl mx-auto leading-tight">
               {post.title}
             </h1>
-            <div className="flex items-center justify-center gap-6 mt-6 text-white/90">
+            <div className="flex items-center justify-center gap-6 text-white/90 mt-6">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" />
                 {post.date}
@@ -267,15 +320,18 @@ export default function BlogPost() {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-primary prose-p:text-muted-foreground prose-img:rounded-lg"
+              className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-primary prose-p:text-muted-foreground prose-img:rounded-xl"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
             {/* Share / Tags */}
-            <div className="mt-12 pt-8 border-t border-border flex items-center justify-between">
+            <div className="border-t border-border mt-12 pt-8 flex items-center justify-between">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Tag className="h-4 w-4" />
-                <span>Tags: {post.category}, Interior Design, La-Z-Boy</span>
+                <span>{post.category}</span>
+              </div>
+              <div className="flex gap-2">
+                <Button variant="outline" size="sm">Share Article</Button>
               </div>
             </div>
           </div>
@@ -283,83 +339,81 @@ export default function BlogPost() {
           {/* Sidebar */}
           <div className="lg:col-span-4 space-y-8">
             {/* Related Products */}
-            {post.relatedProducts && (
-              <div className="bg-secondary/20 p-6 rounded-lg">
-                <h3 className="font-serif text-xl font-bold text-primary mb-4">Featured Products</h3>
-                <div className="space-y-4">
-                  {post.relatedProducts.map((product) => (
-                    <div 
-                      key={product.id}
-                      className="group cursor-pointer bg-white p-3 rounded-md shadow-sm hover:shadow-md transition-all flex items-center gap-4"
-                      onClick={() => setSelectedProduct(product)}
-                    >
-                      <div className="h-16 w-16 rounded-md overflow-hidden bg-gray-100 shrink-0">
-                        <img 
-                          src={product.image} 
-                          alt={product.name} 
-                          className="h-full w-full object-cover"
+            <Card>
+              <CardHeader>
+                <CardTitle className="font-serif text-xl">Shop This Look</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {post.relatedProducts.map((product) => (
+                  <div key={product.id} className="flex gap-4 items-center group cursor-pointer">
+                    <div className="h-20 w-20 rounded-md overflow-hidden bg-secondary">
+                      <img 
+                        src={product.image} 
+                        alt={product.name} 
+                        className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-primary group-hover:text-accent transition-colors">
+                        {product.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">{product.category}</p>
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+              <CardFooter>
+                <Link href="/comfort-club">
+                  <Button className="w-full">Book a Design Consultation</Button>
+                </Link>
+              </CardFooter>
+            </Card>
+
+            {/* Newsletter */}
+            <Card className="bg-primary text-primary-foreground">
+              <CardHeader>
+                <CardTitle className="font-serif text-xl">Join the Club</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-primary-foreground/80 mb-4">
+                  Get more design tips and exclusive offers delivered to your inbox.
+                </p>
+                <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                  <DialogTrigger asChild>
+                    <Button variant="secondary" className="w-full bg-white text-primary hover:bg-white/90">
+                      Subscribe Now
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Join the Comfort Club</DialogTitle>
+                      <DialogDescription>
+                        Subscribe to our newsletter for the latest design trends and exclusive offers.
+                      </DialogDescription>
+                    </DialogHeader>
+                    <form className="space-y-4 mt-4" onSubmit={(e) => {
+                      e.preventDefault();
+                      setIsDialogOpen(false);
+                    }}>
+                      <div className="space-y-2">
+                        <label htmlFor="email" className="text-sm font-medium">Email Address</label>
+                        <input 
+                          id="email"
+                          type="email" 
+                          placeholder="Enter your email"
+                          className="w-full px-3 py-2 border rounded-md"
+                          required
                         />
                       </div>
-                      <div>
-                        <h4 className="font-medium text-primary group-hover:text-accent transition-colors">
-                          {product.name}
-                        </h4>
-                        <p className="text-xs text-muted-foreground">{product.category}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Newsletter Widget */}
-            <div className="bg-primary text-primary-foreground p-8 rounded-lg text-center">
-              <h3 className="font-serif text-2xl font-bold mb-4">Join the Club</h3>
-              <p className="text-white/80 mb-6">
-                Get design tips and exclusive offers delivered to your inbox.
-              </p>
-              <Link href="/comfort-club">
-                <Button className="w-full bg-white text-primary hover:bg-white/90">
-                  Sign Up Now
-                </Button>
-              </Link>
-            </div>
+                      <Button type="submit" className="w-full">Subscribe</Button>
+                    </form>
+                  </DialogContent>
+                </Dialog>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
-
-      {/* Product Quick View Dialog */}
-      <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
-        <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle className="font-serif text-2xl">{selectedProduct?.name}</DialogTitle>
-            <DialogDescription>
-              {selectedProduct?.category}
-            </DialogDescription>
-          </DialogHeader>
-          <div className="mt-4">
-            <div className="aspect-square rounded-lg overflow-hidden bg-gray-100 mb-4">
-              <img 
-                src={selectedProduct?.image} 
-                alt={selectedProduct?.name} 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <p className="text-muted-foreground text-sm mb-6">
-              Experience the comfort of the {selectedProduct?.name} at our Columbus showroom. 
-              Customize it with over 900 fabric and leather options.
-            </p>
-            <div className="flex gap-3">
-              <Button className="flex-1" onClick={() => window.open('https://www.la-z-boy.com', '_blank')}>
-                View Details
-              </Button>
-              <Button variant="outline" className="flex-1" onClick={() => setSelectedProduct(null)}>
-                Close
-              </Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }

@@ -342,26 +342,26 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://www.google.com/maps/place/La-Z-Boy+Furniture+Galleries+%26+Decor/@32.545155,-84.9546556,17z/data=!3m1!4b1!4m6!3m5!1s0x888ccb4a37b8fd43:0x23498fe3dd17bfdc!8m2!3d32.5451505!4d-84.9520753!16s%2Fg%2F1tdd1g9j?entry=ttu" 
+              href="https://search.google.com/local/writereview?placeid=ChIJQ_24N0rLiIgR3L8X3eOPOSM" 
               target="_blank" 
               rel="noopener noreferrer"
             >
               <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-serif text-lg px-8 py-6 h-auto w-full sm:w-auto">
+                Write a Review
+              </Button>
+            </a>
+            <a 
+              href="https://www.google.com/search?q=la-z-boy+columbus+ga+reviews" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-serif text-lg px-8 py-6 h-auto w-full sm:w-auto">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" className="w-5 h-5 mr-2" />
                 Read All Reviews
               </Button>
             </a>
             
-            <a 
-              href="https://search.google.com/local/writereview?placeid=ChIJQ_24N0rLiIgR3L8X3eOISSME" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-serif text-lg px-8 py-6 h-auto w-full sm:w-auto">
-                <PenSquare className="w-5 h-5 mr-2" />
-                Write a Review
-              </Button>
-            </a>
+
           </div>
         </div>
       </section>
@@ -388,7 +388,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-primary">Address</h3>
-                    <p className="text-muted-foreground">5555 Whittlesey Blvd<br />Columbus, GA 31909</p>
+                    <p className="text-muted-foreground">Columbus Park Crossing<br />5555 Whittlesey Blvd., Bldg. 1<br />Columbus, GA 31909</p>
                     <p className="text-muted-foreground mt-2">
                       <span className="font-semibold">Hours:</span><br/>
                       Mon - Sat: 10am - 7pm<br/>

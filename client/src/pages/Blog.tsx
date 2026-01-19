@@ -71,6 +71,16 @@ export default function Blog() {
       date: "August 22, 2023",
       image: "/images/TD13a_Collins_610494_D180764_018.jpg",
       category: "Materials"
+    },
+    {
+      id: 6,
+      slug: "easy-room-refresh-accessories",
+      title: "Easy Ways to Refresh Your Room by Swapping Accessories",
+      excerpt: "If your room is feeling a little tired but a full makeover isn't in the cards, accessories are your secret weapon. Small changes can make a big impact.",
+      author: "Design Team",
+      date: "January 15, 2026",
+      image: "/images/gallery/blue-grey-living-room-1.png",
+      category: "Decor Tips"
     }
   ];
 
