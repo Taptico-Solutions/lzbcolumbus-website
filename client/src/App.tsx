@@ -23,7 +23,7 @@ function Router() {
         <Route path="/comfort-club" component={ComfortClub} />
         <Route path="/community" component={Community} />
       <Route path="/blog" component={Blog} />
-        <Route path="/blog/:id" component={BlogPost} />
+        <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/new-year-2026" component={NewYear2026} />
         <Route path="/room-planner" component={RoomPlanner} />
         <Route path="/service-request" component={ServiceRequest} />

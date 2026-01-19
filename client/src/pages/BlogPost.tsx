@@ -9,6 +9,50 @@ import { useState } from "react";
 // Mock data for blog posts - in a real app this would come from an API or CMS
 const blogPosts = [
   {
+    id: 5,
+    slug: "la-z-boy-rebrand-2025",
+    title: "La-Z-Boy Gets Comfy with Its Biggest Rebrand in 22 Years",
+    content: `
+      <p class="mb-4">La-Z-Boy, the iconic purveyor of recliners and accidental napping, has finally got round to rebranding, and it’s a big one. With help from creative agency Colle McVoy, the company just pulled off its first major identity refresh in over two decades.</p>
+      
+      <p class="mb-4">This is a full reimagining of what La-Z-Boy stands for, shifting from “dad chair in a dusty showroom” to a lifestyle brand rooted in wellness and softness. The timing couldn’t be better. With their 100th anniversary on the horizon in 2027 and the world still deep in its love affair with loungewear, La-Z-Boy is smartly claiming its spot as the high priest of laid-back living.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Comfort is No Longer a Guilty Pleasure</h3>
+      <p class="mb-4">For years, La-Z-Boy was shorthand for… well, laziness. Whether it was Chandler and Joey fighting over the recliner on Friends or your uncle snoozing through Sunday football, the brand was baked into pop culture, just not in a way most marketers would shout about.</p>
+      <p class="mb-4">But Colle McVoy spotted the opportunity. Instead of running from the brand’s history, they’ve embraced it. They doubled down on comfort and reframed it as a modern wellness essential. This isn’t about zoning out in front of the telly. It’s about creating a personal sanctuary. An “ahhh place,” as the new brand line puts it.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">The New Logo is Soft in All The Right Places</h3>
+      <p class="mb-4">The old La-Z-Boy logo design was doing the bare minimum. Corporate, cold, and very much stuck in the early 2000s. The new one? With its soft curves and subtle movement, it’s clearly inspired by the original 1927 logo. The refreshed wordmark feels like it’s just finished a deep stretch and sunk into a cloud.</p>
+      <p class="mb-4">Each letterform has been shaped to mimic the feeling of sinking into your favourite chair, with gentle tilts and pillowy terminals that make the whole thing feel tactile before you’ve even touched a cushion. And yes, the hyphens are back.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">A Brand You Can Feel</h3>
+      <p class="mb-4">This rebrand is designed to feel comfy. The colour palette leans into nature, with calming forest greens and a burnt vermilion that feels like firelight. Typography-wise, the combo of Bookmania and Gotham brings together the old and the new, the warm and the structured.</p>
+      <p class="mb-4">From UX design and showroom layouts to packaging and photography, the entire experience has been crafted to feel unhurried and intuitive. Layouts are spacious, messaging is clear, and every touchpoint is another nudge to relax.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Rest is in, and La-Z-Boy Owns it</h3>
+      <p class="mb-4">While other heritage brands are busy chasing youth and relevance with influencer deals and viral gimmicks, La-Z-Boy is doing something smarter. It’s staying in its lane and turning it into a comfort highway. Post-Covid, people aren’t just staying home; they’re choosing home.</p>
+      <p class="mb-4">With slogans like “Tailored for your time off” and “Life’s better laid back,” the brand is reclaiming rest as something aspirational. No guilt. No grind. Just intentional calm (with nice branding).</p>
+    `,
+    author: "Design Team",
+    date: "August 4, 2025",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800",
+    category: "Brand News",
+    relatedProducts: [
+      {
+        id: "p1",
+        name: "Trouper Recliner",
+        image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
+        category: "Recliners"
+      },
+      {
+        id: "p7",
+        name: "Ava Sofa",
+        image: "/images/TD8_Ava_010769_C196552_009.jpg",
+        category: "Sofas"
+      }
+    ]
+  },
+  {
     id: 1,
     slug: "choosing-perfect-recliner",
     title: "5 Tips for Choosing the Perfect Recliner",
@@ -139,8 +183,7 @@ const blogPosts = [
         name: "Ava Sofa",
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
         category: "Sofas"
-      },
-
+      }
     ]
   }
 ];
@@ -253,61 +296,35 @@ export default function BlogPost() {
                           Quick View
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="sm:max-w-[600px] bg-background border-border">
+                      <DialogContent className="sm:max-w-[425px]">
                         <DialogHeader>
                           <DialogTitle className="font-serif text-2xl text-primary">{product.name}</DialogTitle>
-                          <DialogDescription className="text-muted-foreground uppercase tracking-wider text-xs">
-                            {product.category}
+                          <DialogDescription>
+                            Experience comfort and style with the {product.name}.
                           </DialogDescription>
                         </DialogHeader>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                          <div className="aspect-square overflow-hidden rounded-lg bg-muted/30">
+                        <div className="grid gap-4 py-4">
+                          <div className="aspect-video relative overflow-hidden rounded-lg">
                             <img 
                               src={product.image} 
                               alt={product.name} 
-                              className="w-full h-full object-cover"
+                              className="object-cover w-full h-full"
                             />
                           </div>
-                          <div className="space-y-4">
-                            <p className="text-muted-foreground">
-                              Experience the perfect blend of style and comfort with the {product.name}. 
-                              Available in hundreds of fabrics and leathers to match your unique style.
-                            </p>
-                            <div className="space-y-2">
-                              <h4 className="font-medium text-primary">Key Features:</h4>
-                              <ul className="text-sm text-muted-foreground list-disc list-inside space-y-1">
-                                <li>Premium cushioning</li>
-                                <li>Customizable upholstery</li>
-                                <li>Handcrafted quality</li>
-                                <li>Lifetime warranty on frame</li>
-                              </ul>
-                            </div>
-                            <div className="pt-4">
-                              <Link href="/comfort-club">
-                                <Button className="w-full bg-primary text-white hover:bg-primary/90">
-                                  Schedule a Test Sit
-                                </Button>
-                              </Link>
-                            </div>
-                          </div>
+                          <p className="text-muted-foreground">
+                            Visit our showroom to customize this piece with over 900 fabric and leather options.
+                          </p>
+                          <Link href="/room-planner">
+                            <Button className="w-full bg-primary text-white">
+                              Book a Consultation
+                            </Button>
+                          </Link>
                         </div>
                       </DialogContent>
                     </Dialog>
                   </CardFooter>
                 </Card>
               ))}
-            </div>
-            
-            <div className="mt-8 pt-8 border-t border-border">
-              <h4 className="font-serif text-xl text-primary mb-4">Need Design Help?</h4>
-              <p className="text-muted-foreground mb-4 text-sm">
-                Our design experts can help you find the perfect pieces for your home.
-              </p>
-              <Link href="/comfort-club">
-                <Button className="w-full bg-primary text-white">
-                  Book a Consultation
-                </Button>
-              </Link>
             </div>
           </div>
         </div>

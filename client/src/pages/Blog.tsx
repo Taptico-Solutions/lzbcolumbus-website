@@ -23,6 +23,16 @@ export default function Blog() {
   };
   const posts = [
     {
+      id: 5,
+      slug: "la-z-boy-rebrand-2025",
+      title: "La-Z-Boy Gets Comfy with Its Biggest Rebrand in 22 Years",
+      excerpt: "La-Z-Boy ditches the 'dad chair' vibes in its first major rebrand in over two decades, embracing comfort as a modern wellness essential.",
+      author: "Design Team",
+      date: "August 4, 2025",
+      image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800",
+      category: "Brand News"
+    },
+    {
       id: 1,
       slug: "choosing-perfect-recliner",
       title: "5 Tips for Choosing the Perfect Recliner",
