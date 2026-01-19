@@ -72,17 +72,7 @@ export default function RoomPlanner() {
             />
           </div>
 
-          <div className="mb-20">
-            <TransformationGallery 
-              images={[
-                { src: "/images/project-upload-2/IMG_4319.jpg", alt: "Living Room Angle 1", category: "Living Room" },
-                { src: "/images/project-upload-2/IMG_4316.jpg", alt: "Detail Shot", category: "Details" },
-                
-                { src: "/images/project-upload/IMG_7226.jpg", alt: "Rug Detail", category: "Textures" },
-                
-              ]}
-            />
-          </div>
+
 
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl text-primary mb-4">See It In Action</h2>
