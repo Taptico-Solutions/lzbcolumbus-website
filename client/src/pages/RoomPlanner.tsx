@@ -223,11 +223,11 @@ export default function RoomPlanner() {
                   </li>
                 ))}
               </ul>
-              <Link href="/comfort-club">
+              <a href="https://www.la-z-boy.com/design-services/request" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90 border-none text-lg px-8">
                   Request Design Review
                 </Button>
-              </Link>
+              </a>
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-2xl border-4 border-white/10">
               <img 
