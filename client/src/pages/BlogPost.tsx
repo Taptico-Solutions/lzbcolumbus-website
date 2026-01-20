@@ -33,9 +33,9 @@ const blogPosts = [
       <p class="mb-4">While other heritage brands are busy chasing youth and relevance with influencer deals and viral gimmicks, La-Z-Boy is doing something smarter. It’s staying in its lane and turning it into a comfort highway. Post-Covid, people aren’t just staying home; they’re choosing home.</p>
       <p class="mb-4">With slogans like “Tailored for your time off” and “Life’s better laid back,” the brand is reclaiming rest as something aspirational. No guilt. No grind. Just intentional calm (with nice branding).</p>
     `,
-    author: "Design Team",
+    author: "La-Z-Boy Corporate News",
     date: "August 4, 2025",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800",
+    image: "/images/logo-final.png",
     category: "Brand News",
     relatedProducts: [
       {
@@ -388,11 +388,17 @@ export default function BlogPost() {
             {/* Related Products */}
             <Card>
               <CardHeader>
-                <CardTitle className="font-serif text-xl">Shop This Look</CardTitle>
+                <CardTitle className="font-serif text-xl">Featured Products</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {post.relatedProducts.map((product) => (
-                  <div key={product.id} className="flex gap-4 items-center group cursor-pointer">
+                  <a 
+                    key={product.id} 
+                    href="https://www.la-z-boy.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex gap-4 items-center group cursor-pointer"
+                  >
                     <div className="h-20 w-20 rounded-md overflow-hidden bg-secondary">
                       <img 
                         src={product.image} 
@@ -401,18 +407,16 @@ export default function BlogPost() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-medium text-primary group-hover:text-accent transition-colors">
-                        {product.name}
-                      </h4>
+                      <h4 className="font-medium text-foreground group-hover:text-primary transition-colors">{product.name}</h4>
                       <p className="text-sm text-muted-foreground">{product.category}</p>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </CardContent>
               <CardFooter>
-                <Link href="/comfort-club">
-                  <Button className="w-full">Book a Design Consultation</Button>
-                </Link>
+                <a href="https://www.la-z-boy.com" target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button className="w-full">View All Products</Button>
+                </a>
               </CardFooter>
             </Card>
 

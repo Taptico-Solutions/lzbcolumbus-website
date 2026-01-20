@@ -32,7 +32,7 @@ export default function Home() {
           >
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 leading-tight">
               Make Yourself <br/>
-              <span className="text-foreground text-5xl md:text-6xl lg:text-7xl">At Home.</span>
+              <span className="text-foreground text-5xl md:text-6xl lg:text-7xl">at Home.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light">
               We're here to help you create a space that feels just right—filled with comfort, style, and quality that lasts.
@@ -428,7 +428,7 @@ export default function Home() {
             
             <div className="h-[400px] bg-muted rounded-lg overflow-hidden shadow-lg relative">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8765432109876!2d-84.94567890123456!3d32.54321098765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888cdd1234567890%3A0x1234567890abcdef!2sLa-Z-Boy%20Furniture%20Galleries!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.087456789012!2d-84.95426398480000!3d32.54515048104200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888ccb4a37b8fd43%3A0x23498fe3dd17bfdc!2sLa-Z-Boy%20Home%20Furnishings%20%26%20Decor!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
