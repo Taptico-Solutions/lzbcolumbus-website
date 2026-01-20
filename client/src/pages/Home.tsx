@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Star, ArrowRight, Heart, ShieldCheck, Armchair, PenSquare } from "lucide-react";
+import { MapView } from "@/components/Map";
 import { InstagramFeed } from "@/components/InstagramFeed";
 import { GoogleReviewFeed } from "@/components/GoogleReviewFeed";
 import { Link } from "wouter";
@@ -427,14 +428,29 @@ export default function Home() {
             </div>
             
             <div className="h-[400px] bg-muted rounded-lg overflow-hidden shadow-lg relative">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.087456789012!2d-84.95426398480000!3d32.54515048104200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888ccb4a37b8fd43%3A0x23498fe3dd17bfdc!2sLa-Z-Boy%20Home%20Furnishings%20%26%20Decor!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy"
-                title="La-Z-Boy Columbus Location"
+              <MapView 
+                initialCenter={{ lat: 32.5451505, lng: -84.954264 }}
+                initialZoom={17}
+                onMapReady={(map) => {
+                  const placeId = "ChIJQ_24N0rSjIgR3L8X3eOJOQM";
+                  const request = {
+                    placeId: placeId,
+                    fields: ["name", "formatted_address", "geometry", "rating", "user_ratings_total"]
+                  };
+                  
+                  const service = new google.maps.places.PlacesService(map);
+                  service.getDetails(request, (place, status) => {
+                    if (status === google.maps.places.PlacesServiceStatus.OK && place && place.geometry && place.geometry.location) {
+                      map.setCenter(place.geometry.location);
+                      new google.maps.marker.AdvancedMarkerElement({
+                        map,
+                        position: place.geometry.location,
+                        title: place.name,
+                      });
+                    }
+                  });
+                }}
+                className="w-full h-full"
               />
             </div>
           </div>
