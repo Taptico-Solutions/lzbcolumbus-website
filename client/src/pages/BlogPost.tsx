@@ -80,7 +80,7 @@ const blogPosts = [
       <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Bottom Line:</h3>
       <p class="mb-4">Choose a recliner that fits your space, matches how you relax, and supports how you move. With La-Z-Boy's variety of styles and mechanisms, there's a perfect seat for nearly every lifestyle.</p>
     `,
-    author: "Sarah Evans",
+    author: "La-Z-Boy Design Team",
     date: "October 15, 2023",
     image: "/images/pinnacle-power-lift-recliner.jpg",
     category: "Furniture Guide",
@@ -156,7 +156,7 @@ const blogPosts = [
       <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Keep it Light</h3>
       <p class="mb-4">Lighter fabrics reflect light and make the piece feel less heavy. Legs that lift the sofa off the floor also help create a sense of openness.</p>
     `,
-    author: "Mike Johnson",
+    author: "La-Z-Boy Design Team",
     date: "September 10, 2023",
     image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
     category: "Space Planning",
@@ -200,7 +200,7 @@ const blogPosts = [
       <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Who It’s Best For:</h3>
       <p class="mb-4">Families with kids, pet owners, and anyone who wants beautiful furniture without the worry of daily accidents will appreciate the practical advantages of performance fabrics on La-Z-Boy pieces. Whether you’re upgrading a recliner or choosing a new sofa, these fabrics help keep your home looking great with less stress.</p>
     `,
-    author: "Sarah Evans",
+    author: "La-Z-Boy Design Team",
     date: "August 22, 2023",
     image: "/images/TD13a_Collins_610494_D180764_018.jpg",
     category: "Materials",
