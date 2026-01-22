@@ -127,7 +127,8 @@ export default function Blog() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full flex flex-col overflow-hidden group border-border/50 hover:shadow-lg transition-all duration-300">
+                <Link href={`/blog/${post.slug}`} className="block h-full">
+                  <Card className="h-full flex flex-col overflow-hidden group border-border/50 hover:shadow-lg transition-all duration-300 cursor-pointer">
                   <div className="relative h-64 overflow-hidden">
                     <img 
                       src={post.image} 
@@ -159,13 +160,12 @@ export default function Blog() {
                     </p>
                   </CardContent>
                   <CardFooter>
-                    <Link href={`/blog/${post.slug}`}>
-                      <Button variant="ghost" className="p-0 h-auto font-medium text-primary hover:text-accent hover:bg-transparent group/btn">
-                        Read Article <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                      </Button>
-                    </Link>
+                    <Button variant="ghost" className="p-0 h-auto font-medium text-primary hover:text-accent hover:bg-transparent group/btn">
+                      Read Article <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                    </Button>
                   </CardFooter>
                 </Card>
+                </Link>
               </motion.div>
             ))}
           </div>

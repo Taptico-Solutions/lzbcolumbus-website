@@ -392,25 +392,25 @@ export default function BlogPost() {
               </CardHeader>
               <CardContent className="space-y-4">
                 {post.relatedProducts.map((product) => (
-                  <a 
-                    key={product.id} 
-                    href="https://www.la-z-boy.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex gap-4 items-center group cursor-pointer"
-                  >
-                    <div className="h-20 w-20 rounded-md overflow-hidden bg-secondary">
-                      <img 
-                        src={product.image} 
-                        alt={product.name} 
-                        className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
+                  <div key={product.id} className="flex gap-4 items-center group">
+                    <Link href={`/product/${product.id}`}>
+                      <div className="h-20 w-20 rounded-md overflow-hidden bg-secondary cursor-pointer">
+                        <img 
+                          src={product.image} 
+                          alt={product.name} 
+                          className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </Link>
                     <div>
-                      <h4 className="font-medium text-foreground group-hover:text-primary transition-colors">{product.name}</h4>
-                      <p className="text-sm text-muted-foreground">{product.category}</p>
+                      <Link href={`/product/${product.id}`}>
+                        <h4 className="font-medium text-foreground group-hover:text-primary transition-colors cursor-pointer">{product.name}</h4>
+                      </Link>
+                      <Link href={`/category/${product.category}`}>
+                        <p className="text-sm text-muted-foreground hover:text-accent cursor-pointer transition-colors">{product.category}</p>
+                      </Link>
                     </div>
-                  </a>
+                  </div>
                 ))}
               </CardContent>
               <CardFooter>

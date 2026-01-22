@@ -5,11 +5,14 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import ComfortClub from "./pages/ComfortClub";
 import Community from "./pages/Community";
 import Blog from "./pages/Blog";
 import BlogPost from "@/pages/BlogPost";
+import Category from "@/pages/Category";
+import Product from "@/pages/Product";
 import NewYear2026 from "@/pages/NewYear2026";
 import RoomPlanner from "./pages/RoomPlanner";
 import ServiceRequest from "./pages/ServiceRequest";
@@ -18,12 +21,15 @@ import GeneralQuestions from "./pages/GeneralQuestions";
 function Router() {
   return (
     <Layout>
+      <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/comfort-club" component={ComfortClub} />
         <Route path="/community" component={Community} />
       <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
+        <Route path="/category/:name" component={Category} />
+        <Route path="/product/:id" component={Product} />
       <Route path="/new-year-2026" component={NewYear2026} />
         <Route path="/room-planner" component={RoomPlanner} />
         <Route path="/service-request" component={ServiceRequest} />
