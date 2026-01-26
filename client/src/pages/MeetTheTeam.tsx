@@ -4,56 +4,56 @@ import { ArrowLeft, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-// Team member data with the uploaded images
+// Team member data
 const teamMembers = [
   {
     id: 1,
-    name: "Design Consultant",
-    role: "Interior Design Expert",
-    image: "/images/team/310CD491-85C6-4A9E-AEED-B7052F45A422.jpeg",
-    bio: "Passionate about creating spaces that reflect your personal style and comfort needs."
+    name: "Tamika",
+    role: "Design Consultant",
+    image: "/images/team/7D31863D-AF57-4D1F-9D46-63B35109193A.jpeg",
+    bio: "Tamika is patient, thoughtful, and incredibly good at picking up on the details that matter most to you. Customers often comment on how well she listens and how confident they feel after working with her. Whether it’s fabric durability, comfort preferences, or coordinating pieces, she has a knack for putting it all together. Bonus: she makes the process genuinely enjoyable."
   },
   {
     id: 2,
-    name: "Design Consultant",
-    role: "Interior Design Expert",
-    image: "/images/team/8BB8A7C8-045A-4297-993D-F600075145BA.jpeg",
-    bio: "Specializes in space planning and color coordination to bring your vision to life."
-  },
-  {
-    id: 3,
     name: "Bret",
     role: "Design Consultant",
     image: "/images/team/2DB57321-F7BF-4810-80BC-ED5F81D09E23.jpeg",
-    bio: "Dedicated to helping you find the perfect furniture pieces for your home and lifestyle."
+    bio: "Bret has mastered the art of giving you space without disappearing. Customers appreciate his calm, no-pressure approach and his ability to jump in with the perfect suggestion right when you need it. He knows La-Z-Boy inside and out and is especially good at helping people narrow down options without overwhelm. Shopping with Bret feels easy — like it should."
+  },
+  {
+    id: 3,
+    name: "Casey",
+    role: "Interior Designer",
+    image: "/images/team/1EFC803C-5257-4B20-8CF3-1D8E0715AE62.jpeg",
+    bio: "Casey is our space-planning wizard and design problem-solver. Awkward room layout? Too many doors? Furniture that never quite fits? Casey lives for this stuff. She helps customers visualize their space, choose the right scale, and create rooms that actually work — not just look good online. If your room suddenly makes sense and feels finished, Casey probably had something to do with it."
   },
   {
     id: 4,
-    name: "Kenneth",
-    role: "Design Consultant",
-    image: "/images/team/F2B8B66A-3926-4FC6-BA25-3F9704D8865D.jpeg",
-    bio: "Expert in combining functionality with aesthetics to create beautiful, livable rooms."
-  },
-  {
-    id: 5,
     name: "Jason",
     role: "Design Consultant",
     image: "/images/team/38AF3243-C28A-4C87-8A03-727829B6D97A.jpeg",
-    bio: "Here to guide you through our extensive collection and customization options."
+    bio: "Jason is the guy customers trust when they want real answers, not sales talk. He’s known for taking his time, listening carefully, and helping people land on furniture that actually fits their lifestyle — not just their living room. Shoppers regularly mention how relaxed the experience felt, which Jason considers the highest compliment. If you leave confident in your decision, he’s done his job."
+  },
+  {
+    id: 5,
+    name: "Kenneth",
+    role: "Design Consultant",
+    image: "/images/team/F2B8B66A-3926-4FC6-BA25-3F9704D8865D.jpeg",
+    bio: "Kenneth brings great energy, real talk, and a genuine love for helping people get comfortable. Customers appreciate his honesty and easygoing style — no upselling, no pressure, just good guidance. He’s especially good at helping people compare options and understand what features they’ll actually use. Expect smiles, laughs, and a chair you don’t want to get out of."
   },
   {
     id: 6,
-    name: "Design Consultant",
-    role: "Interior Design Expert",
-    image: "/images/team/1EFC803C-5257-4B20-8CF3-1D8E0715AE62.jpeg",
-    bio: "Loves helping clients transform their houses into homes with personalized design solutions."
+    name: "Marlon",
+    role: "Store Manager",
+    image: "/images/team/8BB8A7C8-045A-4297-993D-F600075145BA.jpeg",
+    bio: "Marlon keeps the whole operation running smoothly while making sure the store feels welcoming, relaxed, and friendly. Customers often comment on the positive atmosphere — and that starts at the top. He believes furniture shopping should be enjoyable, not stressful, and leads the team with that mindset every day. If your experience feels easy and comfortable, Marlon would say that’s exactly the point."
   },
   {
     id: 7,
-    name: "Design Consultant",
-    role: "Interior Design Expert",
-    image: "/images/team/7D31863D-AF57-4D1F-9D46-63B35109193A.jpeg",
-    bio: "Focused on understanding your unique needs to create a space you'll love for years to come."
+    name: "Aulashua (Smoot)",
+    role: "Design Consultant",
+    image: "/images/team/310CD491-85C6-4A9E-AEED-B7052F45A422.jpeg",
+    bio: "Known around the showroom as “Smoot,” Aulashua has a gift for making people feel comfortable before they even sit down. Customers often mention how fun and easy their experience was — which is no accident. He’s especially skilled at matching people with recliners they didn’t know they needed, but will soon refuse to give up. Expect laughs, honest advice, and at least one “okay wow, this is comfortable” moment."
   }
 ];
 
@@ -78,8 +78,11 @@ export default function MeetTheTeam() {
               Meet Our Design Team
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Our certified design experts are here to help you create a home that's uniquely yours. 
-              From finding the perfect recliner to redesigning an entire room, we're with you every step of the way.
+              Furniture shopping should feel comfortable — and so should the people helping you do it. 
+              Our team at La-Z-Boy Columbus is made up of experienced listeners, space-planning pros, 
+              and comfort enthusiasts who genuinely enjoy helping you find what works for your home. 
+              No pressure, no rushing, no “salesy” vibes — just real people, real advice, and a lot 
+              of sitting down along the way.
             </p>
           </motion.div>
         </div>
@@ -97,7 +100,7 @@ export default function MeetTheTeam() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
                   <div className="aspect-[3/4] overflow-hidden bg-muted relative">
                     <img 
                       src={member.image} 
@@ -105,13 +108,13 @@ export default function MeetTheTeam() {
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
-                  <CardContent className="pt-6 text-center">
+                  <CardContent className="pt-6 text-center flex-grow flex flex-col">
                     <h3 className="font-serif text-2xl text-primary mb-1">{member.name}</h3>
                     <p className="text-accent font-medium mb-4 uppercase tracking-wide text-sm">{member.role}</p>
-                    <p className="text-muted-foreground mb-6">{member.bio}</p>
-                    <Button variant="outline" className="w-full gap-2 group">
+                    <p className="text-muted-foreground mb-6 flex-grow">{member.bio}</p>
+                    <Button variant="outline" className="w-full gap-2 group mt-auto">
                       <Mail className="h-4 w-4 group-hover:text-accent transition-colors" />
-                      Contact {member.name === "Design Consultant" ? "Me" : member.name}
+                      Contact {member.name.split(' ')[0]}
                     </Button>
                   </CardContent>
                 </Card>
