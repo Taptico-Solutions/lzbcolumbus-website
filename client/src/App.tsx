@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import Category from "@/pages/Category";
 import Product from "@/pages/Product";
+import MeetTheTeam from "@/pages/MeetTheTeam";
 import NewYear2026 from "@/pages/NewYear2026";
 import RoomPlanner from "./pages/RoomPlanner";
 import ServiceRequest from "./pages/ServiceRequest";
@@ -30,6 +31,7 @@ function Router() {
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/category/:name" component={Category} />
         <Route path="/product/:id" component={Product} />
+        <Route path="/meet-the-team" component={MeetTheTeam} />
       <Route path="/new-year-2026" component={NewYear2026} />
         <Route path="/room-planner" component={RoomPlanner} />
         <Route path="/service-request" component={ServiceRequest} />

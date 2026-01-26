@@ -14,6 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { href: "/community", label: "Community" },
     { href: "/blog", label: "Design Blog" },
     { href: "/room-planner", label: "Room Planner" },
+    { href: "/meet-the-team", label: "Meet the Team" },
   ];
 
   return (
