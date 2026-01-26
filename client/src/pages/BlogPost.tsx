@@ -9,6 +9,61 @@ import { useState } from "react";
 // Mock data for blog posts - in a real app this would come from an API or CMS
 const blogPosts = [
   {
+    id: 6,
+    slug: "cottage-design-trend",
+    title: "The Cottage Design Trend: Comfort Comes Home",
+    content: `
+      <p class="mb-4">Cottage design is having a moment — and it’s easy to see why. In a world that feels busy and over-styled, this trend brings design back to what matters most: comfort, warmth, and spaces that are meant to be lived in. Cottage interiors feel welcoming, familiar, and effortlessly cozy — the kind of rooms you actually want to sit down and stay awhile in.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Comfortable Upholstery is at the Heart</h3>
+      <p class="mb-4">Cottage spaces favor plush seating, soft fabrics, and furniture that invites you to relax. Think sofas and chairs with generous cushions, relaxed silhouettes, and performance fabrics that hold up to everyday life while still looking beautiful.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Soft Colors Create an Easygoing Foundation</h3>
+      <p class="mb-4">Whites, creams, warm neutrals, soft greens, and pale blues help cottage rooms feel light and calm. These shades pair perfectly with upholstered furniture, layered textiles, and natural wood tones, creating a space that feels peaceful rather than precious.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Layering Adds Warmth and Personality</h3>
+      <p class="mb-4">Cottage style shines when textures are mixed — throw pillows, cozy blankets, woven rugs, and upholstered pieces all working together. The result feels collected and comfortable, not overly matched or formal.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Livable Design is the Goal</h3>
+      <p class="mb-4">Cottage interiors aren’t about perfection. They’re about homes that function for real people — families, pets, guests, and quiet evenings at home. Furniture that’s supportive, durable, and comfortable isn’t just practical here — it’s essential.</p>
+      
+      <h3 class="text-2xl font-serif text-primary mt-8 mb-4">Modern Cottage Keeps Things Fresh</h3>
+      <p class="mb-4">Today’s take on cottage design blends classic coziness with clean lines and thoughtful layouts. The look feels timeless, relaxed, and perfectly suited for everyday living — proof that comfort and good design can absolutely coexist.</p>
+
+      <div class="my-8 p-6 bg-secondary/20 rounded-lg border border-secondary/40">
+        <h4 class="text-xl font-serif text-primary mb-3">Featured Piece: La‑Z‑Boy Collins Sofa</h4>
+        <p class="mb-4">A classic transitional silhouette with rolled arms, supportive blown-fiber backs, and box-seat cushions that strike the perfect balance of comfort and timeless style. It pairs beautifully with soft linens, cozy throws, and vintage-inspired décor typical of the cottage trend.</p>
+        <ul class="list-disc pl-5 space-y-2 mb-4">
+          <li><strong>Why it works for cottage design:</strong> Simple, welcoming profile that feels homey without looking sloppy.</li>
+          <li><strong>Customizable upholstery</strong> to match light, neutral, or earthy palettes.</li>
+          <li><strong>Plush seating and rolled arms</strong> that invite lounging — key to cottage comfort.</li>
+        </ul>
+        <img src="/images/blog/collins-sofa.webp" alt="La-Z-Boy Collins Sofa" class="w-full h-auto rounded-md shadow-sm mb-4" />
+        <a href="/product/collins-sofa" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+          Shop Collins Sofa
+        </a>
+      </div>
+    `,
+    author: "La-Z-Boy Design Team",
+    date: "January 24, 2026",
+    image: "/images/blog/collins-sofa.webp",
+    category: "Design Trends",
+    relatedProducts: [
+      {
+        id: "collins-sofa",
+        name: "Collins Sofa",
+        image: "/images/blog/collins-sofa.webp",
+        category: "Sofas"
+      },
+      {
+        id: "p7",
+        name: "Ava Sofa",
+        image: "/images/TD8_Ava_010769_C196552_009.jpg",
+        category: "Sofas"
+      }
+    ]
+  },
+  {
     id: 5,
     slug: "la-z-boy-rebrand-2025",
     title: "La-Z-Boy Gets Comfy with Its Biggest Rebrand in 22 Years",

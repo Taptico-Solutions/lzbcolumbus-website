@@ -23,6 +23,16 @@ export default function Blog() {
   };
   const posts = [
     {
+      id: 6,
+      slug: "cottage-design-trend",
+      title: "The Cottage Design Trend: Comfort Comes Home",
+      excerpt: "Cottage design is having a moment. Discover how to bring this welcoming, effortlessly cozy style into your home with soft colors, layered textures, and comfortable upholstery.",
+      author: "Design Team",
+      date: "January 24, 2026",
+      image: "/images/blog/collins-sofa.webp",
+      category: "Design Trends"
+    },
+    {
       id: 5,
       slug: "la-z-boy-rebrand-2025",
       title: "La-Z-Boy Gets Comfy with Its Biggest Rebrand in 22 Years",
