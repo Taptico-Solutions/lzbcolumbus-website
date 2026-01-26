@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowLeft, Mail } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -112,10 +112,7 @@ export default function MeetTheTeam() {
                     <h3 className="font-serif text-2xl text-primary mb-1">{member.name}</h3>
                     <p className="text-accent font-medium mb-4 uppercase tracking-wide text-sm">{member.role}</p>
                     <p className="text-muted-foreground mb-6 flex-grow">{member.bio}</p>
-                    <Button variant="outline" className="w-full gap-2 group mt-auto">
-                      <Mail className="h-4 w-4 group-hover:text-accent transition-colors" />
-                      Contact {member.name.split(' ')[0]}
-                    </Button>
+
                   </CardContent>
                 </Card>
               </motion.div>
