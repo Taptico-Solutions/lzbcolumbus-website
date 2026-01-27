@@ -39,8 +39,8 @@ const blogPosts = [
           <li><strong>Plush seating and rolled arms</strong> that invite lounging — key to cottage comfort.</li>
         </ul>
         <img src="/images/blog/collins-sofa.webp" alt="La-Z-Boy Collins Sofa" class="w-full h-auto rounded-md shadow-sm mb-4" />
-        <a href="/product/collins-sofa" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-          Shop Collins Sofa
+        <a href="/room-planner" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+          Request a Quote
         </a>
       </div>
     `,
