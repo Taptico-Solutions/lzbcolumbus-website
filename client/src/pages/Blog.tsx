@@ -192,13 +192,27 @@ export default function Blog() {
             </p>
             {isSubscribed ? (
               <motion.div 
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ type: "spring", duration: 0.6, bounce: 0.3 }}
                 className="bg-white/10 rounded-lg p-6 flex flex-col items-center gap-3"
               >
-                <CheckCircle2 className="h-12 w-12 text-accent" />
-                <h3 className="text-xl font-medium">Thanks for subscribing!</h3>
-                <p className="text-sm text-white/80">Check your inbox for your welcome guide.</p>
+                <motion.div
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ type: "spring", duration: 0.8, bounce: 0.5, delay: 0.2 }}
+                >
+                  <CheckCircle2 className="h-12 w-12 text-accent" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="text-center"
+                >
+                  <h3 className="text-xl font-medium">Thanks for subscribing!</h3>
+                  <p className="text-sm text-white/80">Check your inbox for your welcome guide.</p>
+                </motion.div>
               </motion.div>
             ) : (
               <form 

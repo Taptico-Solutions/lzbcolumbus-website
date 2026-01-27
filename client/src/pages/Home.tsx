@@ -257,15 +257,31 @@ export default function Home() {
           </p>
           <div className="max-w-2xl mx-auto">
             {isSubscribed ? (
-              <div className="bg-white/50 rounded-lg p-8 text-center border border-[#003349]/10">
-                <div className="inline-flex items-center justify-center p-3 bg-[#C25B3C]/10 rounded-full mb-4">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ type: "spring", duration: 0.6, bounce: 0.3 }}
+                className="bg-white/50 rounded-lg p-8 text-center border border-[#003349]/10"
+              >
+                <motion.div 
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ type: "spring", duration: 0.8, bounce: 0.5, delay: 0.2 }}
+                  className="inline-flex items-center justify-center p-3 bg-[#C25B3C]/10 rounded-full mb-4"
+                >
                   <CheckCircle2 className="h-8 w-8 text-[#C25B3C]" />
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-[#003349] mb-2">You're on the list!</h3>
-                <p className="text-gray-700">
-                  Thanks for joining the Comfort Club. Keep an eye on your inbox for your welcome email.
-                </p>
-              </div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <h3 className="text-2xl font-serif font-bold text-[#003349] mb-2">You're on the list!</h3>
+                  <p className="text-gray-700">
+                    Thanks for joining the Comfort Club. Keep an eye on your inbox for your welcome email.
+                  </p>
+                </motion.div>
+              </motion.div>
             ) : (
               <form 
                 className="flex flex-col gap-4 validate text-left" 
