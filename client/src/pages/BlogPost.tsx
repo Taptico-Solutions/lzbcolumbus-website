@@ -464,7 +464,7 @@ export default function BlogPost() {
               <CardContent className="space-y-4">
                 {post.relatedProducts.map((product) => (
                   <div key={product.id} className="flex gap-4 items-center group">
-                    <Link href={product.id === 'room-planner' ? '/room-planner' : `/product/${product.id}`}>
+                    <a href={product.url} target="_blank" rel="noopener noreferrer">
                       <div className="h-20 w-20 rounded-md overflow-hidden bg-secondary cursor-pointer">
                         <img 
                           src={product.image} 
@@ -472,14 +472,14 @@ export default function BlogPost() {
                           className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                    </Link>
+                    </a>
                     <div>
-                      <Link href={product.id === 'room-planner' ? '/room-planner' : `/product/${product.id}`}>
+                      <a href={product.url} target="_blank" rel="noopener noreferrer">
                         <h4 className="font-medium text-foreground group-hover:text-primary transition-colors cursor-pointer">{product.name}</h4>
-                      </Link>
-                      <Link href={`/category/${product.category}`}>
+                      </a>
+                      <a href="https://www.la-z-boy.com" target="_blank" rel="noopener noreferrer">
                         <p className="text-sm text-muted-foreground hover:text-accent cursor-pointer transition-colors">{product.category}</p>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 ))}
