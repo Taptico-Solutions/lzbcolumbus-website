@@ -7,63 +7,63 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 // Mock data for products - in a real app this would come from an API or CMS
 const products = [
   {
-    id: "room-planner",
+    id: "p1",
     name: "Trouper Recliner",
     image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
     category: "Recliners",
     price: "$899"
   },
   {
-    id: "room-planner",
+    id: "p2",
     name: "Morrison Recliner",
     image: "/images/gallery-grey-recliner.jpg",
     category: "Recliners",
     price: "$749"
   },
   {
-    id: "room-planner",
+    id: "p3",
     name: "Jasper Recliner",
     image: "/images/greyson-rocking-recliner.jpg",
     category: "Recliners",
     price: "$929"
   },
   {
-    id: "room-planner",
+    id: "p4",
     name: "Tahoe Sectional",
     image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
     category: "Sectionals",
     price: "$2,499"
   },
   {
-    id: "room-planner",
+    id: "p5",
     name: "Trouper Sectional",
     image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
     category: "Sectionals",
     price: "$2,899"
   },
   {
-    id: "room-planner",
+    id: "p6",
     name: "Ava Sofa",
     image: "/images/TD8_Ava_010769_C196552_009.jpg",
     category: "Sofas",
     price: "$1,299"
   },
   {
-    id: "room-planner",
+    id: "collins-sofa",
     name: "Collins Sofa",
     image: "/images/TD13a_Collins_610494_D180764_018.jpg",
     category: "Sofas",
     price: "$1,499"
   },
   {
-    id: "room-planner",
+    id: "p8",
     name: "Leah Sleep Sofa",
     image: "/images/TD28e_Leah_555-418_D206893.jpg",
     category: "Sleep Sofas",
     price: "$1,699"
   },
   {
-    id: "room-planner",
+    id: "p9",
     name: "Armitage Chair",
     image: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg",
     category: "Chairs",

@@ -131,6 +131,20 @@ const products = [
       "Tapered wood legs",
       "Compact footprint"
     ]
+  },
+  {
+    id: "collins-sofa",
+    name: "Collins Sofa",
+    image: "/images/TD13a_Collins_610494_D180764_018.jpg",
+    category: "Sofas",
+    price: "$1,499",
+    description: "With its rolled arms and deep comfort, the Collins Sofa is a timeless addition to any home. It's designed to look great and feel even better, with a supportive back and seat that holds its shape.",
+    features: [
+      "Rolled arms for a classic look",
+      "ComfortCore® cushions",
+      "Patented La-Z-Boy construction",
+      "Customizable fabric options"
+    ]
   }
 ];
 
