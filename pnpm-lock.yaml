@@ -97,9 +97,6 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.2.8
         version: 1.2.8(@types/react-dom@19.2.1(@types/react@19.2.1))(@types/react@19.2.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@types/jsonp':
-        specifier: ^0.2.3
-        version: 0.2.3
       axios:
         specifier: ^1.12.0
         version: 1.12.2
@@ -191,6 +188,9 @@ importers:
       '@types/google.maps':
         specifier: ^3.58.1
         version: 3.58.1
+      '@types/jsonp':
+        specifier: ^0.2.3
+        version: 0.2.3
       '@types/node':
         specifier: ^24.7.0
         version: 24.7.0

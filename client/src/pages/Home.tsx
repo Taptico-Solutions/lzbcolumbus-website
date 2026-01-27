@@ -11,6 +11,8 @@ import { GoogleReviewFeed } from "@/components/GoogleReviewFeed";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { subscribeToMailchimp } from "@/lib/mailchimp";
+import { toast } from "sonner";
 
 export default function Home() {
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -266,15 +268,40 @@ export default function Home() {
               </div>
             ) : (
               <form 
-                action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0" 
-                method="post" 
-                id="mc-embedded-subscribe-form" 
-                name="mc-embedded-subscribe-form" 
                 className="flex flex-col gap-4 validate text-left" 
-                target="_blank"
-                onSubmit={() => {
-                  localStorage.setItem("comfortClubSubscribed", "true");
-                  setIsSubscribed(true);
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const data = {
+                    EMAIL: formData.get('EMAIL') as string,
+                    FNAME: formData.get('FNAME') as string,
+                    LNAME: formData.get('LNAME') as string,
+                    MMERGE7: formData.get('MMERGE7') as string,
+                    MMERGE9: formData.get('MMERGE9') as string,
+                    MMERGE24: formData.get('MMERGE24') as string,
+                  };
+
+                  try {
+                    const response = await subscribeToMailchimp(data);
+                    if (response.result === 'success') {
+                      localStorage.setItem("comfortClubSubscribed", "true");
+                      setIsSubscribed(true);
+                      toast.success("Successfully subscribed!");
+                    } else {
+                      // Mailchimp error (e.g., already subscribed)
+                      if (response.msg.includes("already subscribed")) {
+                        localStorage.setItem("comfortClubSubscribed", "true");
+                        setIsSubscribed(true);
+                        toast.info("You were already subscribed!");
+                      } else {
+                        toast.error("Something went wrong. Please try again.");
+                        console.error(response.msg);
+                      }
+                    }
+                  } catch (error) {
+                    toast.error("Connection error. Please try again later.");
+                    console.error(error);
+                  }
                 }}
               >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -327,11 +354,6 @@ export default function Home() {
                   <option value="Kennth Llera">Kennth Llera</option>
                   <option value="Susan Evans">Susan Evans</option>
                 </select>
-              </div>
-
-              {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
-              <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-                <input type="text" name="b_125356b6e77a67ca13f0f1c06_677285eb78" tabIndex={-1} defaultValue="" />
               </div>
               
               <Button type="submit" name="subscribe" id="mc-embedded-subscribe" className="bg-[#C25B3C] hover:bg-[#A04830] text-white h-12 px-8 font-serif text-lg w-full mt-4">
