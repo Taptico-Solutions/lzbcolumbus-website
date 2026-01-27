@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { toast } from "sonner";
 
 export default function Blog() {
-  const [email, setEmail] = useState("");
+
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   useEffect(() => {
@@ -17,18 +17,7 @@ export default function Blog() {
     }
   }, []);
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    
-    // Simulate API call
-    setTimeout(() => {
-      localStorage.setItem("comfortClubSubscribed", "true");
-      setIsSubscribed(true);
-      toast.success("Successfully subscribed to the newsletter!");
-      setEmail("");
-    }, 1000);
-  };
+
   const posts = [
     {
       id: 6,
@@ -211,16 +200,33 @@ export default function Blog() {
                 <p className="text-sm text-white/80">Check your inbox for your welcome guide.</p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input 
-                  type="email" 
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address" 
-                  required
-                  className="flex-1 px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-accent"
-                />
-                <Button type="submit" size="lg" className="bg-accent hover:bg-accent/90 text-white border-none">
+              <form 
+                action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0" 
+                method="post" 
+                id="mc-embedded-subscribe-form-blog" 
+                name="mc-embedded-subscribe-form" 
+                className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" 
+                target="_blank"
+                onSubmit={() => {
+                  localStorage.setItem("comfortClubSubscribed", "true");
+                  setIsSubscribed(true);
+                }}
+              >
+                <div className="flex-1">
+                  <input 
+                    type="email" 
+                    name="EMAIL" 
+                    id="mce-EMAIL-blog" 
+                    placeholder="Enter your email address" 
+                    required
+                    className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-accent"
+                  />
+                  {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+                  <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+                    <input type="text" name="b_125356b6e77a67ca13f0f1c06_677285eb78" tabIndex={-1} defaultValue="" />
+                  </div>
+                </div>
+                <Button type="submit" size="lg" className="bg-accent hover:bg-accent/90 text-white border-none whitespace-nowrap">
                   Subscribe
                 </Button>
               </form>
