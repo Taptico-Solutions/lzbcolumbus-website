@@ -7,63 +7,63 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 // Mock data for products - in a real app this would come from an API or CMS
 const products = [
   {
-    id: "p1",
+    id: "room-planner",
     name: "Trouper Recliner",
     image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
     category: "Recliners",
     price: "$899"
   },
   {
-    id: "p2",
+    id: "room-planner",
     name: "Morrison Recliner",
     image: "/images/gallery-grey-recliner.jpg",
     category: "Recliners",
     price: "$749"
   },
   {
-    id: "p3",
+    id: "room-planner",
     name: "Jasper Recliner",
     image: "/images/greyson-rocking-recliner.jpg",
     category: "Recliners",
     price: "$929"
   },
   {
-    id: "p4",
+    id: "room-planner",
     name: "Tahoe Sectional",
     image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
     category: "Sectionals",
     price: "$2,499"
   },
   {
-    id: "p5",
+    id: "room-planner",
     name: "Trouper Sectional",
     image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
     category: "Sectionals",
     price: "$2,899"
   },
   {
-    id: "p6",
+    id: "room-planner",
     name: "Ava Sofa",
     image: "/images/TD8_Ava_010769_C196552_009.jpg",
     category: "Sofas",
     price: "$1,299"
   },
   {
-    id: "p7",
+    id: "room-planner",
     name: "Collins Sofa",
     image: "/images/TD13a_Collins_610494_D180764_018.jpg",
     category: "Sofas",
     price: "$1,499"
   },
   {
-    id: "p8",
+    id: "room-planner",
     name: "Leah Sleep Sofa",
     image: "/images/TD28e_Leah_555-418_D206893.jpg",
     category: "Sleep Sofas",
     price: "$1,699"
   },
   {
-    id: "p9",
+    id: "room-planner",
     name: "Armitage Chair",
     image: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg",
     category: "Chairs",
@@ -117,7 +117,7 @@ export default function Category() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link href={`/product/${product.id}`}>
+                  <Link href={product.id === 'room-planner' ? '/room-planner' : `/product/${product.id}`}>
                     <Card className="h-full overflow-hidden group cursor-pointer hover:shadow-lg transition-all duration-300">
                       <div className="relative h-64 overflow-hidden bg-muted">
                         <img 

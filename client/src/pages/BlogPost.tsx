@@ -50,13 +50,13 @@ const blogPosts = [
     category: "Design Trends",
     relatedProducts: [
       {
-        id: "collins-sofa",
+        id: "room-planner",
         name: "Collins Sofa",
         image: "/images/blog/collins-sofa.webp",
         category: "Sofas"
       },
       {
-        id: "p7",
+        id: "room-planner",
         name: "Ava Sofa",
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
         category: "Sofas"
@@ -94,13 +94,13 @@ const blogPosts = [
     category: "Brand News",
     relatedProducts: [
       {
-        id: "p1",
+        id: "room-planner",
         name: "Trouper Recliner",
         image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
         category: "Recliners"
       },
       {
-        id: "p7",
+        id: "room-planner",
         name: "Ava Sofa",
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
         category: "Sofas"
@@ -141,19 +141,19 @@ const blogPosts = [
     category: "Furniture Guide",
     relatedProducts: [
       {
-        id: "p1",
+        id: "room-planner",
         name: "Trouper Recliner",
         image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
         category: "Recliners"
       },
       {
-        id: "p2",
+        id: "room-planner",
         name: "Morrison Recliner",
         image: "/images/gallery-grey-recliner.jpg",
         category: "Recliners"
       },
       {
-        id: "p3",
+        id: "room-planner",
         name: "Jasper Recliner",
         image: "/images/greyson-rocking-recliner.jpg",
         category: "Recliners"
@@ -182,13 +182,13 @@ const blogPosts = [
     category: "Interior Design",
     relatedProducts: [
       {
-        id: "p3",
+        id: "room-planner",
         name: "Tahoe Sectional",
         image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
         category: "Sectionals"
       },
       {
-        id: "p4",
+        id: "room-planner",
         name: "Armitage Chair",
         image: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg",
         category: "Chairs"
@@ -217,13 +217,13 @@ const blogPosts = [
     category: "Space Planning",
     relatedProducts: [
       {
-        id: "p5",
+        id: "room-planner",
         name: "Trouper Sectional",
         image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
         category: "Sectionals"
       },
       {
-        id: "p6",
+        id: "room-planner",
         name: "Tahoe Sectional",
         image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
         category: "Sectionals"
@@ -261,13 +261,13 @@ const blogPosts = [
     category: "Materials",
     relatedProducts: [
       {
-        id: "p7",
+        id: "room-planner",
         name: "Collins Sofa",
         image: "/images/TD13a_Collins_610494_D180764_018.jpg",
         category: "Sofas"
       },
       {
-        id: "p8",
+        id: "room-planner",
         name: "Leah Sleep Sofa",
         image: "/images/TD28e_Leah_555-418_D206893.jpg",
         category: "Sleep Sofas"
@@ -302,13 +302,13 @@ const blogPosts = [
     category: "Decor Tips",
     relatedProducts: [
       {
-        id: "p7",
+        id: "room-planner",
         name: "Ava Sofa",
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
         category: "Sofas"
       },
       {
-        id: "p4",
+        id: "room-planner",
         name: "Armitage Chair",
         image: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg",
         category: "Chairs"
@@ -343,13 +343,13 @@ const blogPosts = [
     category: "Design Services",
     relatedProducts: [
       {
-        id: "p3",
+        id: "room-planner",
         name: "Tahoe Sectional",
         image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
         category: "Sectionals"
       },
       {
-        id: "p7",
+        id: "room-planner",
         name: "Ava Sofa",
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
         category: "Sofas"
@@ -448,7 +448,7 @@ export default function BlogPost() {
               <CardContent className="space-y-4">
                 {post.relatedProducts.map((product) => (
                   <div key={product.id} className="flex gap-4 items-center group">
-                    <Link href={`/product/${product.id}`}>
+                    <Link href={product.id === 'room-planner' ? '/room-planner' : `/product/${product.id}`}>
                       <div className="h-20 w-20 rounded-md overflow-hidden bg-secondary cursor-pointer">
                         <img 
                           src={product.image} 
@@ -458,7 +458,7 @@ export default function BlogPost() {
                       </div>
                     </Link>
                     <div>
-                      <Link href={`/product/${product.id}`}>
+                      <Link href={product.id === 'room-planner' ? '/room-planner' : `/product/${product.id}`}>
                         <h4 className="font-medium text-foreground group-hover:text-primary transition-colors cursor-pointer">{product.name}</h4>
                       </Link>
                       <Link href={`/category/${product.category}`}>
