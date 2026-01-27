@@ -39,8 +39,8 @@ const blogPosts = [
           <li><strong>Plush seating and rolled arms</strong> that invite lounging — key to cottage comfort.</li>
         </ul>
         <img src="/images/blog/collins-sofa.webp" alt="La-Z-Boy Collins Sofa" class="w-full h-auto rounded-md shadow-sm mb-4" />
-        <a href="/room-planner" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-          Request a Quote
+        <a href="https://www.la-z-boy.com/p/stationary-sofas/collins-sofa/_/R-610494" target="_blank"        <a href="https://www.la-z-boy.com/p/stationary-sectionals/tahoe-sectional/_/R-xxs632" target="_blank"        <a href="https://www.la-z-boy.com/p/reclining-sofas/ava-reclining-sofa/_/R-444769" target="_blank"        <a href="https://www.la-z-boy.com/p/oversized-recliners/armitage-power-reclining-chair-and-a-half-w-headrest/_/R-85U812" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+          View Product Details
         </a>
       </div>
     `,
@@ -53,13 +53,15 @@ const blogPosts = [
         id: "collins-sofa",
         name: "Collins Sofa",
         image: "/images/blog/collins-sofa.webp",
-        category: "Sofas"
+        category: "Sofas",
+        url: "https://www.la-z-boy.com/p/stationary-sofas/collins-sofa/_/R-610494"
       },
       {
         id: "p6",
         name: "Ava Sofa",
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
-        category: "Sofas"
+        category: "Sofas",
+        url: "https://www.la-z-boy.com/p/reclining-sofas/ava-reclining-sofa/_/R-444769"
       }
     ]
   },
@@ -97,13 +99,15 @@ const blogPosts = [
         id: "p1",
         name: "Trouper Recliner",
         image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
-        category: "Recliners"
+        category: "Recliners",
+        url: "https://www.la-z-boy.com/p/rocking-recliners/trouper-rocking-recliner/_/R-010724"
       },
       {
         id: "p6",
         name: "Ava Sofa",
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
-        category: "Sofas"
+        category: "Sofas",
+        url: "https://www.la-z-boy.com/p/reclining-sofas/ava-reclining-sofa/_/R-444769"
       }
     ]
   },
@@ -144,19 +148,22 @@ const blogPosts = [
         id: "p1",
         name: "Trouper Recliner",
         image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
-        category: "Recliners"
+        category: "Recliners",
+        url: "https://www.la-z-boy.com/p/rocking-recliners/trouper-rocking-recliner/_/R-010724"
       },
       {
         id: "p2",
         name: "Morrison Recliner",
         image: "/images/gallery-grey-recliner.jpg",
-        category: "Recliners"
+        category: "Recliners",
+        url: "https://www.la-z-boy.com/p/rocking-recliners/morrison-rocking-recliner/_/R-010766"
       },
       {
         id: "p3",
         name: "Jasper Recliner",
         image: "/images/greyson-rocking-recliner.jpg",
-        category: "Recliners"
+        category: "Recliners",
+        url: "https://www.la-z-boy.com/p/rocking-recliners/jasper-rocking-recliner/_/R-010709"
       }
     ]
   },
@@ -185,13 +192,15 @@ const blogPosts = [
         id: "p4",
         name: "Tahoe Sectional",
         image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
-        category: "Sectionals"
+        category: "Sectionals",
+        url: "https://www.la-z-boy.com/p/stationary-sectionals/tahoe-sectional/_/R-xxs632"
       },
       {
         id: "p9",
         name: "Armitage Chair",
         image: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg",
-        category: "Chairs"
+        category: "Chairs",
+        url: "https://www.la-z-boy.com/p/oversized-recliners/armitage-power-reclining-chair-and-a-half-w-headrest/_/R-85U812"
       }
     ]
   },
@@ -220,13 +229,15 @@ const blogPosts = [
         id: "p5",
         name: "Trouper Sectional",
         image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
-        category: "Sectionals"
+        category: "Sectionals",
+        url: "https://www.la-z-boy.com/p/reclining-sectionals/trouper-sectional/_/R-xxs724"
       },
       {
         id: "p4",
         name: "Tahoe Sectional",
         image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
-        category: "Sectionals"
+        category: "Sectionals",
+        url: "https://www.la-z-boy.com/p/stationary-sectionals/tahoe-sectional/_/R-xxs632"
       }
     ]
   },
@@ -270,7 +281,8 @@ const blogPosts = [
         id: "p8",
         name: "Leah Sleep Sofa",
         image: "/images/TD28e_Leah_555-418_D206893.jpg",
-        category: "Sleep Sofas"
+        category: "Sleep Sofas",
+        url: "https://www.la-z-boy.com/p/stationary-sofas/leah-queen-sleep-sofa/_/R-510418"
       }
     ]
   },
@@ -305,13 +317,15 @@ const blogPosts = [
         id: "p6",
         name: "Ava Sofa",
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
-        category: "Sofas"
+        category: "Sofas",
+        url: "https://www.la-z-boy.com/p/reclining-sofas/ava-reclining-sofa/_/R-444769"
       },
       {
         id: "p9",
         name: "Armitage Chair",
         image: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg",
-        category: "Chairs"
+        category: "Chairs",
+        url: "https://www.la-z-boy.com/p/oversized-recliners/armitage-power-reclining-chair-and-a-half-w-headrest/_/R-85U812"
       }
     ]
   },
@@ -346,13 +360,15 @@ const blogPosts = [
         id: "p4",
         name: "Tahoe Sectional",
         image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
-        category: "Sectionals"
+        category: "Sectionals",
+        url: "https://www.la-z-boy.com/p/stationary-sectionals/tahoe-sectional/_/R-xxs632"
       },
       {
         id: "p6",
         name: "Ava Sofa",
         image: "/images/TD8_Ava_010769_C196552_009.jpg",
-        category: "Sofas"
+        category: "Sofas",
+        url: "https://www.la-z-boy.com/p/reclining-sofas/ava-reclining-sofa/_/R-444769"
       }
     ]
   }

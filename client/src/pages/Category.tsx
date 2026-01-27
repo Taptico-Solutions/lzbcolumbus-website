@@ -11,63 +11,72 @@ const products = [
     name: "Trouper Recliner",
     image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
     category: "Recliners",
-    price: "$899"
+    price: "$899",
+    url: "https://www.la-z-boy.com/p/rocking-recliners/trouper-rocking-recliner/_/R-010724"
   },
   {
     id: "p2",
     name: "Morrison Recliner",
     image: "/images/gallery-grey-recliner.jpg",
     category: "Recliners",
-    price: "$749"
+    price: "$749",
+    url: "https://www.la-z-boy.com/p/rocking-recliners/morrison-rocking-recliner/_/R-010766"
   },
   {
     id: "p3",
     name: "Jasper Recliner",
     image: "/images/greyson-rocking-recliner.jpg",
     category: "Recliners",
-    price: "$929"
+    price: "$929",
+    url: "https://www.la-z-boy.com/p/rocking-recliners/jasper-rocking-recliner/_/R-010709"
   },
   {
     id: "p4",
     name: "Tahoe Sectional",
     image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
     category: "Sectionals",
-    price: "$2,499"
+    price: "$2,499",
+    url: "https://www.la-z-boy.com/p/stationary-sectionals/tahoe-sectional/_/R-xxs632"
   },
   {
     id: "p5",
     name: "Trouper Sectional",
     image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
     category: "Sectionals",
-    price: "$2,899"
+    price: "$2,899",
+    url: "https://www.la-z-boy.com/p/reclining-sectionals/trouper-sectional/_/R-xxs724"
   },
   {
     id: "p6",
     name: "Ava Sofa",
     image: "/images/TD8_Ava_010769_C196552_009.jpg",
     category: "Sofas",
-    price: "$1,299"
+    price: "$1,299",
+    url: "https://www.la-z-boy.com/p/reclining-sofas/ava-reclining-sofa/_/R-444769"
   },
   {
     id: "collins-sofa",
     name: "Collins Sofa",
     image: "/images/TD13a_Collins_610494_D180764_018.jpg",
     category: "Sofas",
-    price: "$1,499"
+    price: "$1,499",
+    url: "https://www.la-z-boy.com/p/stationary-sofas/collins-sofa/_/R-610494"
   },
   {
     id: "p8",
     name: "Leah Sleep Sofa",
     image: "/images/TD28e_Leah_555-418_D206893.jpg",
     category: "Sleep Sofas",
-    price: "$1,699"
+    price: "$1,699",
+    url: "https://www.la-z-boy.com/p/stationary-sofas/leah-queen-sleep-sofa/_/R-510418"
   },
   {
     id: "p9",
     name: "Armitage Chair",
     image: "/images/TD16e_Armitage_MOD-812_E20462_001.jpg",
     category: "Chairs",
-    price: "$699"
+    price: "$699",
+    url: "https://www.la-z-boy.com/p/oversized-recliners/armitage-power-reclining-chair-and-a-half-w-headrest/_/R-85U812"
   }
 ];
 
@@ -117,7 +126,7 @@ export default function Category() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link href={product.id === 'room-planner' ? '/room-planner' : `/product/${product.id}`}>
+                  <a href={product.url} target="_blank" rel="noopener noreferrer" className="block h-full">
                     <Card className="h-full overflow-hidden group cursor-pointer hover:shadow-lg transition-all duration-300">
                       <div className="relative h-64 overflow-hidden bg-muted">
                         <img 
@@ -139,7 +148,7 @@ export default function Category() {
                         </span>
                       </CardFooter>
                     </Card>
-                  </Link>
+                  </a>
                 </motion.div>
               ))}
             </div>
