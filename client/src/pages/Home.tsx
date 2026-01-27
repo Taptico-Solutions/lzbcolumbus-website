@@ -283,51 +283,15 @@ export default function Home() {
                 </motion.div>
               </motion.div>
             ) : (
-              <form 
-                className="flex flex-col gap-4 validate text-left" 
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  const formData = new FormData(e.currentTarget);
-                  const data = {
-                    EMAIL: formData.get('EMAIL') as string,
-                    FNAME: formData.get('FNAME') as string,
-                    LNAME: formData.get('LNAME') as string,
-                    MMERGE7: formData.get('MMERGE7') as string,
-                    MMERGE9: formData.get('MMERGE9') as string,
-                    MMERGE24: formData.get('MMERGE24') as string,
-                  };
-
-                  try {
-                    const response = await subscribeToMailchimp(data);
-                    if (response.result === 'success') {
-                      localStorage.setItem("comfortClubSubscribed", "true");
-                      setIsSubscribed(true);
-                      toast.success("Successfully subscribed!");
-                    } else {
-                      // Mailchimp error (e.g., already subscribed)
-                      if (response.msg.includes("already subscribed")) {
-                        localStorage.setItem("comfortClubSubscribed", "true");
-                        setIsSubscribed(true);
-                        toast.info("You were already subscribed!");
-                      } else {
-                        toast.error("Something went wrong. Please try again.");
-                        console.error(response.msg);
-                      }
-                    }
-                  } catch (error) {
-                    toast.error("Connection error. Please try again later.");
-                    console.error(error);
-                  }
-                }}
-              >
+              <div className="flex flex-col gap-4 text-left">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="mce-FNAME" className="text-[#003349]">First Name</Label>
-                  <Input type="text" name="FNAME" id="mce-FNAME" className="bg-white border-gray-300" />
+                  <Input type="text" id="mce-FNAME" className="bg-white border-gray-300" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="mce-LNAME" className="text-[#003349]">Last Name</Label>
-                  <Input type="text" name="LNAME" id="mce-LNAME" className="bg-white border-gray-300" />
+                  <Input type="text" id="mce-LNAME" className="bg-white border-gray-300" />
                 </div>
               </div>
 
@@ -335,7 +299,6 @@ export default function Home() {
                 <Label htmlFor="mce-EMAIL" className="text-[#003349]">Email Address <span className="text-red-500">*</span></Label>
                 <Input 
                   type="email" 
-                  name="EMAIL" 
                   id="mce-EMAIL" 
                   className="bg-white border-gray-300 required email"
                   required
@@ -345,18 +308,17 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="mce-MMERGE7" className="text-[#003349]">City</Label>
-                  <Input type="text" name="MMERGE7" id="mce-MMERGE7" className="bg-white border-gray-300" />
+                  <Input type="text" id="mce-MMERGE7" className="bg-white border-gray-300" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="mce-MMERGE9" className="text-[#003349]">Zip Code</Label>
-                  <Input type="text" name="MMERGE9" id="mce-MMERGE9" className="bg-white border-gray-300" />
+                  <Input type="text" id="mce-MMERGE9" className="bg-white border-gray-300" />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="mce-MMERGE24" className="text-[#003349]">Who helped you with your sign up today?</Label>
                 <select 
-                  name="MMERGE24" 
                   id="mce-MMERGE24" 
                   className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 >
@@ -372,10 +334,50 @@ export default function Home() {
                 </select>
               </div>
               
-              <Button type="submit" name="subscribe" id="mc-embedded-subscribe" className="bg-[#C25B3C] hover:bg-[#A04830] text-white h-12 px-8 font-serif text-lg w-full mt-4">
+              <Button 
+                type="button" 
+                className="bg-[#C25B3C] hover:bg-[#A04830] text-white h-12 px-8 font-serif text-lg w-full mt-4"
+                onClick={async () => {
+                  const emailInput = document.getElementById('mce-EMAIL') as HTMLInputElement;
+                  if (!emailInput.value) {
+                    toast.error("Please enter your email address.");
+                    return;
+                  }
+
+                  const data = {
+                    EMAIL: emailInput.value,
+                    FNAME: (document.getElementById('mce-FNAME') as HTMLInputElement).value,
+                    LNAME: (document.getElementById('mce-LNAME') as HTMLInputElement).value,
+                    MMERGE7: (document.getElementById('mce-MMERGE7') as HTMLInputElement).value,
+                    MMERGE9: (document.getElementById('mce-MMERGE9') as HTMLInputElement).value,
+                    MMERGE24: (document.getElementById('mce-MMERGE24') as HTMLSelectElement).value,
+                  };
+
+                  try {
+                    const response = await subscribeToMailchimp(data);
+                    if (response.result === 'success') {
+                      localStorage.setItem("comfortClubSubscribed", "true");
+                      setIsSubscribed(true);
+                      toast.success("Successfully subscribed!");
+                    } else {
+                      if (response.msg.includes("already subscribed")) {
+                        localStorage.setItem("comfortClubSubscribed", "true");
+                        setIsSubscribed(true);
+                        toast.info("You were already subscribed!");
+                      } else {
+                        toast.error("Something went wrong. Please try again.");
+                        console.error(response.msg);
+                      }
+                    }
+                  } catch (error) {
+                    toast.error("Connection error. Please try again later.");
+                    console.error(error);
+                  }
+                }}
+              >
                 Subscribe
               </Button>
-            </form>
+            </div>
             )}
           </div>
         </div>

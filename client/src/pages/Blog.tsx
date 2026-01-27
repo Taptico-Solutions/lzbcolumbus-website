@@ -215,51 +215,56 @@ export default function Blog() {
                 </motion.div>
               </motion.div>
             ) : (
-              <form 
-                className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" 
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  const formData = new FormData(e.currentTarget);
-                  const data = {
-                    EMAIL: formData.get('EMAIL') as string,
-                  };
-
-                  try {
-                    const response = await subscribeToMailchimp(data);
-                    if (response.result === 'success') {
-                      localStorage.setItem("comfortClubSubscribed", "true");
-                      setIsSubscribed(true);
-                      toast.success("Successfully subscribed!");
-                    } else {
-                      if (response.msg.includes("already subscribed")) {
-                        localStorage.setItem("comfortClubSubscribed", "true");
-                        setIsSubscribed(true);
-                        toast.info("You were already subscribed!");
-                      } else {
-                        toast.error("Something went wrong. Please try again.");
-                        console.error(response.msg);
-                      }
-                    }
-                  } catch (error) {
-                    toast.error("Connection error. Please try again later.");
-                    console.error(error);
-                  }
-                }}
-              >
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <div className="flex-1">
                   <input 
                     type="email" 
-                    name="EMAIL" 
                     id="mce-EMAIL-blog" 
                     placeholder="Enter your email address" 
                     required
                     className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-accent"
                   />
                 </div>
-                <Button type="submit" size="lg" className="bg-accent hover:bg-accent/90 text-white border-none whitespace-nowrap">
+                <Button 
+                  type="button" 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-white border-none whitespace-nowrap"
+                  onClick={async () => {
+                    const emailInput = document.getElementById('mce-EMAIL-blog') as HTMLInputElement;
+                    if (!emailInput.value) {
+                      toast.error("Please enter your email address.");
+                      return;
+                    }
+
+                    const data = {
+                      EMAIL: emailInput.value,
+                    };
+
+                    try {
+                      const response = await subscribeToMailchimp(data);
+                      if (response.result === 'success') {
+                        localStorage.setItem("comfortClubSubscribed", "true");
+                        setIsSubscribed(true);
+                        toast.success("Successfully subscribed!");
+                      } else {
+                        if (response.msg.includes("already subscribed")) {
+                          localStorage.setItem("comfortClubSubscribed", "true");
+                          setIsSubscribed(true);
+                          toast.info("You were already subscribed!");
+                        } else {
+                          toast.error("Something went wrong. Please try again.");
+                          console.error(response.msg);
+                        }
+                      }
+                    } catch (error) {
+                      toast.error("Connection error. Please try again later.");
+                      console.error(error);
+                    }
+                  }}
+                >
                   Subscribe
                 </Button>
-              </form>
+              </div>
             )}
           </div>
         </div>
