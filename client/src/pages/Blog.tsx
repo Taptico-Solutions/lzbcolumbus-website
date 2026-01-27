@@ -3,12 +3,19 @@ import { Calendar, User, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "sonner";
 
 export default function Blog() {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
+
+  useEffect(() => {
+    const subscribed = localStorage.getItem("comfortClubSubscribed");
+    if (subscribed === "true") {
+      setIsSubscribed(true);
+    }
+  }, []);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,6 +23,7 @@ export default function Blog() {
     
     // Simulate API call
     setTimeout(() => {
+      localStorage.setItem("comfortClubSubscribed", "true");
       setIsSubscribed(true);
       toast.success("Successfully subscribed to the newsletter!");
       setEmail("");

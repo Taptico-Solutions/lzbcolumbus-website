@@ -4,14 +4,24 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Star, ArrowRight, Heart, ShieldCheck, Armchair, PenSquare } from "lucide-react";
+import { Star, ArrowRight, Heart, ShieldCheck, Armchair, PenSquare, CheckCircle2 } from "lucide-react";
 
 import { InstagramFeed } from "@/components/InstagramFeed";
 import { GoogleReviewFeed } from "@/components/GoogleReviewFeed";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  useEffect(() => {
+    const subscribed = localStorage.getItem("comfortClubSubscribed");
+    if (subscribed === "true") {
+      setIsSubscribed(true);
+    }
+  }, []);
+
   return (
     <div className="flex flex-col gap-0">
       {/* Hero Section */}
@@ -244,14 +254,29 @@ export default function Home() {
             Sign up for our newsletter to receive exclusive offers, design tips, and updates on new arrivals.
           </p>
           <div className="max-w-2xl mx-auto">
-            <form 
-              action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0" 
-              method="post" 
-              id="mc-embedded-subscribe-form" 
-              name="mc-embedded-subscribe-form" 
-              className="flex flex-col gap-4 validate text-left" 
-              target="_blank"
-            >
+            {isSubscribed ? (
+              <div className="bg-white/50 rounded-lg p-8 text-center border border-[#003349]/10">
+                <div className="inline-flex items-center justify-center p-3 bg-[#C25B3C]/10 rounded-full mb-4">
+                  <CheckCircle2 className="h-8 w-8 text-[#C25B3C]" />
+                </div>
+                <h3 className="text-2xl font-serif font-bold text-[#003349] mb-2">You're on the list!</h3>
+                <p className="text-gray-700">
+                  Thanks for joining the Comfort Club. Keep an eye on your inbox for your welcome email.
+                </p>
+              </div>
+            ) : (
+              <form 
+                action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0" 
+                method="post" 
+                id="mc-embedded-subscribe-form" 
+                name="mc-embedded-subscribe-form" 
+                className="flex flex-col gap-4 validate text-left" 
+                target="_blank"
+                onSubmit={() => {
+                  localStorage.setItem("comfortClubSubscribed", "true");
+                  setIsSubscribed(true);
+                }}
+              >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="mce-FNAME" className="text-[#003349]">First Name</Label>
@@ -313,6 +338,7 @@ export default function Home() {
                 Subscribe
               </Button>
             </form>
+            )}
           </div>
         </div>
       </section>

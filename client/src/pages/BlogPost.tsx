@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link, useRoute } from "wouter";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Mock data for blog posts - in a real app this would come from an API or CMS
 const blogPosts = [
@@ -377,6 +377,14 @@ const blogPosts = [
 export default function BlogPost() {
   const [match, params] = useRoute("/blog/:slug");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  useEffect(() => {
+    const subscribed = localStorage.getItem("comfortClubSubscribed");
+    if (subscribed === "true") {
+      setIsSubscribed(true);
+    }
+  }, []);
   
   if (!match) return null;
   
@@ -497,40 +505,53 @@ export default function BlogPost() {
                 <CardTitle className="font-serif text-xl">Join the Club</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-primary-foreground/80 mb-4">
-                  Get more design tips and exclusive offers delivered to your inbox.
-                </p>
-                <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-                  <DialogTrigger asChild>
-                    <Button variant="secondary" className="w-full bg-white text-primary hover:bg-white/90">
-                      Subscribe Now
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>Join the Comfort Club</DialogTitle>
-                      <DialogDescription>
-                        Subscribe to our newsletter for the latest design trends and exclusive offers.
-                      </DialogDescription>
-                    </DialogHeader>
-                    <form className="space-y-4 mt-4" onSubmit={(e) => {
-                      e.preventDefault();
-                      setIsDialogOpen(false);
-                    }}>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium">Email Address</label>
-                        <input 
-                          id="email"
-                          type="email" 
-                          placeholder="Enter your email"
-                          className="w-full px-3 py-2 border rounded-md"
-                          required
-                        />
-                      </div>
-                      <Button type="submit" className="w-full">Subscribe</Button>
-                    </form>
-                  </DialogContent>
-                </Dialog>
+                {isSubscribed ? (
+                  <div className="text-center py-4">
+                    <p className="text-lg font-medium mb-2">Thanks for subscribing!</p>
+                    <p className="text-primary-foreground/80 text-sm">
+                      You're all set to receive our latest design tips and offers.
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <p className="text-primary-foreground/80 mb-4">
+                      Get more design tips and exclusive offers delivered to your inbox.
+                    </p>
+                    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                      <DialogTrigger asChild>
+                        <Button variant="secondary" className="w-full bg-white text-primary hover:bg-white/90">
+                          Subscribe Now
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <DialogTitle>Join the Comfort Club</DialogTitle>
+                          <DialogDescription>
+                            Subscribe to our newsletter for the latest design trends and exclusive offers.
+                          </DialogDescription>
+                        </DialogHeader>
+                        <form className="space-y-4 mt-4" onSubmit={(e) => {
+                          e.preventDefault();
+                          localStorage.setItem("comfortClubSubscribed", "true");
+                          setIsSubscribed(true);
+                          setIsDialogOpen(false);
+                        }}>
+                          <div className="space-y-2">
+                            <label htmlFor="email" className="text-sm font-medium">Email Address</label>
+                            <input 
+                              id="email"
+                              type="email" 
+                              placeholder="Enter your email"
+                              className="w-full px-3 py-2 border rounded-md"
+                              required
+                            />
+                          </div>
+                          <Button type="submit" className="w-full">Subscribe</Button>
+                        </form>
+                      </DialogContent>
+                    </Dialog>
+                  </>
+                )}
               </CardContent>
             </Card>
           </div>
