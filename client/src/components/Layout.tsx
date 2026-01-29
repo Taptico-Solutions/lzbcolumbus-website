@@ -11,6 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/comfort-club", label: "Comfort Club" },
+    { href: "/special-offers", label: "Special Offers" },
     { href: "/community", label: "Community" },
     { href: "/blog", label: "Design Blog" },
     { href: "/room-planner", label: "Room Planner" },
@@ -125,6 +126,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li>
                   <Link href="/comfort-club">
                     <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Comfort Club</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/special-offers">
+                    <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">Special Offers</span>
                   </Link>
                 </li>
                 <li>

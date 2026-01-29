@@ -19,6 +19,7 @@ import NewYear2026 from "@/pages/NewYear2026";
 import RoomPlanner from "./pages/RoomPlanner";
 import ServiceRequest from "./pages/ServiceRequest";
 import GeneralQuestions from "./pages/GeneralQuestions";
+import SpecialOffers from "./pages/SpecialOffers";
 
 function Router() {
   return (
@@ -37,6 +38,7 @@ function Router() {
         <Route path="/room-planner" component={RoomPlanner} />
         <Route path="/service-request" component={ServiceRequest} />
         <Route path="/general-questions" component={GeneralQuestions} />
+        <Route path="/special-offers" component={SpecialOffers} />
         <Route path="/404" component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

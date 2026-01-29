@@ -64,6 +64,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Special Offers Banner */}
+      <section className="py-12 bg-[#003349] text-white overflow-hidden relative">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div className="container relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-center md:text-left">
+              <div className="inline-block px-3 py-1 bg-[#C25B3C] text-white text-xs font-bold tracking-wider uppercase rounded-full mb-3">
+                Columbus Exclusive
+              </div>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-2">
+                Special Offers Coming Soon
+              </h2>
+              <p className="text-white/80 text-lg max-w-xl">
+                Exclusive deals available ONLY at our Columbus, Georgia location.
+              </p>
+            </div>
+            <Link href="/special-offers">
+              <Button size="lg" className="bg-white text-[#003349] hover:bg-gray-100 font-serif text-lg px-8 h-14 whitespace-nowrap">
+                View Details
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Owner Introduction Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container">

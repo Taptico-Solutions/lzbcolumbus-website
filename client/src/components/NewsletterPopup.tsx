@@ -10,6 +10,8 @@ import { toast } from "sonner";
 export function NewsletterPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Check if user has already seen the popup or subscribed
@@ -32,16 +34,14 @@ export function NewsletterPopup() {
   };
 
   const handleSubmit = async () => {
-    const emailInput = document.getElementById('popup-email') as HTMLInputElement;
-    if (!emailInput.value) {
+    if (!email) {
       toast.error("Please enter your email address.");
       return;
     }
 
+    setIsLoading(true);
     const data = {
-      EMAIL: emailInput.value,
-      // Add a tag or hidden field if needed to identify source as "Free Delivery Popup"
-      // For now, we just send the email to the main list
+      EMAIL: email,
     };
 
     try {
@@ -68,6 +68,8 @@ export function NewsletterPopup() {
     } catch (error) {
       toast.error("Connection error. Please try again later.");
       console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -137,13 +139,17 @@ export function NewsletterPopup() {
                           type="email"
                           placeholder="Enter your email address"
                           className="h-12"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          disabled={isLoading}
                         />
                       </div>
                       <Button 
                         onClick={handleSubmit}
+                        disabled={isLoading}
                         className="w-full h-12 bg-[#C25B3C] hover:bg-[#A04830] text-white font-medium text-lg"
                       >
-                        Unlock Free Delivery
+                        {isLoading ? "Processing..." : "Unlock Free Delivery"}
                       </Button>
                       <p className="text-xs text-center text-gray-400">
                         No spam, unsubscribe at any time.
