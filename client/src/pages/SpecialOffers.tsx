@@ -1,9 +1,33 @@
 import { motion } from "framer-motion";
-import { Tag, MapPin, Clock } from "lucide-react";
+import { Tag, MapPin, Clock, Share2, Facebook, Mail, Link as LinkIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { toast } from "sonner";
 
 export default function SpecialOffers() {
+  const shareUrl = window.location.href;
+  const shareText = "Check out these exclusive offers coming soon to La-Z-Boy Columbus!";
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(shareUrl);
+    toast.success("Link copied to clipboard!");
+  };
+
+  const handleShare = (platform: string) => {
+    let url = "";
+    switch (platform) {
+      case "facebook":
+        url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        break;
+      case "twitter":
+        url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+        break;
+      case "email":
+        url = `mailto:?subject=${encodeURIComponent("Special Offers at La-Z-Boy Columbus")}&body=${encodeURIComponent(`${shareText}\n\n${shareUrl}`)}`;
+        break;
+    }
+    if (url) window.open(url, "_blank");
+  };
   return (
     <div className="min-h-screen bg-[#F8F7F5] pt-24 pb-16">
       <div className="container mx-auto px-4">
@@ -63,6 +87,54 @@ export default function SpecialOffers() {
               </div>
             </div>
           </motion.div>
+
+          {/* Social Sharing */}
+          <div className="mt-12 flex flex-col items-center gap-4">
+            <p className="text-[#003349] font-medium flex items-center gap-2">
+              <Share2 className="h-4 w-4" />
+              Share with friends
+            </p>
+            <div className="flex gap-3">
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-[#003349]/20 text-[#003349] hover:bg-[#003349]/5 hover:text-[#003349]"
+                onClick={() => handleShare("facebook")}
+                title="Share on Facebook"
+              >
+                <Facebook className="h-4 w-4" />
+              </Button>
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-[#003349]/20 text-[#003349] hover:bg-[#003349]/5 hover:text-[#003349]"
+                onClick={() => handleShare("twitter")}
+                title="Share on X (Twitter)"
+              >
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </Button>
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-[#003349]/20 text-[#003349] hover:bg-[#003349]/5 hover:text-[#003349]"
+                onClick={() => handleShare("email")}
+                title="Share via Email"
+              >
+                <Mail className="h-4 w-4" />
+              </Button>
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-[#003349]/20 text-[#003349] hover:bg-[#003349]/5 hover:text-[#003349]"
+                onClick={handleCopyLink}
+                title="Copy Link"
+              >
+                <LinkIcon className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
 
           {/* Store Info */}
           <div className="mt-16 grid md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto">
