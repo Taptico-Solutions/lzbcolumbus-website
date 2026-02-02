@@ -10,7 +10,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import ComfortClub from "./pages/ComfortClub";
 import Community from "./pages/Community";
-import Blog from "./pages/Blog";
+import Blog from "@/pages/Blog";
+import FreeDeliveryCoupon from "@/pages/FreeDeliveryCoupon";
 import BlogPost from "@/pages/BlogPost";
 import Category from "@/pages/Category";
 import Product from "@/pages/Product";
@@ -30,6 +31,7 @@ function Router() {
         <Route path="/comfort-club" component={ComfortClub} />
         <Route path="/community" component={Community} />
       <Route path="/blog" component={Blog} />
+      <Route path="/free-delivery-coupon" component={FreeDeliveryCoupon} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/category/:name" component={Category} />
         <Route path="/product/:id" component={Product} />
