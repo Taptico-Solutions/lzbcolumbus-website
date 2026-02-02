@@ -215,8 +215,8 @@ export default function Blog() {
                 </motion.div>
               </motion.div>
             ) : (
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <div className="flex-1">
+              <div className="flex flex-col gap-4 max-w-md mx-auto text-left">
+                <div className="space-y-2">
                   <input 
                     type="email" 
                     id="mce-EMAIL-blog" 
@@ -225,10 +225,26 @@ export default function Blog() {
                     className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-accent"
                   />
                 </div>
+                <div className="space-y-2">
+                  <select 
+                    id="mce-MMERGE24-blog" 
+                    className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-accent [&>option]:text-black"
+                  >
+                    <option value="">Who helped you with your sign up today?</option>
+                    <option value="Marlon Rice">Marlon Rice</option>
+                    <option value="Tamika Davis">Tamika Davis</option>
+                    <option value="Casey Cooper">Casey Cooper</option>
+                    <option value="Jason Hall">Jason Hall</option>
+                    <option value="Bret Gladden">Bret Gladden</option>
+                    <option value="Aaulashua Smoot">Aaulashua Smoot</option>
+                    <option value="Kennth Llera">Kennth Llera</option>
+                    <option value="Susan Evans">Susan Evans</option>
+                  </select>
+                </div>
                 <Button 
                   type="button" 
                   size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-white border-none whitespace-nowrap"
+                  className="bg-accent hover:bg-accent/90 text-white border-none w-full"
                   onClick={async () => {
                     const emailInput = document.getElementById('mce-EMAIL-blog') as HTMLInputElement;
                     if (!emailInput.value) {
@@ -238,6 +254,7 @@ export default function Blog() {
 
                     const data = {
                       EMAIL: emailInput.value,
+                      MMERGE24: (document.getElementById('mce-MMERGE24-blog') as HTMLSelectElement).value,
                     };
 
                     try {
