@@ -42,6 +42,7 @@ export function NewsletterPopup() {
     setIsLoading(true);
     const data = {
       EMAIL: email,
+      MMERGE24: (document.getElementById('popup-sales-person') as HTMLSelectElement).value,
     };
 
     try {
@@ -143,6 +144,23 @@ export function NewsletterPopup() {
                           onChange={(e) => setEmail(e.target.value)}
                           disabled={isLoading}
                         />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="popup-sales-person" className="sr-only">Who helped you?</Label>
+                        <select 
+                          id="popup-sales-person" 
+                          className="flex h-12 w-full items-center justify-between rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                          <option value="">Who helped you with your sign up today?</option>
+                          <option value="Marlon Rice">Marlon Rice</option>
+                          <option value="Tamika Davis">Tamika Davis</option>
+                          <option value="Casey Cooper">Casey Cooper</option>
+                          <option value="Jason Hall">Jason Hall</option>
+                          <option value="Bret Gladden">Bret Gladden</option>
+                          <option value="Aaulashua Smoot">Aaulashua Smoot</option>
+                          <option value="Kennth Llera">Kennth Llera</option>
+                          <option value="Susan Evans">Susan Evans</option>
+                        </select>
                       </div>
                       <Button 
                         onClick={handleSubmit}
