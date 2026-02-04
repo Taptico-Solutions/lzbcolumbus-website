@@ -43,7 +43,7 @@ Request Details:
 ${formData.message}
     `;
     
-    window.location.href = `mailto:sevans@lazboy-columbus.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:Service@lazboy-columbus.com,sevans@lazboy-columbus.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Show confirmation and clear form
     setShowConfirmation(true);
