@@ -37,7 +37,7 @@ export default function Blog() {
       excerpt: "La-Z-Boy ditches the 'dad chair' vibes in its first major rebrand in over two decades, embracing comfort as a modern wellness essential.",
       author: "Design Team",
       date: "August 4, 2025",
-      image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800",
+      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/gwLWqbtBkLOTfCJs.jpg",
       category: "Brand News"
     },
     {

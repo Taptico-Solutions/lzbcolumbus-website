@@ -92,7 +92,7 @@ const blogPosts = [
     `,
     author: "La-Z-Boy Corporate News",
     date: "August 4, 2025",
-    image: "/images/logo-final.png",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/gwLWqbtBkLOTfCJs.jpg",
     category: "Brand News",
     relatedProducts: [
       {
