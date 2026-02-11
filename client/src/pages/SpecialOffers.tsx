@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { Tag, MapPin, Clock, Share2, Facebook, Mail, Link as LinkIcon } from "lucide-react";
+import { Tag, MapPin, Clock, Share2, Facebook, Mail, Link as LinkIcon, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { toast } from "sonner";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function SpecialOffers() {
   const shareUrl = window.location.href;
-  const shareText = "Check out these exclusive offers coming soon to La-Z-Boy Columbus!";
+  const shareText = "Check out these exclusive offers at La-Z-Boy Columbus!";
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(shareUrl);
@@ -28,6 +29,35 @@ export default function SpecialOffers() {
     }
     if (url) window.open(url, "_blank");
   };
+
+  // Sample offers data to demonstrate the layout
+  const offers = [
+    {
+      id: 1,
+      title: "President's Day Sale",
+      description: "Save up to 30% on select recliners and sofas. Limited time only!",
+      image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800&h=600", // 4:3 aspect ratio
+      validUntil: "February 28, 2026",
+      tag: "Limited Time"
+    },
+    {
+      id: 2,
+      title: "Free Delivery Event",
+      description: "Enjoy free white-glove delivery on all orders over $999.",
+      image: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80&w=800&h=600", // 4:3 aspect ratio
+      validUntil: "March 15, 2026",
+      tag: "Exclusive"
+    },
+    {
+      id: 3,
+      title: "Buy More, Save More",
+      description: "Get an extra $100 off for every $1000 you spend on sectional sofas.",
+      image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800&h=600", // 4:3 aspect ratio
+      validUntil: "March 31, 2026",
+      tag: "Bundle Deal"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-[#F8F7F5] pt-24 pb-16">
       <div className="container mx-auto px-4">
@@ -35,10 +65,10 @@ export default function SpecialOffers() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-6xl mx-auto"
         >
           {/* Header Section */}
-          <div className="mb-12">
+          <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center p-3 bg-[#C25B3C]/10 rounded-full mb-6">
               <Tag className="h-8 w-8 text-[#C25B3C]" />
             </div>
@@ -49,38 +79,81 @@ export default function SpecialOffers() {
               <MapPin className="h-5 w-5" />
               <span>Available at Columbus, Georgia location ONLY!</span>
             </div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Exclusive deals and limited-time savings for our Columbus community.
+            </p>
           </div>
 
-          {/* Coming Soon Card */}
+          {/* Offers Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {offers.map((offer, index) => (
+              <motion.div
+                key={offer.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 + 0.2 }}
+              >
+                <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300 border-border/50">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                    <img 
+                      src={offer.image} 
+                      alt={offer.title} 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                    <div className="absolute top-4 left-4 bg-[#C25B3C] text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                      {offer.tag}
+                    </div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="font-serif text-2xl text-[#003349]">
+                      {offer.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground mb-4">
+                      {offer.description}
+                    </p>
+                    <div className="flex items-center gap-2 text-sm text-[#C25B3C] font-medium">
+                      <Clock className="h-4 w-4" />
+                      <span>Valid until {offer.validUntil}</span>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="pt-0">
+                    <Button className="w-full bg-[#003349] hover:bg-[#004460] text-white group">
+                      View Details <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Coming Soon / Newsletter Section */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="bg-white rounded-2xl shadow-xl p-12 md:p-20 border border-[#003349]/5 relative overflow-hidden"
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="bg-white rounded-2xl shadow-xl p-12 border border-[#003349]/5 relative overflow-hidden text-center max-w-4xl mx-auto"
           >
             {/* Background Pattern */}
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#003349] to-[#C25B3C]" />
-            <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#C25B3C]/5 rounded-full blur-3xl" />
-            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-[#003349]/5 rounded-full blur-3xl" />
-
+            
             <div className="relative z-10">
-              <Clock className="h-16 w-16 text-[#003349]/40 mx-auto mb-6" />
-              <h2 className="text-5xl md:text-7xl font-serif font-bold text-[#003349] mb-6 tracking-tight">
-                COMING SOON
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#003349] mb-4">
+                Don't Miss the Next Sale
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-                We're preparing some exclusive deals just for our Columbus community. 
-                Check back soon for limited-time savings on your favorite comfort pieces.
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                Join our Comfort Club to get notified about upcoming sales and exclusive subscriber-only offers.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/comfort-club">
-                  <Button size="lg" className="bg-[#003349] hover:bg-[#004460] text-white h-14 px-8 text-lg">
-                    Join Comfort Club for Updates
+                  <Button size="lg" className="bg-[#003349] hover:bg-[#004460] text-white h-12 px-8">
+                    Join Comfort Club
                   </Button>
                 </Link>
                 <Link href="/">
-                  <Button variant="outline" size="lg" className="border-[#003349] text-[#003349] hover:bg-[#003349]/5 h-14 px-8 text-lg">
+                  <Button variant="outline" size="lg" className="border-[#003349] text-[#003349] hover:bg-[#003349]/5 h-12 px-8">
                     Return Home
                   </Button>
                 </Link>
@@ -92,7 +165,7 @@ export default function SpecialOffers() {
           <div className="mt-12 flex flex-col items-center gap-4">
             <p className="text-[#003349] font-medium flex items-center gap-2">
               <Share2 className="h-4 w-4" />
-              Share with friends
+              Share these offers
             </p>
             <div className="flex gap-3">
               <Button
