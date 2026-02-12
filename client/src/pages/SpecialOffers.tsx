@@ -30,7 +30,7 @@ export default function SpecialOffers() {
     if (url) window.open(url, "_blank");
   };
 
-  // Sample offers data to demonstrate the layout
+  // Current offers
   const offers = [
     {
       id: 1,
@@ -39,22 +39,6 @@ export default function SpecialOffers() {
       image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/fgpXNxiWJpLZmnrO.jpeg", // 4:3 aspect ratio
       validUntil: "February 28, 2026",
       tag: "Limited Time"
-    },
-    {
-      id: 2,
-      title: "Free Delivery Event",
-      description: "Enjoy free white-glove delivery on all orders over $999.",
-      image: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80&w=800&h=600", // 4:3 aspect ratio
-      validUntil: "March 15, 2026",
-      tag: "Exclusive"
-    },
-    {
-      id: 3,
-      title: "Buy More, Save More",
-      description: "Get an extra $100 off for every $1000 you spend on sectional sofas.",
-      image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800&h=600", // 4:3 aspect ratio
-      validUntil: "March 31, 2026",
-      tag: "Bundle Deal"
     }
   ];
 
@@ -85,13 +69,15 @@ export default function SpecialOffers() {
           </div>
 
           {/* Offers Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="flex justify-center mb-16">
+            <div className="w-full max-w-md">
             {offers.map((offer, index) => (
               <motion.div
                 key={offer.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.2 }}
+                className="h-full"
               >
                 <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300 border-border/50">
                   <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
@@ -126,6 +112,7 @@ export default function SpecialOffers() {
                 </Card>
               </motion.div>
             ))}
+            </div>
           </div>
 
           {/* Coming Soon / Newsletter Section */}
