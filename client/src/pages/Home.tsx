@@ -74,7 +74,7 @@ export default function Home() {
                 Columbus Exclusive
               </div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold mb-2">
-                Special Offers Coming Soon
+                Special Offers
               </h2>
               <p className="text-white/80 text-lg max-w-xl">
                 Exclusive deals available ONLY at our Columbus, Georgia location.

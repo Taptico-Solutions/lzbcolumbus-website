@@ -36,7 +36,7 @@ export default function SpecialOffers() {
       id: 1,
       title: "President's Day Sale",
       description: "Save up to 30% on select recliners and sofas. Limited time only!",
-      image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800&h=600", // 4:3 aspect ratio
+      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/fgpXNxiWJpLZmnrO.jpeg", // 4:3 aspect ratio
       validUntil: "February 28, 2026",
       tag: "Limited Time"
     },
