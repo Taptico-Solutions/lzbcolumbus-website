@@ -8,9 +8,7 @@ export function NewsletterPopup() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Popup temporarily disabled
     // Check if user has already seen the popup
-    /*
     const hasSeenPopup = sessionStorage.getItem("hasSeenNewsletterPopup");
 
     if (!hasSeenPopup) {
@@ -22,7 +20,6 @@ export function NewsletterPopup() {
 
       return () => clearTimeout(timer);
     }
-    */
   }, []);
 
   const handleClose = () => {
@@ -85,8 +82,8 @@ export function NewsletterPopup() {
                         Get Coupon
                       </Button>
                     </Link>
-                    <p className="text-xs text-center text-gray-500">
-                      Limited time offer. Terms apply.
+                    <p className="text-[10px] text-center text-gray-400 leading-tight">
+                      Enjoy free delivery on one item within our local delivery area. Additional items or deliveries outside this area may be subject to additional fees. Limit one per address. Valid on in-store purchases only.
                     </p>
                   </div>
                 </div>
