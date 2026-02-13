@@ -78,8 +78,26 @@ export default function FreeDeliveryCoupon() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 print:bg-white print:p-0">
-        <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border-2 border-[#002D5C] print:shadow-none print:border-4">
+      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 print:bg-white print:p-0 print:h-screen print:flex print:items-center print:justify-center">
+        <style>{`
+          @media print {
+            @page { margin: 0; size: auto; }
+            body * { visibility: hidden; }
+            #coupon-container, #coupon-container * { visibility: visible; }
+            #coupon-container { 
+              position: absolute; 
+              left: 0; 
+              top: 0; 
+              width: 100%; 
+              margin: 0;
+              border: none !important;
+              box-shadow: none !important;
+            }
+            /* Hide header/footer if they exist outside this component */
+            header, footer, nav { display: none !important; }
+          }
+        `}</style>
+        <div id="coupon-container" className="max-w-3xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border-2 border-[#002D5C] print:shadow-none print:border-4 print:w-full print:max-w-none print:rounded-none">
           {/* Coupon Header */}
           <div className="bg-[#002D5C] text-white p-8 text-center print:bg-white print:text-black">
             <div className="flex justify-center mb-4">
