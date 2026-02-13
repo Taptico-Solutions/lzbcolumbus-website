@@ -29,7 +29,7 @@ export default function Community() {
     {
       title: "Valley Rescue Mission",
       description: "Since 1963, Valley Rescue Mission has provided emergency shelter and meals for the homeless, substance abuse recovery programs, and community outreach.",
-      logo: "/images/logo-valley-rescue.png",
+      logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/FuXfUcoFDqVvBbgg.png",
       image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800",
       link: "https://www.valleyrescuemission.org/"
     }
@@ -41,7 +41,7 @@ export default function Community() {
       <section className="relative py-24 bg-primary text-primary-foreground overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/community-hero.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/pWFePvddMjOltOuv.jpg" 
             alt="Community involvement" 
             className="w-full h-full object-cover opacity-20 mix-blend-overlay"
           />

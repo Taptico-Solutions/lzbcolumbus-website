@@ -14,7 +14,7 @@ export default function ComfortClub() {
       <section className="relative py-20 md:py-32 bg-secondary/30 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/comfort-club-hero.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/lzpBuZQdXkGqwuoj.jpg" 
             alt="Relaxing comfort" 
             className="w-full h-full object-cover opacity-40"
           />

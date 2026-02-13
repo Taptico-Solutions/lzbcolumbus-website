@@ -53,8 +53,8 @@ export default function RoomPlanner() {
               <h3 className="font-serif text-xl text-primary">Project 1: The Dorian Living Room</h3>
             </div>
             <BeforeAfterSlider 
-              beforeImage="/images/project-upload/IMG_7228_empty.png" 
-              afterImage="/images/project-upload/IMG_7228.jpg" 
+              beforeImage="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/ZAqeLctBtdCkmDSm.png" 
+              afterImage="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/oOtFLNDYWdSmZSFk.jpg" 
               beforeLabel="Before (Empty Room)"
               afterLabel="After (La-Z-Boy Design)"
             />
@@ -65,8 +65,8 @@ export default function RoomPlanner() {
               <h3 className="font-serif text-xl text-primary">Project 2: Cozy Family Retreat</h3>
             </div>
             <BeforeAfterSlider 
-              beforeImage="/images/project-upload-2/IMG_4318_empty.png" 
-              afterImage="/images/project-upload-2/IMG_4318.jpg" 
+              beforeImage="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/uiDjMKZNKETPrdFR.png" 
+              afterImage="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/QpsMIOgBQgcuxnWa.jpg" 
               beforeLabel="Before (AI Generated Empty Room)"
               afterLabel="After"
             />

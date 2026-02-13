@@ -11,7 +11,7 @@ export default function NewYear2026() {
         {/* Hero Section */}
         <div className="relative h-[60vh] w-full overflow-hidden">
           <img 
-            src="/images/family-photo-nano-banana-v2.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/CIItMjewbURpzkRk.jpg" 
             alt="The Evans Family - Happy New Year 2026" 
             className="w-full h-full object-cover"
           />
@@ -51,7 +51,7 @@ export default function NewYear2026() {
               <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
                 <div>
                   <img 
-                    src="/images/hero-living-room.jpg" 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/FMfaYnUVFzjloCRo.jpg" 
                     alt="Cozy Living Room" 
                     className="rounded-lg shadow-lg w-full h-[400px] object-cover"
                   />

@@ -8,7 +8,9 @@ export function NewsletterPopup() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    // Popup temporarily disabled
     // Check if user has already seen the popup
+    /*
     const hasSeenPopup = sessionStorage.getItem("hasSeenNewsletterPopup");
 
     if (!hasSeenPopup) {
@@ -20,6 +22,7 @@ export function NewsletterPopup() {
 
       return () => clearTimeout(timer);
     }
+    */
   }, []);
 
   const handleClose = () => {
