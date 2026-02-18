@@ -1,10 +1,29 @@
 import { Link } from "wouter";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet";
 
 export default function ClingstonesPartnership() {
   return (
     <div className="min-h-screen bg-background pt-24 pb-16">
+      <Helmet>
+        <title>Clingstones and La-Z-Boy of Columbus Combine to Offer Local Youths Their Own "Field of Dreams"</title>
+        <meta name="description" content="Partnership aims to create lasting memories for young players across the Chattahoochee Valley." />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://lzbcolumbus.com/blog/clingstones-partnership" />
+        <meta property="og:title" content="Clingstones and La-Z-Boy of Columbus Combine to Offer Local Youths Their Own 'Field of Dreams'" />
+        <meta property="og:description" content="Partnership aims to create lasting memories for young players across the Chattahoochee Valley." />
+        <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/McmpfzJJGJclgvxc.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://lzbcolumbus.com/blog/clingstones-partnership" />
+        <meta property="twitter:title" content="Clingstones and La-Z-Boy of Columbus Combine to Offer Local Youths Their Own 'Field of Dreams'" />
+        <meta property="twitter:description" content="Partnership aims to create lasting memories for young players across the Chattahoochee Valley." />
+        <meta property="twitter:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/McmpfzJJGJclgvxc.png" />
+      </Helmet>
       <div className="container max-w-4xl mx-auto px-4">
         {/* Back Button */}
         <Link href="/design-blog">
