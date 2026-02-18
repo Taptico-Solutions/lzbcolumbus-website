@@ -21,6 +21,7 @@ import RoomPlanner from "./pages/RoomPlanner";
 import ServiceRequest from "./pages/ServiceRequest";
 import GeneralQuestions from "./pages/GeneralQuestions";
 import SpecialOffers from "./pages/SpecialOffers";
+import ClingstonesPartnership from "./pages/ClingstonesPartnership";
 
 function Router() {
   return (
@@ -31,6 +32,7 @@ function Router() {
         <Route path="/comfort-club" component={ComfortClub} />
         <Route path="/community" component={Community} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/clingstones-partnership" component={ClingstonesPartnership} />
       <Route path="/free-delivery-coupon" component={FreeDeliveryCoupon} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/category/:name" component={Category} />

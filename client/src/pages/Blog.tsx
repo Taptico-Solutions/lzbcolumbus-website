@@ -21,6 +21,16 @@ export default function Blog() {
 
   const posts = [
     {
+      id: 0,
+      slug: "clingstones-partnership",
+      title: "Clingstones and La-Z-Boy of Columbus Combine to Offer Local Youths Their Own 'Field of Dreams'",
+      excerpt: "Partnership aims to create lasting memories for young players across the Chattahoochee Valley.",
+      author: "Jack Johnson",
+      date: "February 18, 2026",
+      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/McmpfzJJGJclgvxc.png",
+      category: "Community News"
+    },
+    {
       id: 6,
       slug: "cottage-design-trend",
       title: "The Cottage Design Trend: Comfort Comes Home",
