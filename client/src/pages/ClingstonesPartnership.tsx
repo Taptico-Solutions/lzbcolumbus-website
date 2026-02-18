@@ -82,7 +82,7 @@ export default function ClingstonesPartnership() {
               "As a family-owned business, this partnership is especially meaningful to us. Our own kids play baseball here in Columbus, and we've experienced firsthand how special those on-field moments can be. There's nothing like hearing your name announced and stepping onto that field. We're proud to help give more local kids the chance to experience that feeling."
             </p>
             <footer className="text-sm font-bold text-primary uppercase tracking-wide">
-              — Susan Evans, Owner of La-Z-Boy of Columbus
+              — Susan Evans
             </footer>
           </div>
 
