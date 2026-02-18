@@ -89,6 +89,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Community Highlight - Clingstones Partnership */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="bg-muted/30 rounded-2xl overflow-hidden shadow-lg border border-border/50">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="relative h-64 lg:h-auto">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/McmpfzJJGJclgvxc.png" 
+                  alt="La-Z-Boy and Clingstones Partnership" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 text-sm font-medium text-primary mb-4">
+                  <span className="bg-primary/10 px-3 py-1 rounded-full">Community News</span>
+                  <span className="text-muted-foreground">February 18, 2026</span>
+                </div>
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
+                  Clingstones and La-Z-Boy of Columbus Combine to Offer Local Youths Their Own "Field of Dreams"
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                  We're proud to announce a new partnership that invites local youth league teams to join their heroes on the diamond. Discover how we're creating lasting memories for young players across the Chattahoochee Valley.
+                </p>
+                <div>
+                  <Link href="/blog/clingstones-partnership">
+                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-serif text-lg px-8">
+                      Read Full Story <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Owner Introduction Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
