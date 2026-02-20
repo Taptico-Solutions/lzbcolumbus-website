@@ -43,6 +43,13 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl bg-white/90 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-xl border-l-4 border-accent"
           >
+            <div className="mb-8">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/CVzDNZFkntddHLfF.PNG" 
+                alt="La-Z-Boy Columbus, Georgia" 
+                className="w-full max-w-md h-auto"
+              />
+            </div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 leading-tight">
               Make Yourself <br/>
               <span className="text-foreground text-5xl md:text-6xl lg:text-7xl">at Home.</span>
