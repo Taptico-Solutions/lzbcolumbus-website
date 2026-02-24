@@ -34,11 +34,19 @@ export default function SpecialOffers() {
   const offers = [
     {
       id: 1,
+      title: "Anniversary Sale",
+      description: "Celebrate with us! Get 35% OFF timeless styles storewide. Advertised items. Exclusions apply.",
+      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/EEEtTPzulEwKBaag.jpg",
+      validUntil: "Limited Time",
+      tag: "New Offer"
+    },
+    {
+      id: 2,
       title: "President's Day Sale",
       description: "Save up to 30% on select recliners and sofas. Limited time only!",
       image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/fgpXNxiWJpLZmnrO.jpeg", // 4:3 aspect ratio
       validUntil: "February 28, 2026",
-      tag: "Limited Time"
+      tag: "Ending Soon"
     }
   ];
 
@@ -70,7 +78,7 @@ export default function SpecialOffers() {
 
           {/* Offers Grid */}
           <div className="flex justify-center mb-16">
-            <div className="w-full max-w-md">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
             {offers.map((offer, index) => (
               <motion.div
                 key={offer.id}
