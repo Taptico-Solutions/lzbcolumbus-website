@@ -34,17 +34,24 @@ export default function SpecialOffers() {
   };
 
   // Current offers
-  const offers = [
+  const allOffers = [
     {
       id: 1,
       title: "Anniversary Sale",
       description: "Celebrate with us! Get 35% OFF timeless styles storewide. Advertised items. Exclusions apply.",
       image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/EEEtTPzulEwKBaag.jpg",
-      validUntil: "Limited Time",
+      validUntil: "March 23rd",
+      expiresAt: "2026-03-23T23:59:59",
       tag: "New Offer"
     },
 
   ];
+
+  // Filter out expired offers
+  const offers = allOffers.filter(offer => {
+    if (!offer.expiresAt) return true;
+    return new Date(offer.expiresAt) > new Date();
+  });
 
   return (
     <div className="min-h-screen bg-[#F8F7F5] pt-24 pb-16">
