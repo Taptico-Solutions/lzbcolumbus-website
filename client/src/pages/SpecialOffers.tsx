@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
-import { Tag, MapPin, Clock, Share2, Facebook, Mail, Link as LinkIcon, ArrowRight } from "lucide-react";
+import { Tag, MapPin, Clock, Share2, Facebook, Mail, Link as LinkIcon, ArrowRight, X, ZoomIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { toast } from "sonner";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
+import { useState } from "react";
 
 export default function SpecialOffers() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const shareUrl = window.location.href;
   const shareText = "Check out these exclusive offers at La-Z-Boy Columbus!";
 
@@ -81,14 +84,17 @@ export default function SpecialOffers() {
                 className="h-full"
               >
                 <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300 border-border/50">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                  <div className="relative aspect-square overflow-hidden bg-gray-100 cursor-pointer" onClick={() => setSelectedImage(offer.image)}>
                     <img 
                       src={offer.image} 
                       alt={offer.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="w-full h-full object-contain p-2 transition-transform duration-500 hover:scale-105"
                     />
-                    <div className="absolute top-4 left-4 bg-[#C25B3C] text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                    <div className="absolute top-4 left-4 bg-[#C25B3C] text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm z-10">
                       {offer.tag}
+                    </div>
+                    <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300 flex items-center justify-center group-hover:opacity-100 opacity-0">
+                      <ZoomIn className="text-white w-12 h-12 drop-shadow-lg" />
                     </div>
                   </div>
                   <CardHeader>
@@ -106,8 +112,11 @@ export default function SpecialOffers() {
                     </div>
                   </CardContent>
                   <CardFooter className="pt-0">
-                    <Button className="w-full bg-[#003349] hover:bg-[#004460] text-white group">
-                      View Details <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <Button 
+                      className="w-full bg-[#003349] hover:bg-[#004460] text-white group"
+                      onClick={() => setSelectedImage(offer.image)}
+                    >
+                      View Details <ZoomIn className="ml-2 h-4 w-4 transition-transform group-hover:scale-110" />
                     </Button>
                   </CardFooter>
                 </Card>
@@ -115,6 +124,28 @@ export default function SpecialOffers() {
             ))}
             </div>
           </div>
+
+          {/* Image Modal */}
+          <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
+            <DialogContent className="max-w-4xl w-full p-0 overflow-hidden bg-transparent border-none shadow-none">
+              <div className="relative w-full h-full flex items-center justify-center">
+                <button 
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute -top-12 right-0 text-white hover:text-gray-200 transition-colors"
+                >
+                  <X className="h-8 w-8" />
+                  <span className="sr-only">Close</span>
+                </button>
+                {selectedImage && (
+                  <img 
+                    src={selectedImage} 
+                    alt="Special Offer Detail" 
+                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl bg-white"
+                  />
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
 
           {/* Coming Soon / Newsletter Section */}
           <motion.div 
