@@ -523,11 +523,11 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-primary">Address</h3>
-                    <p className="text-muted-foreground">Columbus Park Crossing<br />5555 Whittlesey Blvd., Bldg. 1<br />Columbus, GA 31909</p>
+                    <p className="text-muted-foreground">Columbus Park Crossing<br />5555 Whittlesey Blvd<br />Columbus, GA 31909</p>
                     <p className="text-muted-foreground mt-2">
                       <span className="font-semibold">Hours:</span><br/>
                       Mon - Sat: 10am - 7pm<br/>
-                      Sun: 12:30pm - 5pm
+                      Sun: 12pm - 6pm
                     </p>
                   </div>
                 </div>
@@ -540,7 +540,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-primary">Phone</h3>
-                    <a href="tel:7066531070" className="text-muted-foreground hover:text-primary transition-colors">(706) 653-1070</a>
+                    <a href="tel:7063229999" className="text-muted-foreground hover:text-primary transition-colors">(706) 322-9999</a>
                   </div>
                 </div>
                 
@@ -554,7 +554,7 @@ export default function Home() {
                     <h3 className="font-bold text-lg text-primary">Hours</h3>
                     <p className="text-muted-foreground">
                       Mon - Sat: 10am - 7pm<br />
-                      Sun: 12:30pm - 5pm
+                      Sun: 12pm - 6pm
                     </p>
                   </div>
                 </div>

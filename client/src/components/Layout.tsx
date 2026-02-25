@@ -169,21 +169,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <MapPin size={18} className="text-accent mt-0.5 shrink-0" />
                   <address className="not-italic">
                     Columbus Park Crossing<br />
-                    5555 Whittlesey Blvd., Bldg. 1<br />
+                    5555 Whittlesey Blvd<br />
                     Columbus, GA 31909
                   </address>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={18} className="text-accent shrink-0" />
-                  <a href="tel:7066531070" className="hover:text-primary transition-colors">
-                    (706) 653-1070
+                  <a href="tel:7063229999" className="hover:text-primary transition-colors">
+                    (706) 322-9999
                   </a>
                 </div>
                 <div className="flex items-start gap-3 pt-2">
                   <div className="text-accent font-semibold shrink-0 text-xs uppercase tracking-wider">Hours</div>
                   <div className="space-y-1">
                     <p>Mon - Sat: 10am - 7pm</p>
-                    <p>Sun: 12:30pm - 5pm</p>
+                    <p>Sun: 12pm - 6pm</p>
                   </div>
                 </div>
               </div>
