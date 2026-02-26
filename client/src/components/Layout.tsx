@@ -101,14 +101,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="space-y-4">
               <img src="/images/logo-final.png" alt="La-Z-Boy Columbus" className="h-10 w-auto object-contain mb-4" />
               <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-                Creating homes filled with comfort, style, and quality that lasts. 
-                Proudly serving the Columbus community since 2002.
+                La-Z-Boy of Columbus is a locally owned and operated furniture store serving Columbus, Phenix City, and the entire Chattahoochee Valley since 2002.
               </p>
               <div className="flex gap-4 pt-2">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.facebook.com/lazboycolumbus/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Facebook size={20} />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.instagram.com/lazboycolumbus/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Instagram size={20} />
                 </a>
               </div>
@@ -167,11 +166,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex items-start gap-3">
                   <MapPin size={18} className="text-accent mt-0.5 shrink-0" />
-                  <address className="not-italic">
-                    Columbus Park Crossing<br />
-                    5555 Whittlesey Blvd., Bldg. 1<br />
-                    Columbus, GA 31909
-                  </address>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-foreground">La-Z-Boy of Columbus</span>
+                    <address className="not-italic">
+                      5555 Whittlesey Blvd, Bldg 1<br />
+                      Columbus, GA 31909
+                    </address>
+                  </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={18} className="text-accent shrink-0" />

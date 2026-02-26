@@ -51,13 +51,13 @@ export default function Home() {
               />
             </div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 leading-tight">
-              Make Yourself <br/>
-              <span className="text-foreground text-5xl md:text-6xl lg:text-7xl">at Home.</span>
+              La-Z-Boy of <br/>
+              <span className="text-foreground text-5xl md:text-6xl lg:text-7xl">Columbus, Georgia</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light">
-              We're here to help you create a space that feels just right—filled with comfort, style, and quality that lasts.
+              Locally Owned & Operated Furniture Store Serving Columbus, Phenix City, and the Chattahoochee Valley Since 2002.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link href="/comfort-club">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-serif text-lg px-8 py-6 h-auto cursor-pointer">
                   Join Comfort Club
@@ -66,6 +66,16 @@ export default function Home() {
               <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 font-serif text-lg px-8 py-6 h-auto bg-transparent" onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}>
                 Explore Gallery
               </Button>
+            </div>
+            
+            <div className="border-t border-border pt-6">
+              <h3 className="font-serif font-bold text-primary mb-3">Why Shop Local with Us?</h3>
+              <ul className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Family Owned & Operated</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> In-Store Design Services</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Local Delivery Team</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Community Focused</li>
+              </ul>
             </div>
           </motion.div>
         </div>
