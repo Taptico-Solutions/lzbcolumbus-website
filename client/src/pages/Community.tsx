@@ -52,17 +52,23 @@ export default function Community() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Community</h1>
+            <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Our Commitment to Columbus</h1>
             <p className="text-xl md:text-2xl font-light leading-relaxed opacity-90">
-              We love being involved locally—supporting schools, teams, and events that make Columbus such a special place to call home.
+              As a locally owned business since 2002, we're dedicated to supporting the schools, teams, and organizations that make the Chattahoochee Valley a wonderful place to live.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Organizations Grid */}
+      {/* Local Sponsorships & Partnerships */}
       <section className="py-20 bg-background">
         <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">Local Sponsorships & Partnerships</h2>
+            <p className="text-lg text-muted-foreground">
+              We are proud to partner with these incredible local organizations to build a stronger community.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {organizations.map((org, index) => (
               <motion.div

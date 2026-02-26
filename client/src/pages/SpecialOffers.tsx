@@ -235,30 +235,7 @@ export default function SpecialOffers() {
             </div>
           </div>
 
-          {/* Store Info */}
-          <div className="mt-16 grid md:grid-cols-3 gap-8 text-left max-w-3xl mx-auto">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-serif font-bold text-[#003349] text-lg mb-2">Visit Us</h3>
-              <p className="text-gray-600">
-                5555 Whittlesey Blvd, Bldg 1<br />
-                Columbus, GA 31909
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-serif font-bold text-[#003349] text-lg mb-2">Hours</h3>
-              <p className="text-gray-600">
-                Mon-Sat: 10am - 7pm<br />
-                Sun: 12:30pm - 5pm
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-serif font-bold text-[#003349] text-lg mb-2">Contact</h3>
-              <p className="text-gray-600">
-                (706) 653-1070<br />
-                sevans@lazboy-columbus.com
-              </p>
-            </div>
-          </div>
+
         </motion.div>
       </div>
     </div>
