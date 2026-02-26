@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-0">
       {/* Hero Section */}
-      <section className="relative h-auto md:h-[80vh] min-h-[600px] w-full overflow-hidden pb-12 md:pb-0">
+      <section className="relative h-auto min-h-[80vh] w-full overflow-hidden pb-12 md:pb-20">
         <div className="absolute inset-0">
           <img 
             src="/images/gallery-1.jpg" 
@@ -36,12 +36,12 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/20" />
         </div>
-        <div className="container relative h-full flex flex-col justify-center items-start z-10 pt-24 md:pt-0">
+        <div className="container relative h-full flex flex-col justify-center items-start z-10 pt-32 md:pt-40">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-2xl bg-white/90 backdrop-blur-sm p-6 md:p-12 rounded-lg shadow-xl border-l-4 border-accent mt-8 md:mt-0 mb-8 md:mb-0"
+            className="max-w-2xl bg-white/90 backdrop-blur-sm p-6 md:p-12 rounded-lg shadow-xl border-l-4 border-accent mb-8"
           >
             <div className="mb-4 md:mb-8">
               <img 
