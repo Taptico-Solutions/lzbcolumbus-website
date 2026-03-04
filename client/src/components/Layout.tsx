@@ -12,6 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { href: "/", label: "Home" },
     { href: "/comfort-club", label: "Comfort Club" },
     { href: "/special-offers", label: "Special Offers" },
+    { href: "/about-lazboy-columbus", label: "About Us" },
     { href: "/community", label: "Community" },
     { href: "/blog", label: "Design Blog" },
     { href: "/room-planner", label: "Room Planner" },

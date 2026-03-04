@@ -55,7 +55,7 @@ export default function Home() {
               <span className="text-foreground text-3xl md:text-6xl lg:text-7xl">Columbus, Georgia</span>
             </h1>
             <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 font-light">
-              Locally Owned & Operated Furniture Store Serving Columbus, Phenix City, and the Chattahoochee Valley Since 2002.
+              Locally Owned & Operated Furniture Store Serving <Link href="/about-lazboy-columbus"><span className="text-primary hover:underline cursor-pointer">Columbus</span></Link>, Phenix City, Fortson, Midland, and the entire Chattahoochee Valley Since 2002.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link href="/comfort-club">
@@ -71,7 +71,7 @@ export default function Home() {
             <div className="border-t border-border pt-6">
               <h3 className="font-serif font-bold text-primary mb-3">Why Shop La-Z-Boy of Columbus?</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent shrink-0" /> Family-owned business</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent shrink-0" /> <Link href="/about-lazboy-columbus"><span className="hover:text-primary cursor-pointer">Family-owned business</span></Link></li>
                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent shrink-0" /> Local delivery team</li>
                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent shrink-0" /> In-store design services</li>
                 <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent shrink-0" /> Comfort Club</li>
