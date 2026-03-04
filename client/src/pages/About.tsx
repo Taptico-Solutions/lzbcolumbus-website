@@ -94,7 +94,7 @@ export default function About() {
             >
               <div className="absolute -top-4 -right-4 w-full h-full border-2 border-accent rounded-lg z-0" />
               <img 
-                src="/images/store-front-real.jpg" 
+                src="/images/store-front-correct.png" 
                 alt="La-Z-Boy Columbus Storefront" 
                 className="relative z-10 rounded-lg shadow-xl w-full object-cover aspect-[4/3]"
               />
