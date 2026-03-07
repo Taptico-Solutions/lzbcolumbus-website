@@ -23,8 +23,8 @@ import ServiceRequest from "./pages/ServiceRequest";
 import GeneralQuestions from "./pages/GeneralQuestions";
 import SpecialOffers from "./pages/SpecialOffers";
 import ClingstonesPartnership from "./pages/ClingstonesPartnership";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Layout>
       <ScrollToTop />
