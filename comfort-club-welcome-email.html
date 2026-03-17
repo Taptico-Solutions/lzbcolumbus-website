@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+
+  <!--
+  ═══════════════════════════════════════════════════════════════════════
+  MAILCHIMP SETUP INSTRUCTIONS
+  ───────────────────────────────────────────────────────────────────────
+  SUBJECT LINE:
+    Not all emails are created equal. 👀 When you see us in your inbox… you'll definitely be all smiles 😉
+
+  PREVIEW TEXT:
+    Welcome to the Comfort Club! You're officially part of Columbus's most comfortable inner circle.
+
+  HOW TO IMPORT:
+    1. In Mailchimp → Email → Templates → Create Template → Paste in code
+    2. Paste the full HTML below
+    3. Set trigger: Automation → When someone subscribes to your audience
+  ═══════════════════════════════════════════════════════════════════════
+  -->
+
+  <title>Welcome to the Comfort Club — La-Z-Boy of Columbus</title>
+
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+
+  <style>
+    /* ── Reset ── */
+    * { box-sizing: border-box; }
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; display: block; }
+    body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+    /* ── Brand Tokens (mirrors index.css) ── */
+    /* Primary: #003349  |  Accent: #C25B3C  |  Beige: #E6E2D5  |  Sage: #9FB6AD */
+
+    body {
+      background-color: #E6E2D5;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .email-wrapper { width: 100%; background-color: #E6E2D5; padding: 28px 0; }
+
+    /* ── Outer card — mirrors the white card with accent top-border on the Comfort Club page ── */
+    .email-card {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,51,73,0.13);
+      border-top: 5px solid #C25B3C; /* accent top border — same as the sign-up card */
+    }
+
+    /* ── Nav bar — mirrors the site's navy top nav ── */
+    .nav-bar {
+      background-color: #003349;
+      padding: 0 32px;
+      text-align: center;
+    }
+    .nav-bar table { margin: 0 auto; }
+    .nav-bar td { padding: 14px 10px; }
+    .nav-bar img.lazboy-logo {
+      height: 36px;
+      width: auto;
+    }
+    .nav-bar .nav-divider {
+      color: rgba(230,226,213,0.4);
+      font-size: 18px;
+      padding: 0 6px;
+    }
+    .nav-tagline {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #E6E2D5;
+      white-space: nowrap;
+    }
+
+    /* ── Hero — mirrors the Comfort Club page hero (beige bg + furniture photo) ── */
+    .hero-section {
+      background-color: #f8f5ef;
+      background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/lzpBuZQdXkGqwuoj.jpg');
+      background-size: cover;
+      background-position: center top;
+    }
+    .hero-overlay {
+      background: linear-gradient(to right, rgba(248,245,239,0.97) 48%, rgba(248,245,239,0.6) 100%);
+      padding: 44px 36px 40px;
+    }
+    .comfort-club-logo-wrap {
+      margin-bottom: 16px;
+    }
+    .comfort-club-logo-wrap img {
+      height: 120px;
+      width: auto;
+    }
+    .hero-headline {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #003349;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+    .hero-subtext {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      color: #4a6270;
+      line-height: 1.65;
+      margin: 0;
+      max-width: 340px;
+    }
+
+    /* ── Rust badge — mirrors the "Columbus Exclusive" pill on the site ── */
+    .rust-badge {
+      display: inline-block;
+      background-color: #C25B3C;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    /* ── Body copy section ── */
+    .body-section {
+      padding: 36px 36px 8px;
+    }
+    .body-section h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 22px;
+      color: #003349;
+      margin: 0 0 14px;
+      font-weight: 700;
+    }
+    .body-section p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      color: #4a6270;
+      line-height: 1.7;
+      margin: 0 0 12px;
+    }
+    .body-section .signature {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: #003349;
+      margin: 16px 0 0;
+    }
+
+    /* ── Divider — thin beige rule like the site uses ── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid #E6E2D5;
+      margin: 24px 36px;
+    }
+
+    /* ── Benefits grid — mirrors the 2-col icon list on the Comfort Club page ── */
+    .benefits-section {
+      padding: 8px 36px 28px;
+    }
+    .benefits-section h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 19px;
+      color: #003349;
+      margin: 0 0 18px;
+      font-weight: 700;
+    }
+    .benefit-row { width: 100%; border-collapse: collapse; }
+    .benefit-cell { width: 50%; padding: 8px 8px 8px 0; vertical-align: top; }
+    .benefit-cell:last-child { padding-right: 0; padding-left: 8px; }
+    .benefit-inner {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    /* icon circle — mirrors the white rounded icon circles on the site */
+    .benefit-icon-wrap {
+      background-color: #ffffff;
+      border: 1px solid #E6E2D5;
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      display: inline-block;
+      text-align: center;
+      line-height: 42px;
+      font-size: 20px;
+      box-shadow: 0 1px 4px rgba(0,51,73,0.08);
+    }
+    .benefit-text-wrap { flex: 1; }
+    .benefit-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #003349;
+      margin: 0 0 3px;
+      display: block;
+    }
+    .benefit-desc {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #4a6270;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ── CTA — mirrors the primary navy button + outline button on the site ── */
+    .cta-section {
+      padding: 8px 36px 36px;
+      text-align: center;
+    }
+    .cta-section p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: #4a6270;
+      line-height: 1.6;
+      margin: 0 0 20px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: #003349;
+      color: #ffffff !important;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 36px;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+    }
+    .btn-outline {
+      display: inline-block;
+      background-color: transparent;
+      color: #003349 !important;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 11px 28px;
+      border: 2px solid #003349;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    /* ── Special Offers banner — mirrors the "Columbus Exclusive" navy banner on the homepage ── */
+    .offers-banner {
+      background-color: #003349;
+      padding: 28px 36px;
+    }
+    .offers-banner table { width: 100%; border-collapse: collapse; }
+    .offers-banner-left { vertical-align: middle; padding-right: 16px; }
+    .offers-banner-right { vertical-align: middle; text-align: right; white-space: nowrap; }
+    .offers-eyebrow {
+      display: inline-block;
+      background-color: #C25B3C;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .offers-headline {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 6px;
+    }
+    .offers-subtext {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      color: rgba(230,226,213,0.85);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .btn-white {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #003349 !important;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    /* ── Store info — mirrors the footer info block ── */
+    .store-info {
+      background-color: #f8f5ef;
+      padding: 28px 36px;
+      text-align: center;
+      border-top: 1px solid #E6E2D5;
+    }
+    .store-info h4 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 15px;
+      color: #003349;
+      margin: 0 0 16px;
+      font-weight: 700;
+    }
+    .store-cols { width: 100%; border-collapse: collapse; }
+    .store-col { width: 33.33%; padding: 0 8px; vertical-align: top; text-align: center; }
+    .store-label {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #C25B3C;
+      margin-bottom: 4px;
+    }
+    .store-value {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #003349;
+      line-height: 1.55;
+    }
+    .store-value a { color: #003349 !important; text-decoration: none; }
+
+    /* ── Social row ── */
+    .social-row {
+      padding: 18px 36px;
+      text-align: center;
+      background-color: #ffffff;
+      border-top: 1px solid #E6E2D5;
+    }
+    .social-row p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #4a6270;
+      margin: 0 0 10px;
+    }
+    .social-link {
+      display: inline-block;
+      margin: 0 8px;
+      color: #003349 !important;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid #C25B3C;
+      padding-bottom: 1px;
+    }
+
+    /* ── Footer ── */
+    .email-footer {
+      background-color: #003349;
+      padding: 20px 36px 24px;
+      text-align: center;
+    }
+    .email-footer img.footer-logo {
+      height: 28px;
+      width: auto;
+      margin-bottom: 10px;
+    }
+    .email-footer p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      color: rgba(230,226,213,0.7);
+      line-height: 1.6;
+      margin: 0 0 4px;
+    }
+    .email-footer a { color: rgba(230,226,213,0.7) !important; text-decoration: underline; }
+
+    /* ── Mobile ── */
+    @media only screen and (max-width: 620px) {
+      .email-card { border-radius: 0 !important; }
+      .nav-bar, .hero-overlay, .body-section, .benefits-section,
+      .cta-section, .offers-banner, .store-info, .social-row, .email-footer {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+      }
+      .section-divider { margin-left: 18px !important; margin-right: 18px !important; }
+      .hero-headline { font-size: 26px !important; }
+      .benefit-cell { display: block !important; width: 100% !important; padding: 6px 0 !important; }
+      .benefit-cell:last-child { padding-left: 0 !important; }
+      .store-col { display: block !important; width: 100% !important; padding: 6px 0 !important; }
+      .offers-banner-left, .offers-banner-right { display: block !important; width: 100% !important; text-align: center !important; padding: 0 0 14px !important; }
+      .comfort-club-logo-wrap img { height: 90px !important; }
+    }
+  </style>
+</head>
+
+<body>
+<!-- Hidden preview text -->
+<div style="display:none;font-size:1px;color:#E6E2D5;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+  Welcome to the Comfort Club! You're officially part of Columbus's most comfortable inner circle. Here's everything waiting for you inside...
+</div>
+
+<div class="email-wrapper">
+<table role="presentation" class="email-card" width="600" cellpadding="0" cellspacing="0" align="center">
+
+  <!-- ══ NAV BAR ══════════════════════════════════════════════════════ -->
+  <tr>
+    <td class="nav-bar">
+      <table role="presentation" cellpadding="0" cellspacing="0" align="center">
+        <tr>
+          <td style="padding: 16px 0;">
+            <!-- La-Z-Boy wordmark logo -->
+            <img
+              class="lazboy-logo"
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/LxipKGHDFfqakeUg.png"
+              alt="La-Z-Boy"
+              height="36"
+              style="height:36px; width:auto;"
+            />
+          </td>
+          <td style="padding: 16px 8px;">
+            <span class="nav-divider" style="color:rgba(230,226,213,0.35); font-size:20px;">|</span>
+          </td>
+          <td style="padding: 16px 0;">
+            <span class="nav-tagline">Columbus, Georgia</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ══ HERO ═════════════════════════════════════════════════════════ -->
+  <tr>
+    <td class="hero-section">
+      <div class="hero-overlay">
+        <div class="comfort-club-logo-wrap">
+          <!-- Comfort Club shield logo — the same one on the Comfort Club page -->
+          <img
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/vfZYryqhCTqzsVRa.png"
+            alt="La-Z-Boy Comfort Club"
+            height="120"
+            style="height:120px; width:auto;"
+          />
+        </div>
+        <div class="rust-badge">✦ &nbsp;You're In!&nbsp; ✦</div>
+        <h1 class="hero-headline">
+          Welcome to<br>The Comfort Club!
+        </h1>
+        <p class="hero-subtext">
+          Unlock exclusive deals, early access to new collections, and insider updates on the latest comfort innovations — all for free.
+        </p>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ══ GREETING ══════════════════════════════════════════════════════ -->
+  <tr>
+    <td class="body-section">
+      <h2>Hey *|FNAME|*, welcome to the family!</h2>
+      <p>
+        We're so glad you joined us. As a locally owned La-Z-Boy store right here in Columbus, Georgia,
+        the Comfort Club is our way of saying <em>thank you</em> for supporting a family business
+        that's been part of this community since 2002.
+      </p>
+      <p>
+        From this day forward, you'll be the first to hear about exclusive member-only savings,
+        new arrivals, design inspiration, and everything happening at our showroom on Whittlesey Blvd.
+        We promise to keep it helpful, fun, and absolutely not spammy. Pinky swear!
+      </p>
+      <p class="signature">— Susan Evans &amp; the La-Z-Boy Columbus Family</p>
+    </td>
+  </tr>
+
+  <tr><td><hr class="section-divider" /></td></tr>
+
+  <!-- ══ BENEFITS ══════════════════════════════════════════════════════ -->
+  <tr>
+    <td class="benefits-section">
+      <h3>Your Member Perks</h3>
+      <table class="benefit-row" role="presentation" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="benefit-cell">
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td style="width:46px; vertical-align:top; padding-top:2px;">
+                  <div class="benefit-icon-wrap">🎁</div>
+                </td>
+                <td style="padding-left:12px; vertical-align:top;">
+                  <span class="benefit-title">Exclusive Member Gifts</span>
+                  <p class="benefit-desc">Surprise gifts and seasonal treats reserved just for members.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td class="benefit-cell">
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td style="width:46px; vertical-align:top; padding-top:2px;">
+                  <div class="benefit-icon-wrap">⚡</div>
+                </td>
+                <td style="padding-left:12px; vertical-align:top;">
+                  <span class="benefit-title">First Look Access</span>
+                  <p class="benefit-desc">Discover new collections before they hit the showroom floor.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="benefit-cell" style="padding-top:16px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td style="width:46px; vertical-align:top; padding-top:2px;">
+                  <div class="benefit-icon-wrap">✨</div>
+                </td>
+                <td style="padding-left:12px; vertical-align:top;">
+                  <span class="benefit-title">Design Trend Updates</span>
+                  <p class="benefit-desc">Curated style guides from our in-store design consultants.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td class="benefit-cell" style="padding-top:16px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td style="width:46px; vertical-align:top; padding-top:2px;">
+                  <div class="benefit-icon-wrap">📬</div>
+                </td>
+                <td style="padding-left:12px; vertical-align:top;">
+                  <span class="benefit-title">Insider News &amp; Sales</span>
+                  <p class="benefit-desc">Be the first to know about sales and Columbus-only promotions.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ══ CTA ═══════════════════════════════════════════════════════════ -->
+  <tr>
+    <td class="cta-section">
+      <p>
+        Ready to start shopping? Come see us at our Columbus showroom<br>
+        or browse our latest arrivals online.
+      </p>
+      <a href="https://www.lzbcolumbus.com" class="btn-primary">
+        Explore Our Showroom
+      </a>
+      <br>
+      <a href="https://www.lzbcolumbus.com/special-offers" class="btn-outline">
+        View Current Offers
+      </a>
+    </td>
+  </tr>
+
+  <!-- ══ SPECIAL OFFERS BANNER (mirrors the homepage navy banner) ══════ -->
+  <tr>
+    <td class="offers-banner">
+      <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="offers-banner-left">
+            <div class="offers-eyebrow">Columbus Exclusive</div>
+            <p class="offers-headline" style="font-family:Georgia,'Times New Roman',serif; font-size:22px; font-weight:700; color:#ffffff; margin:0 0 6px;">Special Offers</p>
+            <p class="offers-subtext">Exclusive deals available ONLY at our Columbus, Georgia location.</p>
+          </td>
+          <td class="offers-banner-right">
+            <a href="https://www.lzbcolumbus.com/special-offers" class="btn-white">
+              View Details &rarr;
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ══ STORE INFO ════════════════════════════════════════════════════ -->
+  <tr>
+    <td class="store-info">
+      <h4>Come See Us In Person</h4>
+      <table class="store-cols" role="presentation" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="store-col">
+            <span class="store-label">Address</span>
+            <span class="store-value">
+              5555 Whittlesey Blvd, Bldg 1<br>
+              Columbus, GA 31909
+            </span>
+          </td>
+          <td class="store-col">
+            <span class="store-label">Hours</span>
+            <span class="store-value">
+              Mon–Sat: 10am – 7pm<br>
+              Sun: 12:30pm – 5pm
+            </span>
+          </td>
+          <td class="store-col">
+            <span class="store-label">Phone</span>
+            <span class="store-value">
+              <a href="tel:7066531070">(706) 653-1070</a>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ══ SOCIAL ════════════════════════════════════════════════════════ -->
+  <tr>
+    <td class="social-row">
+      <p>Follow us for daily inspiration, new arrivals, and community updates:</p>
+      <a href="https://www.facebook.com/lazboycolumbus/" class="social-link">Facebook</a>
+      <a href="https://www.instagram.com/lazboycolumbus/" class="social-link">Instagram</a>
+    </td>
+  </tr>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════════════ -->
+  <tr>
+    <td class="email-footer">
+      <img
+        class="footer-logo"
+        src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/LxipKGHDFfqakeUg.png"
+        alt="La-Z-Boy"
+        height="28"
+        style="height:28px; width:auto; margin:0 auto 10px; display:block; filter:brightness(0) invert(1);"
+      />
+      <p>
+        <strong style="color:rgba(230,226,213,0.9);">La-Z-Boy of Columbus</strong> &nbsp;·&nbsp;
+        5555 Whittlesey Blvd, Bldg 1, Columbus, GA 31909<br>
+        Locally Owned &amp; Operated by the Evans Family Since 2002
+      </p>
+      <p style="margin-top:10px;">
+        You're receiving this because you joined the La-Z-Boy Columbus Comfort Club.<br>
+        Questions? <a href="mailto:sevans@lazboy-columbus.com">sevans@lazboy-columbus.com</a>
+      </p>
+      <p style="margin-top:8px;">
+        <a href="*|UNSUB|*">Unsubscribe</a> &nbsp;·&nbsp;
+        <a href="*|UPDATE_PROFILE|*">Update Preferences</a> &nbsp;·&nbsp;
+        <a href="*|ARCHIVE|*">View in Browser</a>
+      </p>
+      <p style="margin-top:8px;">© 2026 La-Z-Boy of Columbus, Georgia. All rights reserved.</p>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+</body>
+</html>

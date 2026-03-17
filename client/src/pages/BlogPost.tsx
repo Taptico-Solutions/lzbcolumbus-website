@@ -9,6 +9,72 @@ import { useState, useEffect } from "react";
 // Mock data for blog posts - in a real app this would come from an API or CMS
 const blogPosts = [
   {
+    id: 8,
+    slug: "earthy-organic-style",
+    title: "Bring the Outdoors In: Earthy Organic Style for a Calm, Collected Home",
+    content: `
+      <p class="mb-6 text-lg leading-relaxed">There's a shift happening in homes right now.</p>
+      <p class="mb-6">Less bright white. Less contrast. More warmth, more texture, more calm.</p>
+      <p class="mb-6">Earthy Organic style is all about creating spaces that feel grounded and relaxed, with natural materials, soft color, and pieces you actually want to live in.</p>
+
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/earthy-organic-cover_6d406a16.webp" alt="Earthy Organic Style Room Inspiration" class="w-full h-auto rounded-lg shadow-md my-8" />
+
+      <h3 class="text-2xl font-serif text-primary mt-10 mb-4">What Is Earthy Organic Style?</h3>
+      <p class="mb-4">This look takes its cues from nature:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Soft greens and warm neutrals</li>
+        <li>Natural wood tones</li>
+        <li>Linen, woven fibers, and layered texture</li>
+      </ul>
+      <p class="mb-6">It's less about a perfect "look" and more about how a room <em>feels</em> — easy, comfortable, and lived in.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-10 mb-4">Start with a Grounding Piece</h3>
+      <p class="mb-4">Every room needs a foundation.</p>
+      <p class="mb-6">The Paxton sectional with the extra-wide chaise is a great place to start. Its clean lines keep it current, while the scale and soft cushions make it feel inviting. The extended chaise adds function and creates a space you can actually settle into.</p>
+      <p class="mb-6">In a soft, earthy tone, it sets the direction for the entire room.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-10 mb-4">Layer in Texture</h3>
+      <p class="mb-4">This style comes to life through texture.</p>
+      <p class="mb-6">Think a woven rug, linen pillows, and a chunky knit throw. These layers add depth without making the space feel busy.</p>
+      <p class="mb-6">The goal is a room that feels collected, not overdesigned.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-10 mb-4">Use Natural, Organic Shapes</h3>
+      <p class="mb-4">Bringing in organic shapes helps soften the space.</p>
+      <p class="mb-6">A piece like a root ball glass top table adds movement and a natural element that balances the clean lines of the sofa. It keeps the room from feeling too structured.</p>
+
+      <h3 class="text-2xl font-serif text-primary mt-10 mb-4">Keep It Warm and Livable</h3>
+      <p class="mb-4">Warm lighting and natural materials make all the difference.</p>
+      <p class="mb-6">This is a style built for real life — comfortable, relaxed, and easy to enjoy every day.</p>
+
+      <div class="my-10 p-6 bg-secondary/20 rounded-lg border border-secondary/40">
+        <h4 class="text-xl font-serif text-primary mb-3">Bringing It Home</h4>
+        <p class="mb-4">If you're ready for a space that feels calmer and more inviting, Earthy Organic style is a great place to start.</p>
+        <p class="mb-4">Whether it's one piece or a full room, we're here to help you pull it together in a way that fits your home.</p>
+        <p>Come see us in Columbus or take advantage of our <strong>complimentary design services</strong> to get started.</p>
+      </div>
+    `,
+    author: "Susan Evans",
+    date: "March 17, 2026",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/earthy-organic-cover_6d406a16.webp",
+    category: "Design Trends",
+    relatedProducts: [
+      {
+        id: "paxton-sectional",
+        name: "Paxton Sectional",
+        image: "/images/TD11c_Tahoe_MOD-632_E191765_090.jpg",
+        category: "Sectionals",
+        url: "https://www.la-z-boy.com/p/stationary-sectionals/paxton-sectional/_/R-xxs628"
+      },
+      {
+        id: "trouper-sectional",
+        name: "Trouper Sectional",
+        image: "/images/TD27d_Trouper_MOD-724_LB172755_143.jpg",
+        category: "Sectionals",
+        url: "https://www.la-z-boy.com/p/living-room-sectionals-reclining-sectionals/sectional-trouper/_/R-xxs724"
+      }
+    ]
+  },
+  {
     id: 6,
     slug: "cottage-design-trend",
     title: "The Cottage Design Trend: Comfort Comes Home",
