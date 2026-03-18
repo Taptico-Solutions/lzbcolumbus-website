@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Ball! Clingstones Season is Almost Here</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Dancing+Script:wght@700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #f0f4f0; font-family: 'Lato', sans-serif; color: #1a1a1a; }
+
+    .block-wrap {
+      max-width: 620px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid #d6ddd6;
+    }
+
+    /* Header */
+    .header {
+      background: #003349;
+      padding: 14px 28px;
+      text-align: center;
+    }
+    .header h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 38px;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    /* Hero image — full width, short crop */
+    .hero-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    /* Body */
+    .body {
+      padding: 24px 30px 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #C25B3C;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #003349;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    h2 em { font-style: italic; color: #C25B3C; }
+
+    p.copy {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #3a3a3a;
+      margin-bottom: 14px;
+    }
+
+    /* Dates strip */
+    .dates {
+      background: #003349;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 4px 0 18px;
+    }
+    .dates h3 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 20px;
+      color: #E6E2D5;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .date-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      gap: 8px;
+    }
+    .date-row:last-child { border-bottom: none; }
+    .date-day { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #fff; min-width: 80px; }
+    .date-promo { font-size: 12px; color: #E6E2D5; flex: 1; }
+    .date-time { font-size: 11px; font-weight: 900; color: #C25B3C; white-space: nowrap; }
+
+    /* Divider */
+    hr { border: none; border-top: 1px solid #e8ede8; margin: 18px 0; }
+
+    /* Partnership blurb */
+    .pull {
+      border-left: 4px solid #C25B3C;
+      background: #f5f7f5;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 0 0 16px;
+    }
+    .pull p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: #003349;
+      line-height: 1.5;
+    }
+
+    /* CTA button */
+    .cta-wrap { text-align: center; margin-top: 20px; }
+    .btn {
+      display: inline-block;
+      background: #4a6741;
+      color: #fff !important;
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 13px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 480px) {
+      h2 { font-size: 24px; }
+      .header h1 { font-size: 30px; }
+      .body { padding: 20px 18px 22px; }
+    }
+  </style>
+</head>
+<body>
+<div class="block-wrap">
+
+  <div class="header">
+    <h1>Play Ball, Columbus! ⚾</h1>
+  </div>
+
+  <img
+    src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/clingstones-field_54fba3e8.jpg"
+    alt="Synovus Park — Home of the Columbus Clingstones"
+    class="hero-img"
+  />
+
+  <div class="body">
+
+    <span class="badge">2026 Season</span>
+    <h2>The Stones Are Back.<br><em>Opening Night is April 3rd.</em></h2>
+
+    <p class="copy">
+      The Columbus Clingstones — Columbus's own Double-A affiliate of the Atlanta Braves — are back at Synovus Park. We're proud to be a sponsor again this season and can't wait to see you at the ballpark!
+    </p>
+
+    <div class="dates">
+      <h3>Opening Home Games</h3>
+      <div class="date-row">
+        <span class="date-day">Fri, Apr 3</span>
+        <span class="date-promo">Opening Night + Post-Game Fireworks 🎆</span>
+        <span class="date-time">7:06 PM</span>
+      </div>
+      <div class="date-row">
+        <span class="date-day">Sat, Apr 4</span>
+        <span class="date-promo">Kids Run the Bases</span>
+        <span class="date-time">6:05 PM</span>
+      </div>
+      <div class="date-row">
+        <span class="date-day">Sun, Apr 5</span>
+        <span class="date-promo">Easter Egg Hunt + Family Sunday</span>
+        <span class="date-time">1:05 PM</span>
+      </div>
+    </div>
+
+    <hr />
+
+    <span class="badge" style="background:#003349;">La-Z-Boy × Clingstones</span>
+    <h2 style="margin-top:10px;">Your Kid's Own<br><em>Field of Dreams.</em></h2>
+
+    <div class="pull">
+      <p>"We want to give every young player in the Chattahoochee Valley the chance to walk out onto that field and feel like a hero."</p>
+    </div>
+
+    <p class="copy">
+      Through our partnership, local youth league teams get to take the field at Synovus Park alongside the pros — running out of the dugout and creating memories that last a lifetime. <strong>Groups of 10+ start at just $10 a ticket.</strong>
+    </p>
+
+    <div class="cta-wrap">
+      <a href="https://www.milb.com/columbus-clingstones/tickets/groups-and-hospitality" class="btn" target="_blank">
+        Bring Your Group →
+      </a>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

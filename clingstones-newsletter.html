@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Ball! Clingstones Season is Almost Here</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #f0f4f0;
+      font-family: 'Lato', sans-serif;
+      color: #1a1a1a;
+    }
+
+    /* ── Outer wrapper ── */
+    .email-wrap {
+      max-width: 620px;
+      margin: 0 auto;
+      background: #f0f4f0;
+      padding: 24px 16px 40px;
+    }
+
+    /* ── Shared card style (matches reference images) ── */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border: 2px solid #d6ddd6;
+    }
+
+    .card-inner {
+      padding: 28px 28px 24px;
+    }
+
+    /* ── Script header banner (like "Design Spotlight", "New Arrivals!") ── */
+    .script-header {
+      background: #003349;
+      border-radius: 14px 14px 0 0;
+      padding: 14px 24px;
+      text-align: center;
+    }
+
+    .script-header h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 38px;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .script-header-green {
+      background: #4a6741;
+    }
+
+    .script-header-rust {
+      background: #C25B3C;
+    }
+
+    /* ── Hero image ── */
+    .hero-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    /* ── Opening night badge ── */
+    .badge {
+      display: inline-block;
+      background: #C25B3C;
+      color: #ffffff;
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .badge-green {
+      background: #4a6741;
+    }
+
+    .badge-navy {
+      background: #003349;
+    }
+
+    /* ── Section headings ── */
+    h2.serif {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: #003349;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    h2.serif em {
+      font-style: italic;
+      color: #C25B3C;
+    }
+
+    h3.serif {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #003349;
+      margin-bottom: 8px;
+    }
+
+    p.body {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #3a3a3a;
+      margin-bottom: 14px;
+    }
+
+    p.body strong {
+      color: #003349;
+    }
+
+    /* ── CTA Button ── */
+    .btn {
+      display: inline-block;
+      background: #003349;
+      color: #ffffff !important;
+      font-family: 'Lato', sans-serif;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+
+    .btn-rust {
+      background: #C25B3C;
+    }
+
+    .btn-green {
+      background: #4a6741;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #003349 !important;
+      border: 2px solid #003349;
+    }
+
+    /* ── Opening dates strip ── */
+    .dates-strip {
+      background: #003349;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .dates-strip h3 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 26px;
+      color: #E6E2D5;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .date-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .date-row:last-child {
+      border-bottom: none;
+    }
+
+    .date-day {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      min-width: 110px;
+    }
+
+    .date-promo {
+      font-size: 13px;
+      color: #E6E2D5;
+      flex: 1;
+      padding: 0 12px;
+    }
+
+    .date-time {
+      font-size: 12px;
+      font-weight: 700;
+      color: #C25B3C;
+      white-space: nowrap;
+    }
+
+    /* ── Partnership highlight box ── */
+    .highlight-box {
+      background: #eef2ee;
+      border-left: 4px solid #C25B3C;
+      border-radius: 0 12px 12px 0;
+      padding: 18px 20px;
+      margin: 16px 0;
+    }
+
+    .highlight-box p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: #003349;
+      line-height: 1.5;
+    }
+
+    /* ── Two-column group options ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .option-card {
+      background: #f5f7f5;
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid #d6ddd6;
+      text-align: center;
+    }
+
+    .option-card .icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .option-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #003349;
+      margin-bottom: 6px;
+    }
+
+    .option-card p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* ── Thank you / Evans family card ── */
+    .family-card {
+      background: #E6E2D5;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border: 2px solid #c8c0b0;
+    }
+
+    .family-inner {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 0;
+    }
+
+    .family-photo {
+      width: 160px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .family-text {
+      padding: 20px 22px;
+    }
+
+    .family-text .script-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 30px;
+      color: #003349;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .family-text p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #3a3a3a;
+    }
+
+    .family-sig {
+      font-family: 'Dancing Script', cursive;
+      font-size: 22px;
+      color: #003349;
+      margin-top: 10px;
+    }
+
+    /* ── Comfort Club card ── */
+    .club-card {
+      background: #dce8f0;
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+      margin-bottom: 20px;
+      border: 2px solid #b8cdd8;
+    }
+
+    .club-card img {
+      width: 120px;
+      margin: 0 auto 16px;
+      display: block;
+    }
+
+    .club-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #003349;
+      margin-bottom: 10px;
+    }
+
+    .club-card p {
+      font-size: 14px;
+      color: #2a4a5a;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    /* ── Footer ── */
+    .footer-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+      border: 2px solid #d6ddd6;
+    }
+
+    .footer-logo {
+      width: 160px;
+      margin: 0 auto 8px;
+      display: block;
+    }
+
+    .footer-location {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #003349;
+      margin-bottom: 6px;
+    }
+
+    .footer-address {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .footer-phone {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #003349;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      font-size: 11px;
+      color: #888;
+    }
+
+    .footer-links a {
+      color: #888;
+      text-decoration: underline;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: #d0d8d0;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 480px) {
+      .two-col { grid-template-columns: 1fr; }
+      .family-inner { grid-template-columns: 1fr; }
+      .family-photo { width: 100%; height: 200px; }
+      h2.serif { font-size: 28px; }
+      .script-header h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+<div class="email-wrap">
+
+  <!-- ══════════════════════════════════════
+       CARD 1 — SEASON OPENER HERO
+  ══════════════════════════════════════ -->
+  <div class="card">
+    <div class="script-header">
+      <h1>Play Ball, Columbus! ⚾</h1>
+    </div>
+    <img
+      src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/clingstones-field_54fba3e8.jpg"
+      alt="Synovus Park — Home of the Columbus Clingstones"
+      class="hero-img"
+    />
+    <div class="card-inner">
+      <span class="badge">2026 Season</span>
+      <h2 class="serif">The Stones Are Coming Home.<br><em>Opening Night is April 3rd.</em></h2>
+      <p class="body">
+        The wait is almost over. The <strong>Columbus Clingstones</strong> — Columbus's own Double-A affiliate of the Atlanta Braves — are back at Synovus Park, and we couldn't be more excited.
+      </p>
+      <p class="body">
+        As a proud sponsor of the Clingstones, La-Z-Boy of Columbus is thrilled to cheer on our hometown team all season long. Whether you're a die-hard baseball fan or just looking for a great night out with the family, there's nothing quite like a summer evening at the ballpark.
+      </p>
+
+      <div class="dates-strip">
+        <h3>Opening Home Games</h3>
+        <div class="date-row">
+          <span class="date-day">Fri, Apr 3</span>
+          <span class="date-promo">Opening Night + Post-Game Fireworks 🎆</span>
+          <span class="date-time">7:06 PM</span>
+        </div>
+        <div class="date-row">
+          <span class="date-day">Sat, Apr 4</span>
+          <span class="date-promo">Kids Run the Bases + Magnet Schedule Giveaway</span>
+          <span class="date-time">6:05 PM</span>
+        </div>
+        <div class="date-row">
+          <span class="date-day">Sun, Apr 5</span>
+          <span class="date-promo">Easter Egg Hunt + Family Sunday + Kids Run the Bases</span>
+          <span class="date-time">1:05 PM</span>
+        </div>
+      </div>
+
+      <p class="body" style="font-size:12px; color:#777; margin-top:4px;">All times ET. Subject to change. vs. Charlotte Knights (CHA).</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CARD 2 — FIELD OF DREAMS PARTNERSHIP
+  ══════════════════════════════════════ -->
+  <div class="card">
+    <div class="script-header script-header-rust">
+      <h1>Our Partnership</h1>
+    </div>
+    <div class="card-inner">
+      <span class="badge badge-navy">La-Z-Boy × Clingstones</span>
+      <h2 class="serif">Your Kid's Own<br><em>Field of Dreams.</em></h2>
+
+      <div class="highlight-box">
+        <p>"We want to give every young player in the Chattahoochee Valley the chance to walk out onto that field and feel like a hero."</p>
+      </div>
+
+      <p class="body">
+        Through our partnership with the Clingstones, <strong>La-Z-Boy of Columbus is sponsoring the Field of Dreams program</strong> — giving local youth league teams the incredible experience of taking the field at Synovus Park alongside their heroes.
+      </p>
+      <p class="body">
+        Youth teams get to run out of the dugout, stand on the same diamond as the pros, and create memories that last a lifetime. It's one of our favorite things we've ever done as part of this community.
+      </p>
+      <p class="body">
+        We're also proud to sponsor the <strong>La-Z-Boy of Columbus Player of the Week</strong> — recognizing standout performances throughout the season.
+      </p>
+
+      <a href="https://www.milb.com/columbus-clingstones/tickets/groups-and-hospitality" class="btn btn-rust" target="_blank">
+        Bring Your Team to the Park →
+      </a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CARD 3 — BRING A GROUP
+  ══════════════════════════════════════ -->
+  <div class="card">
+    <div class="script-header script-header-green">
+      <h1>Bring the Whole Crew!</h1>
+    </div>
+    <div class="card-inner">
+      <p class="body">
+        Looking to bring a youth league team, a school group, or just a big crew of friends and family? The Clingstones make it easy and affordable. Groups of <strong>10 or more</strong> get reserved lower bowl seating starting at just <strong>$10–$12 per person.</strong>
+      </p>
+
+      <div class="two-col">
+        <div class="option-card">
+          <div class="icon">⚾</div>
+          <h4>Group Tickets</h4>
+          <p>10+ fans. Lower bowl seating from $10–$12/person. Perfect for teams, schools & families.</p>
+        </div>
+        <div class="option-card">
+          <div class="icon">🍖</div>
+          <h4>Picnic Areas</h4>
+          <p>Groups of 20+ enjoy a 90-min all-you-can-eat buffet + video board recognition.</p>
+        </div>
+        <div class="option-card">
+          <div class="icon">🏟️</div>
+          <h4>Dugout Patio</h4>
+          <p>Groups of 40–50 right next to the Clingstones dugout. Starting at $35/person.</p>
+        </div>
+        <div class="option-card">
+          <div class="icon">🌟</div>
+          <h4>Luxury Suites</h4>
+          <p>Climate-controlled indoor + outdoor seating for groups of 25. The ultimate experience.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top: 8px;">
+        <a href="https://www.milb.com/columbus-clingstones/tickets/groups-and-hospitality" class="btn btn-green" target="_blank">
+          View All Group Options
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CARD 4 — EVANS FAMILY NOTE
+  ══════════════════════════════════════ -->
+  <div class="family-card">
+    <div class="family-inner">
+      <img
+        src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/family-photo-real_788fb742.jpg"
+        alt="The Evans Family"
+        class="family-photo"
+      />
+      <div class="family-text">
+        <div class="script-title">From Our Family<br>to Yours —</div>
+        <p>
+          Columbus is our home, and supporting the people and teams that make it special is at the heart of everything we do. We're so proud to be part of the Clingstones family this season.
+        </p>
+        <p>
+          Come see us at the showroom, then head out to the ballpark. We'll see you there!
+        </p>
+        <div class="family-sig">— The Evans Family</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CARD 5 — COMFORT CLUB CTA
+  ══════════════════════════════════════ -->
+  <div class="club-card">
+    <img
+      src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/comfort-club-logo_4d634899.png"
+      alt="La-Z-Boy Comfort Club"
+    />
+    <h2>Not a Comfort Club Member Yet?</h2>
+    <p>
+      Join the club for exclusive member gifts, first-look access to new arrivals, insider sales, and design trend updates — delivered straight to your inbox.
+    </p>
+    <a href="https://lzbcolumbus.com/comfort-club" class="btn btn-rust" target="_blank">
+      Join the Comfort Club
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <div class="footer-card">
+    <img
+      src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/logo-final_e4732959.png"
+      alt="La-Z-Boy Columbus"
+      class="footer-logo"
+    />
+    <div class="footer-location">Columbus Park Crossing</div>
+    <div class="footer-address">
+      5555 Whittlesey Blvd., Bldg. 1<br>
+      Columbus, GA 31909
+    </div>
+    <div class="footer-phone">706-653-1070</div>
+
+    <div class="divider"></div>
+
+    <div class="footer-links">
+      <a href="#">Unsubscribe</a> &nbsp;|&nbsp;
+      <a href="#">Update Preferences</a> &nbsp;|&nbsp;
+      <a href="#">View in Browser</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
