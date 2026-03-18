@@ -50,30 +50,13 @@ export function NewsletterPopup() {
             {/* ── TOP ROW: Comfort Club shield + Enter to Win box ── */}
             <div className="flex items-stretch gap-0 p-4 pb-2">
 
-              {/* LEFT: Comfort Club shield + QR */}
-              <div className="flex flex-col items-center justify-start gap-2 pr-3" style={{ minWidth: "110px" }}>
+              {/* LEFT: Comfort Club shield */}
+              <div className="flex flex-col items-center justify-center pr-3" style={{ minWidth: "110px" }}>
                 <img
                   src="/images/comfort-club-logo.png"
                   alt="La-Z-Boy Comfort Club"
-                  style={{ width: "100px", height: "auto", objectFit: "contain" }}
+                  style={{ width: "105px", height: "auto", objectFit: "contain" }}
                 />
-                <p style={{
-                  fontFamily: "'Dancing Script', cursive",
-                  fontSize: "15px",
-                  color: "#003349",
-                  fontWeight: 700,
-                  marginTop: "2px"
-                }}>
-                  Scan here!
-                </p>
-                {/* QR code placeholder — points to comfort club page */}
-                <div style={{ width: "80px", height: "80px", background: "#fff", borderRadius: "6px", padding: "4px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <img
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lzbcolumbus.com/comfort-club"
-                    alt="QR Code - Join Comfort Club"
-                    style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                  />
-                </div>
               </div>
 
               {/* RIGHT: Enter to Win green box */}
@@ -83,13 +66,11 @@ export function NewsletterPopup() {
               >
                 {/* Clingstones logo top-right */}
                 <div className="absolute top-2 right-2">
-                  <div style={{ width: "52px", height: "52px", borderRadius: "50%", overflow: "hidden", border: "2px solid rgba(255,255,255,0.3)" }}>
-                    <img
-                      src="/images/clingstones-logo.jpg"
-                      alt="Columbus Clingstones"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "20% center", transform: "scale(1.2)" }}
-                    />
-                  </div>
+                  <img
+                    src="/images/clingstones-badge.png"
+                    alt="Columbus Clingstones"
+                    style={{ width: "62px", height: "62px", objectFit: "contain" }}
+                  />
                 </div>
 
                 <p style={{ color: "#fff", fontSize: "13px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "1px", marginBottom: "0px" }}>
