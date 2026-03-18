@@ -148,6 +148,26 @@ export default function ComfortClub() {
           </div>
         </div>
       </section>
+      {/* Enter to Win – Clingstones Giveaway Artwork */}
+      <section className="py-12 bg-white">
+        <div className="container">
+          <div className="flex justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="w-full max-w-lg"
+            >
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/entertowinwebsite_699e26fe.webp"
+                alt="Enter to Win 4 tickets to Columbus Clingstones Opening Night – Friday April 3rd, fireworks included. 2 winners announced 3/27/26."
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
