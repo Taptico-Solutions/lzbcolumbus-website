@@ -10,6 +10,10 @@ export function NewsletterPopup() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
+    // Auto-expire after contest ends on March 27, 2026
+    const contestEnd = new Date('2026-03-28T00:00:00');
+    if (new Date() > contestEnd) return;
+
     const hasSeenPopup = sessionStorage.getItem("hasSeenClingstonePopup");
     if (!hasSeenPopup) {
       const timer = setTimeout(() => {
@@ -61,25 +65,26 @@ export function NewsletterPopup() {
 
               {/* RIGHT: Enter to Win green box */}
               <div
-                className="flex-1 rounded-xl p-3 relative overflow-hidden"
+                className="flex-1 rounded-xl p-3"
                 style={{ background: "#2d6a3f" }}
               >
-                {/* Clingstones logo top-right */}
-                <div className="absolute top-2 right-2">
+                {/* Header row: ENTER TO WIN + badge side by side */}
+                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "6px" }}>
+                  <div>
+                    <p style={{ color: "#fff", fontSize: "13px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "1px", marginBottom: "0px" }}>
+                      ENTER TO
+                    </p>
+                    <p style={{ color: "#fff", fontSize: "32px", fontWeight: 900, lineHeight: 1 }}>
+                      WIN!
+                    </p>
+                  </div>
                   <img
                     src="/images/clingstones-badge.png"
                     alt="Columbus Clingstones"
-                    style={{ width: "62px", height: "62px", objectFit: "contain" }}
+                    style={{ width: "64px", height: "64px", objectFit: "contain", flexShrink: 0 }}
                   />
                 </div>
-
-                <p style={{ color: "#fff", fontSize: "13px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "1px", marginBottom: "0px" }}>
-                  ENTER TO
-                </p>
-                <p style={{ color: "#fff", fontSize: "32px", fontWeight: 900, lineHeight: 1, marginBottom: "8px" }}>
-                  WIN!
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "11px", lineHeight: 1.5, marginBottom: "8px", paddingRight: "56px" }}>
+                <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "11px", lineHeight: 1.5, marginBottom: "8px" }}>
                   4 tickets to opening night, Friday April 3rd. Enjoy the game and stay for the fireworks!
                 </p>
                 <p style={{ color: "#fff", fontSize: "11px", fontWeight: 700, lineHeight: 1.5 }}>
