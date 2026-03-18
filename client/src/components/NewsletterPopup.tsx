@@ -79,9 +79,9 @@ export function NewsletterPopup() {
                     </p>
                   </div>
                   <img
-                    src="/images/clingstones-badge.png"
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/clingstones-badge_fc777db6.png"
                     alt="Columbus Clingstones"
-                    style={{ width: "64px", height: "64px", objectFit: "contain", flexShrink: 0 }}
+                    style={{ width: "90px", height: "90px", objectFit: "contain", flexShrink: 0 }}
                   />
                 </div>
                 <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "11px", lineHeight: 1.5, marginBottom: "8px" }}>
