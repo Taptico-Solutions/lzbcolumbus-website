@@ -31,7 +31,7 @@ export function NewsletterPopup() {
       {isOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          style={{ background: "rgba(0,0,0,0.65)" }}
+          style={{ background: "rgba(0,0,0,0.70)" }}
           onClick={(e) => { if (e.target === e.currentTarget) handleClose(); }}
         >
           <motion.div
@@ -40,72 +40,38 @@ export function NewsletterPopup() {
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: "spring", stiffness: 280, damping: 26 }}
             className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl"
-            style={{ background: "#dce8ed", fontFamily: "'Lato', sans-serif" }}
+            style={{ background: "#fff", fontFamily: "'Lato', sans-serif" }}
           >
             {/* Close button */}
             <button
               onClick={handleClose}
-              className="absolute top-3 right-3 z-20 text-[#003349]/50 hover:text-[#003349] transition-colors"
+              className="absolute top-3 right-3 z-20 bg-white/80 rounded-full p-0.5 text-[#003349]/60 hover:text-[#003349] transition-colors shadow"
               aria-label="Close"
             >
               <X className="w-5 h-5" />
             </button>
 
-            {/* ── TOP ROW: Comfort Club shield + Enter to Win box ── */}
-            <div className="flex items-stretch gap-0 p-4 pb-2">
-
-              {/* LEFT: Comfort Club shield */}
-              <div className="flex flex-col items-center justify-center pr-3" style={{ minWidth: "110px" }}>
-                <img
-                  src="/images/comfort-club-logo.png"
-                  alt="La-Z-Boy Comfort Club"
-                  style={{ width: "105px", height: "auto", objectFit: "contain" }}
-                />
-              </div>
-
-              {/* RIGHT: Enter to Win green box */}
-              <div
-                className="flex-1 rounded-xl p-3"
-                style={{ background: "#2d6a3f" }}
-              >
-                {/* Header row: ENTER TO WIN + badge side by side */}
-                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "6px" }}>
-                  <div>
-                    <p style={{ color: "#fff", fontSize: "13px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "1px", marginBottom: "0px" }}>
-                      ENTER TO
-                    </p>
-                    <p style={{ color: "#fff", fontSize: "32px", fontWeight: 900, lineHeight: 1 }}>
-                      WIN!
-                    </p>
-                  </div>
-                  <img
-                    src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/clingstones-badge_fc777db6.png"
-                    alt="Columbus Clingstones"
-                    style={{ width: "90px", height: "90px", objectFit: "contain", flexShrink: 0 }}
-                  />
-                </div>
-                <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "11px", lineHeight: 1.5, marginBottom: "8px" }}>
-                  4 tickets to opening night, Friday April 3rd. Enjoy the game and stay for the fireworks!
-                </p>
-                <p style={{ color: "#fff", fontSize: "11px", fontWeight: 700, lineHeight: 1.5 }}>
-                  Join our comfort club to be eligible to win.<br />
-                  2 winners announced 3/27/26.
-                </p>
-              </div>
+            {/* ── FLYER IMAGE (full width, no padding) ── */}
+            <div className="w-full">
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/entertowinwebsite_699e26fe.webp"
+                alt="Enter to Win 4 tickets to Columbus Clingstones Opening Night – Friday April 3rd"
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
             </div>
 
             {/* ── JOIN THE CLUB headline ── */}
-            <div className="px-4 pt-2 pb-1">
-              <h2 style={{ fontSize: "36px", fontWeight: 900, color: "#003349", lineHeight: 1.05, letterSpacing: "-0.5px" }}>
+            <div className="px-5 pt-4 pb-1">
+              <h2 style={{ fontSize: "28px", fontWeight: 900, color: "#003349", lineHeight: 1.05, letterSpacing: "-0.5px" }}>
                 JOIN THE CLUB
               </h2>
-              <p style={{ fontSize: "14px", color: "#333", lineHeight: 1.6, marginTop: "6px" }}>
-                We're giving away a set of our <strong>custom pillows</strong> every month! Plus get <strong>exclusive gifts</strong>, a first look at <strong>new arrivals</strong> and <strong>design trend updates</strong>!
+              <p style={{ fontSize: "13px", color: "#444", lineHeight: 1.6, marginTop: "5px" }}>
+                Join our <strong>Comfort Club</strong> to enter — plus get <strong>exclusive gifts</strong>, a first look at <strong>new arrivals</strong>, and <strong>design trend updates</strong>!
               </p>
             </div>
 
             {/* ── FORM ── */}
-            <div className="px-4 pt-3 pb-2">
+            <div className="px-5 pt-3 pb-2">
               <form
                 action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0"
                 method="post"
@@ -151,7 +117,7 @@ export function NewsletterPopup() {
                   type="submit"
                   name="subscribe"
                   className="w-full font-black text-sm py-4 rounded-xl tracking-wide text-white mt-1"
-                  style={{ background: "#003349" }}
+                  style={{ background: "#2d6a3f" }}
                 >
                   Enter to Win + Join the Comfort Club
                 </Button>
@@ -167,13 +133,13 @@ export function NewsletterPopup() {
 
             {/* ── RUST LA-Z-BOY SCRIPT BAR ── */}
             <div
-              className="flex items-center justify-center py-4"
+              className="flex items-center justify-center py-3"
               style={{ background: "#C25B3C" }}
             >
               <img
                 src="/images/logo-final.png"
                 alt="La-Z-Boy"
-                style={{ height: "38px", objectFit: "contain", filter: "brightness(0) invert(1)" }}
+                style={{ height: "34px", objectFit: "contain", filter: "brightness(0) invert(1)" }}
               />
             </div>
 
