@@ -17,7 +17,7 @@ const blogPosts = [
       <p class="mb-6">Less bright white. Less contrast. More warmth, more texture, more calm.</p>
       <p class="mb-6">Earthy Organic style is all about creating spaces that feel grounded and relaxed, with natural materials, soft color, and pieces you actually want to live in.</p>
 
-      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/earthy-organic-cover_6d406a16.webp" alt="Earthy Organic Style Room Inspiration" class="w-full h-auto rounded-lg shadow-md my-8" />
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/REVorganicblogpostcoverphoto_ad36da8c.webp" alt="Earthy Organic Style Room Inspiration" class="w-full h-auto rounded-lg shadow-md my-8" />
 
       <h3 class="text-2xl font-serif text-primary mt-10 mb-4">What Is Earthy Organic Style?</h3>
       <p class="mb-4">This look takes its cues from nature:</p>
@@ -55,7 +55,7 @@ const blogPosts = [
     `,
     author: "Susan Evans",
     date: "March 17, 2026",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/earthy-organic-cover_6d406a16.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/REVorganicblogpostcoverphoto_ad36da8c.webp",
     category: "Design Trends",
     relatedProducts: [
       {
