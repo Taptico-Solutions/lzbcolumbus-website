@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  title: La-Z-Boy Columbus API
+  description: >
+    La-Z-Boy Columbus is a family-owned La-Z-Boy Furniture Gallery franchise in
+    Columbus, Georgia. This API provides structured information about the store's
+    products, services, hours, and contact details for AI agents and integrations.
+  version: "1.0.0"
+  contact:
+    email: info@lazboy-columbus.com
+
+servers:
+  - url: https://lzbcolumbus.com
+    description: Production
+
+paths:
+  /llms.txt:
+    get:
+      summary: AI-readable store overview
+      description: Returns a plain-text summary of La-Z-Boy Columbus for LLM ingestion.
+      operationId: getLlmsTxt
+      responses:
+        "200":
+          description: Plain text store summary
+          content:
+            text/plain:
+              schema:
+                type: string
+
+  /sitemap.xml:
+    get:
+      summary: XML sitemap of all public pages
+      description: Returns the full sitemap for lzbcolumbus.com.
+      operationId: getSitemap
+      responses:
+        "200":
+          description: XML sitemap
+          content:
+            application/xml:
+              schema:
+                type: string
+
+  /.well-known/ai-plugin.json:
+    get:
+      summary: WebMCP plugin manifest
+      description: Returns the AI plugin manifest for WebMCP discovery.
+      operationId: getAiPlugin
+      responses:
+        "200":
+          description: Plugin manifest JSON
+          content:
+            application/json:
+              schema:
+                type: object

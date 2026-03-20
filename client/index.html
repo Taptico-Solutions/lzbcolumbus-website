@@ -118,9 +118,46 @@
         "@type": "Person",
         "name": "The Evans Family"
       },
-      "description": "Locally owned and operated La-Z-Boy furniture store serving Columbus, Phenix City, and the Chattahoochee Valley since 2002."
+      "description": "Locally owned and operated La-Z-Boy furniture store serving Columbus, Phenix City, and the Chattahoochee Valley since 2002.",
+      "email": "info@lazboy-columbus.com",
+      "knowsAbout": ["Recliners", "Custom furniture", "Sofas and sectionals", "In-home design", "La-Z-Boy furniture"]
     }
     </script>
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does La-Z-Boy Columbus sell?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La-Z-Boy Columbus offers recliners, sofas, sectionals, and fully customizable upholstered furniture with hundreds of fabric and configuration options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does La-Z-Boy Columbus offer design consultations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — we offer free in-home design consultations to help you find the perfect furniture for your space."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is La-Z-Boy Columbus located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are a family-owned La-Z-Boy Furniture Gallery franchise located at 5555 Whittlesey Blvd, Bldg 1, Columbus, GA 31909, serving Columbus and the surrounding Chattahoochee Valley since 2002."
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- WebMCP discovery -->
+    <link rel="ai-plugin" href="https://lzbcolumbus.com/.well-known/ai-plugin.json" />
     <!-- THIS IS THE START OF A COMMENT BLOCK, BLOCK TO BE DELETED: Google Fonts here, example:
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "La-Z-Boy Columbus",
+  "name_for_model": "lazboy_columbus",
+  "description_for_human": "Family-owned La-Z-Boy furniture store in Columbus, Georgia.",
+  "description_for_model": "La-Z-Boy Columbus is a family-owned furniture gallery in Columbus, Georgia selling recliners, sofas, and custom upholstered furniture. Use this to learn about their products, services, and how to contact them.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://lzbcolumbus.com/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://lzbcolumbus.com/images/logo-final.png",
+  "contact_email": "info@lazboy-columbus.com",
+  "legal_info_url": "https://lzbcolumbus.com/privacy"
+}
