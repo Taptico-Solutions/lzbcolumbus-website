@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to the Comfort Club — La-Z-Boy of Columbus</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #e8e4dc; font-family: Arial, Helvetica, sans-serif; }
+    .wrapper { padding: 28px 0; background-color: #e8e4dc; }
+    .card { width: 560px; margin: 0 auto; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 28px rgba(0,0,0,0.13); }
+
+    /* HEADER */
+    .header { background-color: #003349; padding: 26px 36px 20px; text-align: center; }
+    .header img.logo { width: 120px; height: auto; display: block; margin: 0 auto 14px; filter: brightness(0) invert(1); }
+    .header h1 { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 30px; font-weight: 700; color: #ffffff; line-height: 1.2; }
+    .header p { margin-top: 8px; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(230,226,213,0.75); }
+
+    /* HERO */
+    .hero img { width: 100%; height: 260px; object-fit: cover; display: block; }
+
+    /* RUST BAR */
+    .rust-bar { background-color: #C25B3C; padding: 10px 36px; text-align: center; }
+    .rust-bar p { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #ffffff; }
+
+    /* BODY */
+    .body { padding: 32px 40px 8px; }
+    .comfort-logo { text-align: center; margin-bottom: 24px; }
+    .comfort-logo img { width: 90px; height: auto; display: inline-block; }
+    .body h2 { font-family: Georgia, 'Times New Roman', serif; font-size: 24px; font-weight: 700; color: #003349; line-height: 1.3; margin-bottom: 12px; }
+    .body p { font-size: 15px; color: #3a3a3a; line-height: 1.75; margin-bottom: 14px; }
+
+    /* TWO PHOTOS */
+    .two-col { padding: 0 40px 28px; }
+    .two-col table { width: 100%; border-collapse: collapse; }
+    .two-col td { width: 50%; vertical-align: top; }
+    .two-col td:first-child { padding-right: 6px; }
+    .two-col td:last-child { padding-left: 6px; }
+    .two-col img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; display: block; }
+
+    /* DIVIDER */
+    .divider { padding: 0 40px; }
+    .divider hr { border: none; border-top: 2px solid #e8e4dc; margin-bottom: 28px; }
+
+    /* BENEFITS */
+    .benefits { padding: 0 40px 28px; }
+    .benefits-header { background-color: #003349; border-radius: 6px; padding: 14px 20px; text-align: center; margin-bottom: 20px; }
+    .benefits-header p { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 18px; color: #ffffff; font-weight: 700; }
+    .bullet-row { display: flex; align-items: flex-start; margin-bottom: 8px; }
+    .bullet-dot { color: #C25B3C; font-size: 16px; font-weight: 900; margin-right: 10px; line-height: 1.65; flex-shrink: 0; }
+    .bullet-text { font-size: 15px; color: #1a1a1a; line-height: 1.65; }
+    .bullet-text .muted { color: #666; }
+
+    /* CLINGSTONES CALLOUT */
+    .callout { padding: 0 40px 28px; }
+    .callout-inner { background-color: #f4f1eb; border-left: 4px solid #C25B3C; border-radius: 0 6px 6px 0; display: flex; align-items: center; }
+    .callout-inner img { width: 56px; height: auto; display: block; padding: 16px 8px 16px 16px; flex-shrink: 0; }
+    .callout-text { padding: 16px 20px 16px 8px; }
+    .callout-text strong { font-family: Georgia, 'Times New Roman', serif; font-size: 15px; font-weight: 700; color: #003349; display: block; margin-bottom: 4px; }
+    .callout-text span { font-size: 13px; color: #555555; line-height: 1.6; }
+
+    /* SIGNATURE */
+    .sig { padding: 0 40px 32px; }
+    .sig .no-spam { font-size: 14px; color: #777777; font-style: italic; line-height: 1.6; margin-bottom: 12px; }
+    .sig .name { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; font-style: italic; color: #003349; line-height: 1.5; }
+
+    /* STOREFRONT */
+    .storefront img { width: 100%; height: auto; display: block; }
+
+    /* FOOTER */
+    .footer { background-color: #eef0f2; padding: 30px 40px 28px; text-align: center; border-top: 3px solid #003349; }
+    .footer img { width: 130px; height: auto; display: block; margin: 0 auto 10px; }
+    .footer .location { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #003349; margin-bottom: 4px; }
+    .footer .address { font-size: 13px; color: #003349; line-height: 1.65; margin-bottom: 6px; }
+    .footer .phone { font-size: 17px; font-weight: 700; color: #003349; letter-spacing: 0.5px; margin-bottom: 24px; }
+    .footer .legal { font-size: 11px; color: #999999; line-height: 1.8; }
+    .footer .legal a { color: #999999; text-decoration: underline; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="card">
+
+    <!-- HEADER -->
+    <div class="header">
+      <img class="logo" src="/home/ubuntu/lzbcolumbus/email-assets/lazboy-logo.png" alt="La-Z-Boy" />
+      <h1>Welcome to the Comfort Club!</h1>
+      <p>Columbus, Georgia</p>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <img src="/home/ubuntu/lzbcolumbus/email-assets/gallery-1.jpg" alt="La-Z-Boy Columbus Showroom" />
+    </div>
+
+    <!-- RUST BAR -->
+    <div class="rust-bar">
+      <p>✦ &nbsp; You're officially in &nbsp; ✦</p>
+    </div>
+
+    <!-- INTRO -->
+    <div class="body">
+      <div class="comfort-logo">
+        <img src="/home/ubuntu/lzbcolumbus/email-assets/comfort-club-logo.png" alt="La-Z-Boy Comfort Club" />
+      </div>
+      <h2>You made it!</h2>
+      <p>It's our way of keeping in touch—whether you've shopped with us before or you're just getting to know us.</p>
+      <p>We're a locally owned La-Z-Boy store right here in Columbus, with a full showroom at Columbus Park Crossing, a local warehouse, and a service team that actually picks up the phone.</p>
+    </div>
+
+    <!-- TWO PHOTOS -->
+    <div class="two-col">
+      <table>
+        <tr>
+          <td><img src="/home/ubuntu/lzbcolumbus/email-assets/gallery-grey-recliner.jpg" alt="La-Z-Boy Recliner" /></td>
+          <td><img src="/home/ubuntu/lzbcolumbus/email-assets/family-photo-real.jpg" alt="The Evans Family" /></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="divider"><hr /></div>
+
+    <!-- BENEFITS -->
+    <div class="benefits">
+      <div class="benefits-header">
+        <p>Here's what you'll get first access to:</p>
+      </div>
+      <div class="bullet-row"><span class="bullet-dot">•</span><span class="bullet-text"><strong>monthly giveaways</strong> <span class="muted">(like custom pillows made just for you)</span></span></div>
+      <div class="bullet-row"><span class="bullet-dot">•</span><span class="bullet-text"><strong>member-only gift events</strong> in our showroom</span></div>
+      <div class="bullet-row"><span class="bullet-dot">•</span><span class="bullet-text"><strong>local perks</strong>—Clingstones tickets, Callaway Gardens passes &amp; more</span></div>
+      <div class="bullet-row"><span class="bullet-dot">•</span><span class="bullet-text"><strong>design ideas</strong> <span class="muted">(plus complimentary help pulling it all together)</span></span></div>
+      <div class="bullet-row"><span class="bullet-dot">•</span><span class="bullet-text"><strong>new arrivals</strong> and what's happening in-store</span></div>
+      <div class="bullet-row"><span class="bullet-dot">•</span><span class="bullet-text"><strong>exclusive savings</strong> <span class="muted">(when they're worth your time)</span></span></div>
+    </div>
+
+    <!-- CLINGSTONES CALLOUT -->
+    <div class="callout">
+      <div class="callout-inner">
+        <img src="/home/ubuntu/lzbcolumbus/email-assets/clingstones-badge.png" alt="Columbus Clingstones" />
+        <div class="callout-text">
+          <strong>Local Perks Include Clingstones Tickets</strong>
+          <span>Columbus's own Double-A affiliate of the Atlanta Braves — and we're proud sponsors.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="sig">
+      <p class="no-spam">No spam. No clutter. Just the good stuff.</p>
+      <p class="name">— Susan Evans &amp; the La-Z-Boy of Columbus team</p>
+    </div>
+
+    <!-- STOREFRONT -->
+    <div class="storefront">
+      <img src="/home/ubuntu/lzbcolumbus/email-assets/store-front.png" alt="La-Z-Boy Columbus Storefront" />
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <img src="/home/ubuntu/lzbcolumbus/email-assets/lazboy-logo.png" alt="La-Z-Boy" />
+      <p class="location">Columbus Park Crossing</p>
+      <p class="address">5555 Whittlesey Blvd., Bldg. 1<br>Columbus, GA 31909</p>
+      <p class="phone">706-653-1070</p>
+      <p class="legal">
+        You're receiving this because you joined the La-Z-Boy Columbus Comfort Club.<br>
+        &copy; 2026 La-Z-Boy of Columbus, Georgia. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

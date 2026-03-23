@@ -27,7 +27,7 @@ export default function Blog() {
       excerpt: "Less bright white. Less contrast. More warmth, more texture, more calm. Earthy Organic style is all about creating spaces that feel grounded and relaxed — with natural materials, soft color, and pieces you actually want to live in.",
       author: "Susan Evans",
       date: "March 17, 2026",
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/REVorganicblogpostcoverphoto_ad36da8c.webp",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/IMG_9740_d7ec5661.jpeg",
       category: "Design Trends"
     },
     {
