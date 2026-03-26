@@ -37,11 +37,11 @@ export default function SpecialOffers() {
   const allOffers = [
     {
       id: 1,
-      title: "Anniversary Sale",
-      description: "Celebrate with us! Get 35% OFF timeless styles storewide. Advertised items. Exclusions apply.",
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029768615/EEEtTPzulEwKBaag.jpg",
-      validUntil: "March 23rd",
-      expiresAt: "2026-03-23T23:59:59",
+      title: "Spring Refresh Sale",
+      description: "Try a fresh take on comfort. Get 25% OFF your Spring Refresh. Available exclusively at our Columbus, Georgia location. Advertised items. Exclusions apply.",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663029768615/JcjScaA3JMvUY4j8iKMkae/IMG_4371_56147678.PNG",
+      validUntil: "Limited time only",
+      expiresAt: null,
       tag: "New Offer"
     },
 
