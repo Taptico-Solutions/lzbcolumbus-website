@@ -1,13 +1,23 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { subscribeToMailchimp } from "@/lib/mailchimp";
+import { toast } from "sonner";
 
 export function NewsletterPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Form state
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [city, setCity] = useState("");
+  const [zip, setZip] = useState("");
 
   useEffect(() => {
     // Auto-expire after contest ends on March 27, 2026
@@ -25,6 +35,41 @@ export function NewsletterPopup() {
   }, []);
 
   const handleClose = () => setIsOpen(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) {
+      toast.error("Please enter your email address.");
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      const response = await subscribeToMailchimp({
+        EMAIL: email,
+        FNAME: fname,
+        LNAME: lname,
+        MMERGE7: city,
+        MMERGE9: zip,
+      });
+      if (response.result === "success") {
+        localStorage.setItem("comfortClubSubscribed", "true");
+        setSubmitted(true);
+      } else {
+        if (response.msg.includes("already subscribed")) {
+          localStorage.setItem("comfortClubSubscribed", "true");
+          setSubmitted(true);
+        } else {
+          toast.error("Something went wrong. Please try again.");
+          console.error(response.msg);
+        }
+      }
+    } catch (error) {
+      toast.error("Connection error. Please try again later.");
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -60,76 +105,125 @@ export function NewsletterPopup() {
               />
             </div>
 
-            {/* ── JOIN THE CLUB headline ── */}
-            <div className="px-5 pt-4 pb-1">
-              <h2 style={{ fontSize: "28px", fontWeight: 900, color: "#003349", lineHeight: 1.05, letterSpacing: "-0.5px" }}>
-                JOIN THE CLUB
-              </h2>
-              <p style={{ fontSize: "13px", color: "#444", lineHeight: 1.6, marginTop: "5px" }}>
-                Join our <strong>Comfort Club</strong> to enter — plus get <strong>exclusive gifts</strong>, a first look at <strong>new arrivals</strong>, and <strong>design trend updates</strong>!
-              </p>
-            </div>
-
-            {/* ── FORM ── */}
-            <div className="px-5 pt-3 pb-2">
-              <form
-                action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0"
-                method="post"
-                id="mc-popup-subscribe-form"
-                name="mc-popup-subscribe-form"
-                className="space-y-2 validate"
-                target="_blank"
-                onSubmit={handleClose}
-              >
-                <div className="grid grid-cols-2 gap-2">
-                  <div>
-                    <Label htmlFor="popup-FNAME" className="text-xs font-bold text-[#003349]">First Name</Label>
-                    <Input type="text" name="FNAME" id="popup-FNAME" placeholder="Jane" className="h-8 text-sm mt-0.5 bg-white" />
-                  </div>
-                  <div>
-                    <Label htmlFor="popup-LNAME" className="text-xs font-bold text-[#003349]">Last Name</Label>
-                    <Input type="text" name="LNAME" id="popup-LNAME" placeholder="Doe" className="h-8 text-sm mt-0.5 bg-white" />
-                  </div>
-                </div>
-
-                <div>
-                  <Label htmlFor="popup-EMAIL" className="text-xs font-bold text-[#003349]">Email <span className="text-red-500">*</span></Label>
-                  <Input type="email" name="EMAIL" id="popup-EMAIL" placeholder="jane@example.com" className="h-8 text-sm mt-0.5 bg-white required email" required />
-                </div>
-
-                <div className="grid grid-cols-2 gap-2">
-                  <div>
-                    <Label htmlFor="popup-MMERGE7" className="text-xs font-bold text-[#003349]">City</Label>
-                    <Input type="text" name="MMERGE7" id="popup-MMERGE7" className="h-8 text-sm mt-0.5 bg-white" />
-                  </div>
-                  <div>
-                    <Label htmlFor="popup-MMERGE9" className="text-xs font-bold text-[#003349]">Zip Code</Label>
-                    <Input type="text" name="MMERGE9" id="popup-MMERGE9" className="h-8 text-sm mt-0.5 bg-white" />
-                  </div>
-                </div>
-
-                {/* Honeypot */}
-                <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
-                  <input type="text" name="b_125356b6e77a67ca13f0f1c06_677285eb78" tabIndex={-1} defaultValue="" />
-                </div>
-
-                <Button
-                  type="submit"
-                  name="subscribe"
-                  className="w-full font-black text-sm py-4 rounded-xl tracking-wide text-white mt-1"
-                  style={{ background: "#2d6a3f" }}
+            {submitted ? (
+              /* ── SUCCESS STATE ── */
+              <div className="px-5 pt-6 pb-5 text-center">
+                <motion.div
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ type: "spring", duration: 0.8, bounce: 0.5 }}
+                  className="inline-flex items-center justify-center p-3 bg-[#2d6a3f]/10 rounded-full mb-3"
                 >
-                  Enter to Win + Join the Comfort Club
-                </Button>
-              </form>
+                  <CheckCircle2 className="h-8 w-8 text-[#2d6a3f]" />
+                </motion.div>
+                <h2 style={{ fontSize: "22px", fontWeight: 900, color: "#003349", lineHeight: 1.1 }}>
+                  You're in!
+                </h2>
+                <p style={{ fontSize: "13px", color: "#444", lineHeight: 1.6, marginTop: "6px" }}>
+                  Thanks for joining the Comfort Club. Watch your inbox for updates and your chance to win!
+                </p>
+                <button
+                  onClick={handleClose}
+                  className="mt-4 w-full text-center text-[12px] text-gray-500 hover:text-gray-700 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            ) : (
+              <>
+                {/* ── JOIN THE CLUB headline ── */}
+                <div className="px-5 pt-4 pb-1">
+                  <h2 style={{ fontSize: "28px", fontWeight: 900, color: "#003349", lineHeight: 1.05, letterSpacing: "-0.5px" }}>
+                    JOIN THE CLUB
+                  </h2>
+                  <p style={{ fontSize: "13px", color: "#444", lineHeight: 1.6, marginTop: "5px" }}>
+                    Join our <strong>Comfort Club</strong> to enter — plus get <strong>exclusive gifts</strong>, a first look at <strong>new arrivals</strong>, and <strong>design trend updates</strong>!
+                  </p>
+                </div>
 
-              <button
-                onClick={handleClose}
-                className="w-full text-center text-[11px] text-gray-400 hover:text-gray-600 mt-2 transition-colors pb-1"
-              >
-                No thanks
-              </button>
-            </div>
+                {/* ── FORM ── */}
+                <div className="px-5 pt-3 pb-2">
+                  <form onSubmit={handleSubmit} className="space-y-2">
+                    <div className="grid grid-cols-2 gap-2">
+                      <div>
+                        <Label htmlFor="popup-FNAME" className="text-xs font-bold text-[#003349]">First Name</Label>
+                        <Input
+                          type="text"
+                          id="popup-FNAME"
+                          placeholder="Jane"
+                          className="h-8 text-sm mt-0.5 bg-white"
+                          value={fname}
+                          onChange={(e) => setFname(e.target.value)}
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="popup-LNAME" className="text-xs font-bold text-[#003349]">Last Name</Label>
+                        <Input
+                          type="text"
+                          id="popup-LNAME"
+                          placeholder="Doe"
+                          className="h-8 text-sm mt-0.5 bg-white"
+                          value={lname}
+                          onChange={(e) => setLname(e.target.value)}
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <Label htmlFor="popup-EMAIL" className="text-xs font-bold text-[#003349]">Email <span className="text-red-500">*</span></Label>
+                      <Input
+                        type="email"
+                        id="popup-EMAIL"
+                        placeholder="jane@example.com"
+                        className="h-8 text-sm mt-0.5 bg-white"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2">
+                      <div>
+                        <Label htmlFor="popup-MMERGE7" className="text-xs font-bold text-[#003349]">City</Label>
+                        <Input
+                          type="text"
+                          id="popup-MMERGE7"
+                          className="h-8 text-sm mt-0.5 bg-white"
+                          value={city}
+                          onChange={(e) => setCity(e.target.value)}
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="popup-MMERGE9" className="text-xs font-bold text-[#003349]">Zip Code</Label>
+                        <Input
+                          type="text"
+                          id="popup-MMERGE9"
+                          className="h-8 text-sm mt-0.5 bg-white"
+                          value={zip}
+                          onChange={(e) => setZip(e.target.value)}
+                        />
+                      </div>
+                    </div>
+
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full font-black text-sm py-4 rounded-xl tracking-wide text-white mt-1"
+                      style={{ background: "#2d6a3f" }}
+                    >
+                      {isSubmitting ? "Submitting…" : "Enter to Win + Join the Comfort Club"}
+                    </Button>
+                  </form>
+
+                  <button
+                    onClick={handleClose}
+                    className="w-full text-center text-[11px] text-gray-400 hover:text-gray-600 mt-2 transition-colors pb-1"
+                  >
+                    No thanks
+                  </button>
+                </div>
+              </>
+            )}
 
             {/* ── RUST LA-Z-BOY SCRIPT BAR ── */}
             <div

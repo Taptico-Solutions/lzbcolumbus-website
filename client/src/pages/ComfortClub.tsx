@@ -1,13 +1,62 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Gift, Sparkles, Zap, Mail } from "lucide-react";
+import { Gift, Sparkles, Zap, Mail, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { subscribeToMailchimp } from "@/lib/mailchimp";
+import { toast } from "sonner";
 
 export default function ComfortClub() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [city, setCity] = useState("");
+  const [zip, setZip] = useState("");
+  const [salesperson, setSalesperson] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) {
+      toast.error("Please enter your email address.");
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      const response = await subscribeToMailchimp({
+        EMAIL: email,
+        FNAME: fname,
+        LNAME: lname,
+        MMERGE7: city,
+        MMERGE9: zip,
+        MMERGE24: salesperson,
+      });
+      if (response.result === "success") {
+        localStorage.setItem("comfortClubSubscribed", "true");
+        setIsSubscribed(true);
+        toast.success("Welcome to the Comfort Club!");
+      } else {
+        if (response.msg.includes("already subscribed")) {
+          localStorage.setItem("comfortClubSubscribed", "true");
+          setIsSubscribed(true);
+          toast.info("You're already a member of the Comfort Club!");
+        } else {
+          toast.error("Something went wrong. Please try again.");
+          console.error(response.msg);
+        }
+      }
+    } catch (error) {
+      toast.error("Connection error. Please try again later.");
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="flex flex-col">
       {/* Enter to Win – Clingstones Giveaway Artwork */}
@@ -87,81 +136,122 @@ export default function ComfortClub() {
                   <p className="text-sm text-muted-foreground">It takes less than a minute to join!</p>
                 </CardHeader>
                 <CardContent className="p-6 md:p-8">
-                  <form 
-                    action="https://lazyboy.us2.list-manage.com/subscribe/post?u=125356b6e77a67ca13f0f1c06&amp;id=677285eb78&amp;f_id=00b33ce0f0" 
-                    method="post" 
-                    id="mc-embedded-subscribe-form" 
-                    name="mc-embedded-subscribe-form" 
-                    className="space-y-4 validate" 
-                    target="_blank"
-                  >
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="mce-FNAME">First Name</Label>
-                        <Input type="text" name="FNAME" id="mce-FNAME" placeholder="Jane" className="bg-white" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="mce-LNAME">Last Name</Label>
-                        <Input type="text" name="LNAME" id="mce-LNAME" placeholder="Doe" className="bg-white" />
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="mce-EMAIL">Email Address <span className="text-destructive">*</span></Label>
-                      <Input 
-                        type="email" 
-                        name="EMAIL" 
-                        id="mce-EMAIL" 
-                        placeholder="jane@example.com" 
-                        className="bg-white required email"
-                        required 
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="mce-MMERGE7">City</Label>
-                        <Input type="text" name="MMERGE7" id="mce-MMERGE7" className="bg-white" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="mce-MMERGE9">Zip Code</Label>
-                        <Input type="text" name="MMERGE9" id="mce-MMERGE9" className="bg-white" />
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="mce-MMERGE24">Who helped you with your sign up today?</Label>
-                      <select 
-                        name="MMERGE24" 
-                        id="mce-MMERGE24" 
-                        className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  {isSubscribed ? (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ type: "spring", duration: 0.6, bounce: 0.3 }}
+                      className="text-center py-8"
+                    >
+                      <motion.div
+                        initial={{ scale: 0, rotate: -180 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{ type: "spring", duration: 0.8, bounce: 0.5, delay: 0.2 }}
+                        className="inline-flex items-center justify-center p-3 bg-accent/10 rounded-full mb-4"
                       >
-                        <option value="">Select a team member...</option>
-                        <option value="Marlon Rice">Marlon Rice</option>
-                        <option value="Tamika Davis">Tamika Davis</option>
-                        <option value="Casey Cooper">Casey Cooper</option>
-                        <option value="Jason Hall">Jason Hall</option>
-                        <option value="Bret Gladden">Bret Gladden</option>
-                        <option value="Aaulashua Smoot">Aaulashua Smoot</option>
-                        <option value="Kennth Llera">Kennth Llera</option>
-                        <option value="Susan Evans">Susan Evans</option>
-                      </select>
-                    </div>
-                    
-                    {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
-                    <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-                      <input type="text" name="b_125356b6e77a67ca13f0f1c06_677285eb78" tabIndex={-1} defaultValue="" />
-                    </div>
-                    
-                    <Button type="submit" name="subscribe" id="mc-embedded-subscribe" className="w-full bg-primary hover:bg-primary/90 text-white font-serif text-lg py-6 mt-4">
-                      Join the Club
-                    </Button>
-                    
-                    <p className="text-xs text-center text-muted-foreground mt-4 italic">
-                      By adding your name above, you're giving us the green light to text or email you. 
-                      We promise to keep it helpful, fun and absolutely not spammy. Pinky swear!
-                    </p>
-                  </form>
+                        <CheckCircle2 className="h-8 w-8 text-accent" />
+                      </motion.div>
+                      <h3 className="text-2xl font-serif font-bold text-primary mb-2">You're in the Club!</h3>
+                      <p className="text-muted-foreground">
+                        Thanks for joining the Comfort Club. Keep an eye on your inbox for your welcome email.
+                      </p>
+                    </motion.div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="cc-FNAME">First Name</Label>
+                          <Input
+                            type="text"
+                            id="cc-FNAME"
+                            placeholder="Jane"
+                            className="bg-white"
+                            value={fname}
+                            onChange={(e) => setFname(e.target.value)}
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="cc-LNAME">Last Name</Label>
+                          <Input
+                            type="text"
+                            id="cc-LNAME"
+                            placeholder="Doe"
+                            className="bg-white"
+                            value={lname}
+                            onChange={(e) => setLname(e.target.value)}
+                          />
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="cc-EMAIL">Email Address <span className="text-destructive">*</span></Label>
+                        <Input 
+                          type="email" 
+                          id="cc-EMAIL" 
+                          placeholder="jane@example.com" 
+                          className="bg-white"
+                          required
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="cc-MMERGE7">City</Label>
+                          <Input
+                            type="text"
+                            id="cc-MMERGE7"
+                            className="bg-white"
+                            value={city}
+                            onChange={(e) => setCity(e.target.value)}
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="cc-MMERGE9">Zip Code</Label>
+                          <Input
+                            type="text"
+                            id="cc-MMERGE9"
+                            className="bg-white"
+                            value={zip}
+                            onChange={(e) => setZip(e.target.value)}
+                          />
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="cc-MMERGE24">Who helped you with your sign up today?</Label>
+                        <Select value={salesperson} onValueChange={setSalesperson}>
+                          <SelectTrigger id="cc-MMERGE24" className="bg-white">
+                            <SelectValue placeholder="Select a team member..." />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="Marlon Rice">Marlon Rice</SelectItem>
+                            <SelectItem value="Tamika Davis">Tamika Davis</SelectItem>
+                            <SelectItem value="Casey Cooper">Casey Cooper</SelectItem>
+                            <SelectItem value="Jason Hall">Jason Hall</SelectItem>
+                            <SelectItem value="Bret Gladden">Bret Gladden</SelectItem>
+                            <SelectItem value="Aaulashua Smoot">Aaulashua Smoot</SelectItem>
+                            <SelectItem value="Kennth Llera">Kennth Llera</SelectItem>
+                            <SelectItem value="Susan Evans">Susan Evans</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      
+                      <Button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full bg-primary hover:bg-primary/90 text-white font-serif text-lg py-6 mt-4"
+                      >
+                        {isSubmitting ? "Joining…" : "Join the Club"}
+                      </Button>
+                      
+                      <p className="text-xs text-center text-muted-foreground mt-4 italic">
+                        By adding your name above, you're giving us the green light to text or email you. 
+                        We promise to keep it helpful, fun and absolutely not spammy. Pinky swear!
+                      </p>
+                    </form>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
